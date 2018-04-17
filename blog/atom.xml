@@ -5,9 +5,9 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://joeybling.github.io/"/>
+  <link href="https://joeybling.github.io/blog/"/>
   <updated>2018-04-14T20:03:08.400Z</updated>
-  <id>https://joeybling.github.io/</id>
+  <id>https://joeybling.github.io/blog/</id>
   
   <author>
     <name>Joey</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>my-first-blog</title>
-    <link href="https://joeybling.github.io/2018/04/17/my-first-blog/"/>
-    <id>https://joeybling.github.io/2018/04/17/my-first-blog/</id>
+    <link href="https://joeybling.github.io/blog/2018/04/17/my-first-blog/"/>
+    <id>https://joeybling.github.io/blog/2018/04/17/my-first-blog/</id>
     <published>2018-04-17T02:30:03.000Z</published>
     <updated>2018-04-14T20:03:08.400Z</updated>
     
@@ -37,14 +37,14 @@
     </summary>
     
     
-      <category term="java" scheme="https://joeybling.github.io/tags/java/"/>
+      <category term="java" scheme="https://joeybling.github.io/blog/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://joeybling.github.io/2018/04/14/hello-world/"/>
-    <id>https://joeybling.github.io/2018/04/14/hello-world/</id>
+    <link href="https://joeybling.github.io/blog/2018/04/14/hello-world/"/>
+    <id>https://joeybling.github.io/blog/2018/04/14/hello-world/</id>
     <published>2018-04-14T02:42:48.575Z</published>
     <updated>2018-04-14T02:42:48.575Z</updated>
     
