@@ -189,82 +189,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-生成SSH-Key"><a href="#1-生成SSH-Key" class="headerlink" title="1.生成SSH Key"></a>1.生成SSH Key</h4><p>首先检查下本机是否已经安装了SSH，在终端输入ssh即可：</p>
-<div class="image-package"><br><div class="image-container" style="max-width: 544px; max-height: 141px; background-color: transparent;"><br><div class="image-container-fill" style="padding-bottom: 25.919999999999998%;"></div><br><div class="image-view" data-width="544" data-height="141"><img src="//upload-images.jianshu.io/upload_images/2743275-d5ee041fc6a3b53e.png" alt=""></div><br></div><br><div class="image-caption"></div><br></div>
-
-<p>如果没有安装进行yum安装</p>
-<pre><code>&lt;span class=&quot;hljs-comment&quot;&gt;# yum -y install openssh-clients&lt;/span&gt;
-`&lt;/pre&gt;
-
-###### 接下来就是生成ssh key了，输入ssh-keygen -t rsa，然后连续按回车键三次（注意：千万不要输入密码！）。
-
-&lt;div class=&quot;image-package&quot;&gt;
-&lt;div class=&quot;image-container&quot; style=&quot;max-width: 536px; max-height: 330px; background-color: transparent;&quot;&gt;
-&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 61.57%;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;image-view&quot; data-width=&quot;536&quot; data-height=&quot;330&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-7398d3f9f1eef72c.png)&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-id_rsa.pub为公钥，id_rsa为私钥，它们都是隐藏文件。
-
-那么如何查看它们的内容呢？只需要继续执行以下两条命令即可。
-
-&lt;pre class=&quot;hljs bash&quot;&gt;`&lt;span class=&quot;hljs-comment&quot;&gt;# cd .ssh/&lt;/span&gt;
-&lt;span class=&quot;hljs-comment&quot;&gt;# cat id_rsa.pub&lt;/span&gt;
-`&lt;/pre&gt;
-&lt;div class=&quot;image-package&quot;&gt;
-&lt;div class=&quot;image-container&quot; style=&quot;max-width: 700px; max-height: 66px; background-color: transparent;&quot;&gt;
-&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 5.779999999999999%;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;image-view&quot; data-width=&quot;1142&quot; data-height=&quot;66&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-2c142d50f896e48b.png)&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-#### 2.添加SSH Key到GitHub上
-
-&lt;div class=&quot;image-package&quot;&gt;
-&lt;div class=&quot;image-container&quot; style=&quot;max-width: 260px; max-height: 280px; background-color: transparent;&quot;&gt;
-&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 107.69%;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;image-view&quot; data-width=&quot;260&quot; data-height=&quot;280&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-062ea02946eb9af5.png)&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-接着执行下面操作：
-
-&lt;div class=&quot;image-package&quot;&gt;
-&lt;div class=&quot;image-container&quot; style=&quot;max-width: 700px; max-height: 440px; background-color: transparent;&quot;&gt;
-&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 41.28%;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;image-view&quot; data-width=&quot;1066&quot; data-height=&quot;440&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-d2a6a8697131e8d7.png)&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-点击New SSH Key按钮后进行Key的填写操作，完成SSH Key的添加。如下图：
-
-&lt;div class=&quot;image-package&quot;&gt;
-&lt;div class=&quot;image-container&quot; style=&quot;max-width: 700px; max-height: 664px; background-color: transparent;&quot;&gt;
-&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 58.4%;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;image-view&quot; data-width=&quot;1137&quot; data-height=&quot;664&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-1a8f4cd790d9d667.png)&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;image-package&quot;&gt;
-&lt;div class=&quot;image-container&quot; style=&quot;max-width: 700px; max-height: 630px; background-color: transparent;&quot;&gt;
-&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 40.23%;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;image-view&quot; data-width=&quot;1566&quot; data-height=&quot;630&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-cdbdf7fd81c8ac11.png)&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-添加SSH Key成功之后，继续输入命令进行测试。
-&lt;pre class=&quot;hljs ruby&quot;&gt;`&lt;span class=&quot;hljs-comment&quot;&gt;# ssh -T git&lt;span class=&quot;hljs-doctag&quot;&gt;@github&lt;/span&gt;.com&lt;/span&gt;
-</code></pre><div class="image-package"><br><div class="image-container" style="max-width: 700px; max-height: 97px; background-color: transparent;"><br><div class="image-container-fill" style="padding-bottom: 13.4%;"></div><br><div class="image-view" data-width="724" data-height="97"><img src="//upload-images.jianshu.io/upload_images/2743275-5310d1ab738cb79a.png" alt=""></div><br></div><br><div class="image-caption"></div><br></div>
-
-<p>出现上图结果则说明添加SSH Key成功。</p>
-
+        <p>####1.生成SSH Key<br>首先检查下本机是否已经安装了SSH，在终端输入ssh即可：<br><img src="https://upload-images.jianshu.io/upload_images/2743275-d5ee041fc6a3b53e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>如果没有安装进行yum安装</p>
+        
+          <a class="article-more-a" href="/2018/04/17/Linux配置SSH-Key到GitHub/#more">more >></a>
+        
       
 
       
@@ -277,7 +205,7 @@ id_rsa.pub为公钥，id_rsa为私钥，它们都是隐藏文件。
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		
 		</ul>
@@ -413,6 +341,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
             <div class="clearfix"></div>
