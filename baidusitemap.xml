@@ -4,12 +4,27 @@
 
     
   <url>
-    <loc>https://joeybling.github.io/2018/03/17/Linux%E6%9F%A5%E7%9C%8B%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF/</loc>
-    <lastmod>2018-04-17T08:07:24.196Z</lastmod>
+    <loc>https://joeybling.github.io/2018/04/17/%E6%88%91%E5%90%AC%E8%AF%B4/</loc>
+    <lastmod>2018-04-17T08:57:17.153Z</lastmod>
     <data>
         <display>
-        <title>Linux查看硬件信息</title>
-        <pubTime>2018-03-17T08:06:43.000Z</pubTime>
+        <title>我听说</title>
+        <pubTime>2018-04-17T08:57:03.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://joeybling.github.io/2018/04/17/Linux-%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%8D%A1UUID/</loc>
+    <lastmod>2018-04-17T08:38:01.478Z</lastmod>
+    <data>
+        <display>
+        <title>Linux 查看网卡UUID</title>
+        <pubTime>2018-04-17T08:03:00.000Z</pubTime>
         
         <tag>Linux</tag>
          
@@ -21,12 +36,12 @@
 
     
   <url>
-    <loc>https://joeybling.github.io/2018/04/17/Linux-%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%8D%A1UUID/</loc>
-    <lastmod>2018-04-17T08:04:39.845Z</lastmod>
+    <loc>https://joeybling.github.io/2018/03/17/Linux%E6%9F%A5%E7%9C%8B%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF/</loc>
+    <lastmod>2018-04-17T08:15:16.499Z</lastmod>
     <data>
         <display>
-        <title>Linux 查看网卡UUID</title>
-        <pubTime>2018-04-17T08:03:52.000Z</pubTime>
+        <title>Linux查看硬件信息</title>
+        <pubTime>2018-03-17T08:06:43.000Z</pubTime>
         
         <tag>Linux</tag>
          
