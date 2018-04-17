@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Joey_Blog</title>
+  <title>試毅-思伟</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://joeybling.github.io/</id>
   
   <author>
-    <name>Joey</name>
+    <name>試毅-思伟</name>
     
   </author>
   
