@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://joeybling.github.io/"/>
-  <updated>2018-04-15T00:08:43.933Z</updated>
+  <updated>2018-04-17T08:04:39.845Z</updated>
   <id>https://joeybling.github.io/</id>
   
   <author>
@@ -15,6 +15,126 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 查看网卡UUID</title>
+    <link href="https://joeybling.github.io/2018/04/17/Linux-%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%8D%A1UUID/"/>
+    <id>https://joeybling.github.io/2018/04/17/Linux-查看网卡UUID/</id>
+    <published>2018-04-17T08:03:52.000Z</published>
+    <updated>2018-04-17T08:04:39.845Z</updated>
+    
+    <content type="html"><![CDATA[<p>####Linux 查看网卡UUID</p><p>######1、首先我们查看一下nmcli是哪个软件包提供的</p><pre><code># yum provides &quot;*/nmcli&quot;</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-a42d314368eebd8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><a id="more"></a></p><p>######2、安装NetworkManager服务</p><pre><code># yum -y install NetworkManager</code></pre><p>######3、启动NetworkManager服务</p><pre><code># service NetworkManager start</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-21dd8cfcd7fc0216.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>######4、查看网卡UUID</p><pre><code># nmcli con  tips:如果有发现有报错# Error: could not connect to D-Bus.tips:查看/var/log/messages日志# vi /var/log/messagestips:按两下大写的G跳到最后一页</code></pre><p>报错：</p><pre><code>...Apr 20 14:53:05 localhost NetworkManager[2013]: &lt;info&gt; NetworkManager (version 0.8.1-113.el6) is starting...Apr 20 14:53:05 localhost NetworkManager[2013]: &lt;info&gt; Read config file /etc/NetworkManager/NetworkManager.confApr 20 14:53:05 localhost NetworkManager[2013]: &lt;error&gt; [1492671185.606620] [nm-dbus-manager.c:278] nm_dbus_manager_init_bus(): Could not get the system bus.  Make sure the message bus daemon is running!  Message: Failed to connect to socket /var/run/dbus/system_bus_socket: Connection refused...</code></pre><p>需要先启动messagebus，再启动NetworkManager</p><pre><code># /etc/init.d/messagebus starttips:重新启动# service NetworkManager start</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-1d945ece865909ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>######运行nmcli</p><pre><code># nmcli con</code></pre><p>报错:<br><img src="https://upload-images.jianshu.io/upload_images/2743275-77a46ad27ca920e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><pre><code>查看/var/log/messages日志# vi /var/log/messages</code></pre><p>发现有报错<br><img src="https://upload-images.jianshu.io/upload_images/2743275-8e47a7a12aeb9e68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>######g_slist_free_full 属于glist 的一个方法，缺少glist</p><p>######解决方法:</p><pre><code># yum -y install glib2-devel</code></pre><p>######3、此时再运行nmcli即可查看网卡UUID    </p><pre><code># service NetworkManager start# nmcli con</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-ad3b6fb7812e01d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      Linux 查看网卡UUID
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://joeybling.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 卸载分区</title>
+    <link href="https://joeybling.github.io/2018/04/17/Linux-%E5%8D%B8%E8%BD%BD%E5%88%86%E5%8C%BA/"/>
+    <id>https://joeybling.github.io/2018/04/17/Linux-卸载分区/</id>
+    <published>2018-04-17T08:01:30.000Z</published>
+    <updated>2018-04-17T08:02:51.298Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份"><a href="#注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份" class="headerlink" title="注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份"></a>注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份</h5><pre><code># df -hT</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-d7fb0c77ed1e94d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><a id="more"></a>    <pre><code>准备卸载/dev/sda6这个分区# umount /data2    重新检查一下 # df -hT</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-2af8caea924f6612.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><pre><code># fdisk -l发现待分区的磁盘 /dev/sda</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-c079a22b84557f0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><pre><code>对该磁盘进行卸载分区，输入m并回车# fdisk /dev/sda# m 输入帮助# p 打印分区表</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-85bcd2afce1808d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/2743275-95439e347a38fcf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>卸载/dev/sda6分区<br>此时注意/dev/sda6是刚刚卸载了/data2的分区名<br><img src="https://upload-images.jianshu.io/upload_images/2743275-d7fb0c77ed1e94d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><pre><code># d 删除一个分区# 6  删除第六个分区</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-b7cbc678d5616a01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><pre><code>重新打印分区表发现已卸载/dev/sda6分区# p </code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-8969029b19517563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><pre><code># w   将表写入磁盘并退出再检查一遍# fdisk /dev/sda# p 打印分区表 </code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-fc6779f38f7ccb43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/2743275-40d4fd8413ae4065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      Linux 卸载分区
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://joeybling.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 新建扩展分区</title>
+    <link href="https://joeybling.github.io/2018/04/17/Linux-%E6%96%B0%E5%BB%BA%E6%89%A9%E5%B1%95%E5%88%86%E5%8C%BA/"/>
+    <id>https://joeybling.github.io/2018/04/17/Linux-新建扩展分区/</id>
+    <published>2018-04-17T07:59:52.000Z</published>
+    <updated>2018-04-17T08:01:13.069Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code># fdisk -l</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-a3f8dba4931f0e69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>要进行新建扩展分区的磁盘是 /dev/sda<br><a id="more"></a></p><pre><code># fdisk /dev/sda# p  打印分区表</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-547ba5ce1f898e88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>此时磁盘已经有了3个分区，如果要再弄2个分区就不行，这个时候我们进行新建扩展分区</p><pre><code># n  添加一个新的分区# e  添加一个扩展分区# p  打印分区表</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-4c842484993e6eba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>此时已经看见扩展分区创建完成，在扩展分区下面新建2个分区<br>因为现在扩展分区是20G  所以下面的2个分区都给10G</p><pre><code># n# +10G# p</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-720c53c845ce00b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/2743275-37380dc4f6e9a485.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>重复上面的操作</p><pre><code># n# 回车# 回车   此时回车等于把磁盘剩下的所有空间给了此分区# p</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-a8dbb997e23e1066.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/2743275-591af00ad28e8d7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>创建完毕  保存并重启</p><pre><code># w# reboot</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-7f03551e8e9ec095.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>重新登入系统</p><pre><code># fdisk -l</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-e2e92df2a2148520.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>需要格式化 /dev/sda5   /dev/sda6 分区</p><pre><code>ext4是磁盘文件系统的格式，也可以是ext3# mkfs -t ext4 /dev/sda5# mkfs -t ext4 /dev/sda6</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-8d5cf4a6f7464a29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/2743275-1d8943f50b678455.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><pre><code># mount /dev/sda5 /data报错:mount: mount point /data does not exist原因是根目录没有此文件夹创建文件夹# mkdir /data# mkdir /data2# mount /dev/sda5 /data   把分区 /dev/sda5 挂载到 /data 目录下# mount /dev/sda6 /data2  把分区 /dev/sda6 挂载到 /data2 目录下# df -hT  查看是否挂载成功</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-79b686cdd3f0e8c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>分区格式类型是ext4 分区大小也是10G</p><p>#####此时注意，这样机器重启后就重置了，如果需要永久生效需要设置开机自动挂载（磁盘）</p><p>#####开机自动挂载（磁盘）</p><pre><code># vi /etc/fstab</code></pre><p>最后面添加</p><pre><code>/dev/sda5 /data ext4 defaults 0 0/dev/sda6 /data2 ext4 defaults 0 0</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-59ae777451c4b097.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>###tips:</p><p>   ######第一列：分区的UUID或分区名 例如:/dev/sda5</p><p>   ######第二列：Mount point：设备的挂载点，就是你要挂载到哪个目录下。</p><p>   ######第三列：filesystem：磁盘文件系统的格式，包括ext2、ext3、reiserfs、nfs、vfat等</p><p>   ######第四列：parameters：文件系统的参数<br>    Async/sync<br>    设置是否为同步方式运行，默认为async<br>    auto/noauto<br>     当下载mount -a 的命令时，此文件系统是否被主动挂载。默认为auto<br>    rw/ro<br>     是否以以只读或者读写模式挂载<br>    exec/noexec<br>     限制此文件系统内是否能够进行”执行”的操作<br>    user/nouser<br>    是否允许用户使用mount命令挂载<br>    suid/nosuid<br>    是否允许SUID的存在<br>    Usrquota<br>    启动文件系统支持磁盘配额模式<br>    Grpquota<br>    启动文件系统对群组磁盘配额模式的支持<br>    Defaults<br>    同事具有rw,suid,dev,exec,auto,nouser,async等默认参数的设置</p><h6 id="第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1"><a href="#第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1" class="headerlink" title="第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1"></a>第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1</h6><pre><code>0    代表不要做dump备份1    代表要每天进行dump的操作2    代表不定日期的进行dump操作</code></pre><p>   ######第六列：是否检验扇区：开机的过程中，系统默认会以fsck检验我们系统是否为完整（clean）。<br>    0    不要检验<br>    1    最早检验（一般根目录会选择）<br>    2    1级别检验完成之后进行检验</p><p>####Tips:<br>    查看各个分区的UUID和磁盘文件系统的格式</p><pre><code># blkid</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-a42a23c8dbe89e25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      Linux 新建扩展分区
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://joeybling.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建 ElasticSearch 6.1.3分布式集群</title>
+    <link href="https://joeybling.github.io/2018/04/17/%E6%90%AD%E5%BB%BA-ElasticSearch-6-1-3%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4/"/>
+    <id>https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/</id>
+    <published>2018-04-17T07:57:03.000Z</published>
+    <updated>2018-04-17T07:58:01.983Z</updated>
+    
+    <content type="html"><![CDATA[<p>####ELasticsearch 6.1.3要求JDK版本最低为1.8</p><p>mac上的本机ip为192.168.1.111,设为master节点，配置如下：</p><pre><code>cluster.name: my-applicationnode.name: node-111network.host: 192.168.1.111http.port: 9200http.cors.enabled: truehttp.cors.allow-origin: &quot;*&quot;node.master: truenode.data: truediscovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]</code></pre><a id="more"></a><p>Ubuntu机器的ip位192.168.1.102，配置如下：</p><pre><code>cluster.name: my-applicationnode.name: node-102network.host: 192.168.1.102http.port: 9200http.cors.enabled: truehttp.cors.allow-origin: &quot;*&quot;node.master: falsenode.data: truediscovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]</code></pre><p>先启动mac上的master，再启动Ubuntu上的slave节点，观察输出，会有一个node-102探测到master节点的提示：</p><pre><code>2017-06-07T11:33:39,369][INFO ][o.e.c.s.ClusterService   ] [node-102] detected_master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300}, added {{node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300},}, reason: zen-disco-receive(from master [master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300} committed version [8]])&apos;</code></pre><p>访问head，一个master一个slave组成集群，界面如下：</p><p><img src="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这里写图片描述"></p><p>###单机多节点集群配置</p><p>如果想要在一台机器上启动多个节点，步骤如下：</p><p>1、复制一份ELasticsearch的安装包<br>2、修改端口，比如一个是9200，一个是9205<br>3、删除data目录下的数据(如果是新解压的安装包就不必了)</p>]]></content>
+    
+    <summary type="html">
+    
+      搭建 ElasticSearch 6.1.3分布式集群
+    
+    </summary>
+    
+    
+      <category term="ELK日志分析" scheme="https://joeybling.github.io/tags/ELK%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FreeMarker 中文乱码问题解决办法</title>
+    <link href="https://joeybling.github.io/2018/04/17/FreeMarker-%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>https://joeybling.github.io/2018/04/17/FreeMarker-中文乱码问题解决办法/</id>
+    <published>2018-04-17T07:53:54.000Z</published>
+    <updated>2018-04-17T07:56:12.613Z</updated>
+    
+    <content type="html"><![CDATA[<p>解决办法一：通过修改配置文件freemarker.properties，修改默认编码：</p><pre><code>locale=zh_CNdefault_encoding=gbknumber_format=#date_format=yyyy-MM-ddtime_format=HH:mm:Ssdatetime_format=yyyy-MM-dd HH:mm:Ss</code></pre><p>还有1个办法   在contentType里设置value为text/html;charset=UTF-8”<br><a id="more"></a><br>    <!-- FreeMarker视图解析器 --><br>    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver"><br>        <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"><br>        <property name="contentType" value="text/html;charset=UTF-8"><br>        <property name="cache" value="false"><br>        <property name="viewNames" value="*.ftl"><br>        <property name="suffix" value=""><br>        <property name="order" value="2"><br>    </property></property></property></property></property></property></bean></p><p>解决办法二：通过spring或其他第三方工具配置：</p><pre><code>&lt;bean id=&quot;freemakerCongfig&quot;    class=&quot;org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer&quot;&gt;       &lt;property name=&quot;templateLoaderPath&quot;&gt;       &lt;value&gt;/WEB-INF/web/&lt;/value&gt;       &lt;/property&gt;       &lt;property name=&quot;freemarkerSettings&quot;&gt;       &lt;props&gt;       &lt;prop key=&quot;defaultEncoding&quot;&gt;gbk&lt;/prop&gt;       &lt;/props&gt;       &lt;/property&gt;    &lt;/bean&gt;</code></pre><p>###页面编码和charset要跟上面配置的一致才可以，<br>    <meta http-equiv="Content-type" content="text/html; charset=gbk"></p><p>#####注意：还有一种常见的导致乱码问题：编辑器或文件保存的编码和页面设置的编码不一致会导致乱码，例如文件的编码(用记事本打开,另存为可以看到文件的编码)为UTF-8而页面的charset=gbk就会出现乱码，反之也一样。</p>]]></content>
+    
+    <summary type="html">
+    
+      Spring集成FreeMarker 中文乱码问题解决办法
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://joeybling.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot集成Druid不支持多条SQL</title>
+    <link href="https://joeybling.github.io/2018/04/17/SpringBoot%E9%9B%86%E6%88%90Druid%E4%B8%8D%E6%94%AF%E6%8C%81%E5%A4%9A%E6%9D%A1SQL/"/>
+    <id>https://joeybling.github.io/2018/04/17/SpringBoot集成Druid不支持多条SQL/</id>
+    <published>2018-04-17T07:49:55.000Z</published>
+    <updated>2018-04-17T07:52:21.912Z</updated>
+    
+    <content type="html"><![CDATA[<p>在DataSource 初始化Bean 添加 </p><pre><code>List&lt;Filter&gt; proxyFilters = new ArrayList&lt;Filter&gt;();WallFilter statFilter = new WallFilter();WallConfig config = new WallConfig();config.setMultiStatementAllow(true); // 批量操作statFilter.setConfig(config);proxyFilters.add(statFilter);druidDataSource.setProxyFilters(proxyFilters);</code></pre><p>贴上自己的Config</p><pre><code>package com.wstro.config;import java.sql.SQLException;import java.util.ArrayList;import java.util.HashMap;import java.util.List;import java.util.Map;import javax.sql.DataSource;import org.slf4j.Logger;import org.slf4j.LoggerFactory;import org.springframework.beans.factory.annotation.Value;import org.springframework.boot.web.servlet.FilterRegistrationBean;import org.springframework.boot.web.servlet.ServletRegistrationBean;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;import org.springframework.context.annotation.Primary;import org.springframework.transaction.annotation.EnableTransactionManagement;import com.alibaba.druid.filter.Filter;import com.alibaba.druid.pool.DruidDataSource;import com.alibaba.druid.support.http.StatViewServlet;import com.alibaba.druid.support.http.WebStatFilter;import com.alibaba.druid.wall.WallConfig;import com.alibaba.druid.wall.WallFilter;</code></pre><a id="more"></a><pre><code>/** * Druid数据源配置 *  * @author Joey * @Email 2434387555@qq.com * */@Configuration@EnableTransactionManagement // 启注解事务管理public class DataSourceConfig {  private Logger logger = LoggerFactory.getLogger(DataSourceConfig.class);@Value(&quot;${spring.datasource.url}&quot;)private String dbUrl;@Value(&quot;${spring.datasource.username}&quot;)private String username;@Value(&quot;${spring.datasource.password}&quot;)private String password;@Value(&quot;${spring.datasource.driverClassName}&quot;)private String driverClassName;@Value(&quot;${spring.datasource.initialSize}&quot;)private int initialSize;@Value(&quot;${spring.datasource.minIdle}&quot;)private int minIdle;@Value(&quot;${spring.datasource.maxActive}&quot;)private int maxActive;@Value(&quot;${spring.datasource.maxWait}&quot;)private int maxWait;@Value(&quot;${spring.datasource.timeBetweenEvictionRunsMillis}&quot;)private int timeBetweenEvictionRunsMillis;@Value(&quot;${spring.datasource.minEvictableIdleTimeMillis}&quot;)private int minEvictableIdleTimeMillis;@Value(&quot;${spring.datasource.validationQuery}&quot;)private String validationQuery;@Value(&quot;${spring.datasource.testWhileIdle}&quot;)private boolean testWhileIdle;@Value(&quot;${spring.datasource.testOnBorrow}&quot;)private boolean testOnBorrow;@Value(&quot;${spring.datasource.testOnReturn}&quot;)private boolean testOnReturn;@Value(&quot;${spring.datasource.poolPreparedStatements}&quot;)private boolean poolPreparedStatements;@Value(&quot;${spring.datasource.maxPoolPreparedStatementPerConnectionSize}&quot;)private int maxPoolPreparedStatementPerConnectionSize;@Value(&quot;${spring.datasource.filters}&quot;)private String filters;@Value(&quot;${spring.datasource.connectionProperties}&quot;)private String connectionProperties;/** * 注册DruidServlet *  * @return ServletRegistrationBean */@Beanpublic ServletRegistrationBean druidServletRegistrationBean() {    ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean();    servletRegistrationBean.setServlet(new StatViewServlet());    servletRegistrationBean.addUrlMappings(&quot;/druid/*&quot;);    // 白名单：    servletRegistrationBean.addInitParameter(&quot;allow&quot;, &quot;127.0.0.1&quot;);    // IP黑名单 (存在共同时，deny优先于allow) : 如果满足deny的话提示:Sorry, you are not    // permitted to view this page.    // 登录查看信息的账号密码.    servletRegistrationBean.addInitParameter(&quot;loginUsername&quot;, &quot;joey&quot;);    servletRegistrationBean.addInitParameter(&quot;loginPassword&quot;, &quot;jay&quot;);    // 是否能够重置数据.    servletRegistrationBean.addInitParameter(&quot;resetEnable&quot;, &quot;false&quot;);    return servletRegistrationBean;}/** * 注册DruidFilter拦截 *  * @return FilterRegistrationBean */@Beanpublic FilterRegistrationBean druidFilterRegistrationBean() {    FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();    filterRegistrationBean.setFilter(new WebStatFilter());    Map&lt;String, String&gt; initParams = new HashMap&lt;String, String&gt;();    // 设置忽略请求    initParams.put(&quot;exclusions&quot;, &quot;*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*&quot;);    filterRegistrationBean.setInitParameters(initParams);    filterRegistrationBean.addUrlPatterns(&quot;/*&quot;);    return filterRegistrationBean;}/** * 配置DataSource *  * @return DataSource * @throws SQLException */@Bean(initMethod = &quot;init&quot;, destroyMethod = &quot;close&quot;)@Primarypublic DataSource dataSource() throws SQLException {    DruidDataSource druidDataSource = new DruidDataSource();    druidDataSource.setUrl(dbUrl);    druidDataSource.setUsername(username);    druidDataSource.setPassword(password);    druidDataSource.setDriverClassName(driverClassName);    // configuration    druidDataSource.setInitialSize(initialSize);    druidDataSource.setMinIdle(minIdle);    druidDataSource.setMaxActive(maxActive);    druidDataSource.setMaxWait(maxWait);    druidDataSource.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);    druidDataSource.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);    druidDataSource.setValidationQuery(validationQuery);    druidDataSource.setTestWhileIdle(testWhileIdle);    druidDataSource.setTestOnBorrow(testOnBorrow);    druidDataSource.setTestOnReturn(testOnReturn);    druidDataSource.setPoolPreparedStatements(poolPreparedStatements);    druidDataSource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);    try {        List&lt;Filter&gt; proxyFilters = new ArrayList&lt;Filter&gt;();        WallFilter statFilter = new WallFilter();        WallConfig config = new WallConfig();        config.setMultiStatementAllow(true); // 批量操作        statFilter.setConfig(config);        proxyFilters.add(statFilter);        druidDataSource.setProxyFilters(proxyFilters);        druidDataSource.setFilters(filters);    } catch (SQLException e) {        logger.error(&quot;druid configuration initialization filter&quot;, e);    }    druidDataSource.setConnectionProperties(connectionProperties);    return druidDataSource;}</code></pre><p>}</p><p>properties</p><pre><code>#JDBC# \u6570\u636E\u5E93\u8BBF\u95EE\u914D\u7F6E# \u4E3B\u6570\u636E\u6E90\uFF0C\u9ED8\u8BA4\u7684spring.datasource.type=com.alibaba.druid.pool.DruidDataSourcespring.datasource.driverClassName=com.mysql.jdbc.Driverspring.datasource.url=jdbc:mysql://192.168.1.88:3306/wstro?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=UTF-8spring.datasource.username=rootspring.datasource.password=root# \u4E0B\u9762\u4E3A\u8FDE\u63A5\u6C60\u7684\u8865\u5145\u8BBE\u7F6E\uFF0C\u5E94\u7528\u5230\u4E0A\u9762\u6240\u6709\u6570\u636E\u6E90\u4E2D# \u521D\u59CB\u5316\u5927\u5C0F\uFF0C\u6700\u5C0F\uFF0C\u6700\u5927spring.datasource.initialSize=5spring.datasource.minIdle=5spring.datasource.maxActive=20# \u914D\u7F6E\u83B7\u53D6\u8FDE\u63A5\u7B49\u5F85\u8D85\u65F6\u7684\u65F6\u95F4spring.datasource.maxWait=60000# \u914D\u7F6E\u95F4\u9694\u591A\u4E45\u624D\u8FDB\u884C\u4E00\u6B21\u68C0\u6D4B\uFF0C\u68C0\u6D4B\u9700\u8981\u5173\u95ED\u7684\u7A7A\u95F2\u8FDE\u63A5\uFF0C\u5355\u4F4D\u662F\u6BEB\u79D2spring.datasource.timeBetweenEvictionRunsMillis=60000# \u914D\u7F6E\u4E00\u4E2A\u8FDE\u63A5\u5728\u6C60\u4E2D\u6700\u5C0F\u751F\u5B58\u7684\u65F6\u95F4\uFF0C\u5355\u4F4D\u662F\u6BEB\u79D2spring.datasource.minEvictableIdleTimeMillis=300000spring.datasource.validationQuery=SELECT 1 FROM DUALspring.datasource.testWhileIdle=truespring.datasource.testOnBorrow=falsespring.datasource.testOnReturn=false# \u6253\u5F00PSCache\uFF0C\u5E76\u4E14\u6307\u5B9A\u6BCF\u4E2A\u8FDE\u63A5\u4E0APSCache\u7684\u5927\u5C0Fspring.datasource.poolPreparedStatements=truespring.datasource.maxPoolPreparedStatementPerConnectionSize=20# \u914D\u7F6E\u76D1\u63A7\u7EDF\u8BA1\u62E6\u622A\u7684filters\uFF0C\u53BB\u6389\u540E\u76D1\u63A7\u754C\u9762sql\u65E0\u6CD5\u7EDF\u8BA1\uFF0C&apos;wall&apos;\u7528\u4E8E\u9632\u706B\u5899spring.datasource.filters=stat,wall,log4j# \u901A\u8FC7connectProperties\u5C5E\u6027\u6765\u6253\u5F00mergeSql\u529F\u80FD\uFF1B\u6162SQL\u8BB0\u5F55spring.datasource.connectionProperties=druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;druid.stat.logSlowSql=true;# \u5408\u5E76\u591A\u4E2ADruidDataSource\u7684\u76D1\u63A7\u6570\u636E  #spring.datasource.useGlobalDataSourceStat=true</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      SpringBoot集成Druid不支持多条SQL
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://joeybling.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux配置SSH Key到GitHub</title>
@@ -101,6 +221,26 @@ if (null != inputDir.listFiles()) {
     
     
       <category term="ELK日志分析" scheme="https://joeybling.github.io/tags/ELK%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux查看硬件信息</title>
+    <link href="https://joeybling.github.io/2018/03/17/Linux%E6%9F%A5%E7%9C%8B%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF/"/>
+    <id>https://joeybling.github.io/2018/03/17/Linux查看硬件信息/</id>
+    <published>2018-03-17T08:06:43.000Z</published>
+    <updated>2018-04-17T08:07:24.196Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h5><pre><code># uname -a               # 查看内核/操作系统/CPU信息# head -n 1 /etc/issue   # 查看操作系统版本# cat /proc/cpuinfo      # 查看CPU信息# hostname               # 查看计算机名# lspci -tv              # 列出所有PCI设备（yum install pciutils）# lsusb -tv              # 列出所有USB设备# lsmod                  # 列出加载的内核模块# env                    # 查看环境变量  </code></pre><a id="more"></a><h5 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h5><pre><code># free -m                # 查看内存使用量和交换区使用量# df -h                  # 查看各分区使用情况# du -sh &lt;目录名&gt;        # 查看指定目录的大小# grep MemTotal /proc/meminfo   # 查看内存总量# grep MemFree /proc/meminfo    # 查看空闲内存量# uptime                 # 查看系统运行时间、用户数、负载# cat /proc/loadavg      # 查看系统负载</code></pre><h5 id="磁盘和分区"><a href="#磁盘和分区" class="headerlink" title="磁盘和分区"></a>磁盘和分区</h5><pre><code># mount | column -t      # 查看挂接的分区状态# fdisk -l               # 查看所有分区# swapon -s              # 查看所有交换分区# hdparm -i /dev/hda     # 查看磁盘参数(仅适用于IDE设备)# dmesg | grep IDE       # 查看启动时IDE设备检测状况</code></pre><h5 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h5><pre><code># ifconfig               # 查看所有网络接口的属性# iptables -L            # 查看防火墙设置# route -n               # 查看路由表# netstat -lntp          # 查看所有监听端口# netstat -antp          # 查看所有已经建立的连接# netstat -s             # 查看网络统计信息</code></pre><h5 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h5><pre><code>  # ps -ef                 # 查看所有进程# top                    # 实时显示进程状态</code></pre><h5 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h5><pre><code># w                      # 查看活动用户# id &lt;用户名&gt;            # 查看指定用户信息# last                   # 查看用户登录日志# cut -d: -f1 /etc/passwd   # 查看系统所有用户# cut -d: -f1 /etc/group    # 查看系统所有组# crontab -l             # 查看当前用户的计划任务  </code></pre><h5 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h5><pre><code># chkconfig --list       # 列出所有系统服务# chkconfig --list | grep on    # 列出所有启动的系统服务  </code></pre><h5 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h5><pre><code># rpm -qa                # 查看所有安装的软件包  </code></pre><h5 id="查看网卡型号"><a href="#查看网卡型号" class="headerlink" title="查看网卡型号"></a>查看网卡型号</h5><pre><code>#   lspci | grep Ethernet  </code></pre><h5 id="查看内存和cpu最直接最常用的命令"><a href="#查看内存和cpu最直接最常用的命令" class="headerlink" title="查看内存和cpu最直接最常用的命令"></a>查看内存和cpu最直接最常用的命令</h5><pre><code>  # free# cat /proc/cpuinfo   </code></pre><h5 id="查看硬盘信息（查看硬盘型号和硬盘序列号）"><a href="#查看硬盘信息（查看硬盘型号和硬盘序列号）" class="headerlink" title="查看硬盘信息（查看硬盘型号和硬盘序列号）"></a>查看硬盘信息（查看硬盘型号和硬盘序列号）</h5><pre><code># df -h  </code></pre>]]></content>
+    
+    <summary type="html">
+    
+      Linux查看硬件信息
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://joeybling.github.io/tags/Linux/"/>
     
   </entry>
   
