@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-77a46ad27ca920e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-8e47a7a12aeb9e68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-ad3b6fb7812e01d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-04-17T08:38:01.478Z">
+<meta property="og:updated_time" content="2018-04-17T09:07:10.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 查看网卡UUID">
 <meta name="twitter:description" content="Linux 查看网卡UUID">
@@ -202,17 +202,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####Linux 查看网卡UUID</p>
-<p>######1、首先我们查看一下nmcli是哪个软件包提供的</p>
-<pre><code># yum provides &quot;*/nmcli&quot;
+        <h4 id="Linux-查看网卡UUID"><a href="#Linux-查看网卡UUID" class="headerlink" title="Linux 查看网卡UUID"></a>Linux 查看网卡UUID</h4><h6 id="1、首先我们查看一下nmcli是哪个软件包提供的"><a href="#1、首先我们查看一下nmcli是哪个软件包提供的" class="headerlink" title="1、首先我们查看一下nmcli是哪个软件包提供的"></a>1、首先我们查看一下nmcli是哪个软件包提供的</h6><pre><code># yum provides &quot;*/nmcli&quot;
 </code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-a42d314368eebd8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><a id="more"></a></p>
-<p>######2、安装NetworkManager服务</p>
-<pre><code># yum -y install NetworkManager
-</code></pre><p>######3、启动NetworkManager服务</p>
-<pre><code># service NetworkManager start
+<h6 id="2、安装NetworkManager服务"><a href="#2、安装NetworkManager服务" class="headerlink" title="2、安装NetworkManager服务"></a>2、安装NetworkManager服务</h6><pre><code># yum -y install NetworkManager
+</code></pre><h6 id="3、启动NetworkManager服务"><a href="#3、启动NetworkManager服务" class="headerlink" title="3、启动NetworkManager服务"></a>3、启动NetworkManager服务</h6><pre><code># service NetworkManager start
 </code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-21dd8cfcd7fc0216.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>######4、查看网卡UUID</p>
-<pre><code># nmcli con
+<h6 id="4、查看网卡UUID"><a href="#4、查看网卡UUID" class="headerlink" title="4、查看网卡UUID"></a>4、查看网卡UUID</h6><pre><code># nmcli con
   tips:如果有发现有报错
 # Error: could not connect to D-Bus.
 tips:查看/var/log/messages日志
@@ -229,17 +224,13 @@ Apr 20 14:53:05 localhost NetworkManager[2013]: &lt;error&gt; [1492671185.606620
 tips:重新启动
 # service NetworkManager start
 </code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-1d945ece865909ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>######运行nmcli</p>
-<pre><code># nmcli con
+<h6 id="运行nmcli"><a href="#运行nmcli" class="headerlink" title="运行nmcli"></a>运行nmcli</h6><pre><code># nmcli con
 </code></pre><p>报错:<br><img src="https://upload-images.jianshu.io/upload_images/2743275-77a46ad27ca920e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <pre><code>查看/var/log/messages日志
 # vi /var/log/messages
 </code></pre><p>发现有报错<br><img src="https://upload-images.jianshu.io/upload_images/2743275-8e47a7a12aeb9e68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>######g_slist_free_full 属于glist 的一个方法，缺少glist</p>
-<p>######解决方法:</p>
-<pre><code># yum -y install glib2-devel
-</code></pre><p>######3、此时再运行nmcli即可查看网卡UUID    </p>
-<pre><code># service NetworkManager start
+<h6 id="g-slist-free-full-属于glist-的一个方法，缺少glist"><a href="#g-slist-free-full-属于glist-的一个方法，缺少glist" class="headerlink" title="g_slist_free_full 属于glist 的一个方法，缺少glist"></a>g_slist_free_full 属于glist 的一个方法，缺少glist</h6><h6 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法:"></a>解决方法:</h6><pre><code># yum -y install glib2-devel
+</code></pre><h6 id="3、此时再运行nmcli即可查看网卡UUID"><a href="#3、此时再运行nmcli即可查看网卡UUID" class="headerlink" title="3、此时再运行nmcli即可查看网卡UUID"></a>3、此时再运行nmcli即可查看网卡UUID</h6><pre><code># service NetworkManager start
 # nmcli con
 </code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-ad3b6fb7812e01d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 
@@ -355,15 +346,6 @@ tips:重新启动
 
   
 <nav id="article-nav">
-  
-    <a href="/2018/04/17/我听说/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我听说
-        
-      </div>
-    </a>
   
   
     <a href="/2018/04/17/Linux-卸载分区/" id="article-nav-older" class="article-nav-link-wrap">

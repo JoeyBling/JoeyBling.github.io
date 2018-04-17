@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-79b686cdd3f0e8c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-59ae777451c4b097.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-a42a23c8dbe89e25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-04-17T08:01:13.069Z">
+<meta property="og:updated_time" content="2018-04-17T09:08:55.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 新建扩展分区">
 <meta name="twitter:description" content="Linux 新建扩展分区">
@@ -210,8 +210,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code># fdisk -l
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-a3f8dba4931f0e69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+        <h1 id="fdisk-l"><a href="#fdisk-l" class="headerlink" title="fdisk -l"></a>fdisk -l</h1><p><img src="https://upload-images.jianshu.io/upload_images/2743275-a3f8dba4931f0e69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <p>要进行新建扩展分区的磁盘是 /dev/sda<br><a id="more"></a></p>
 <pre><code># fdisk /dev/sda
 # p  打印分区表
@@ -252,24 +251,37 @@
 # df -hT  查看是否挂载成功
 </code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-79b686cdd3f0e8c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <p>分区格式类型是ext4 分区大小也是10G</p>
-<p>#####此时注意，这样机器重启后就重置了，如果需要永久生效需要设置开机自动挂载（磁盘）</p>
-<p>#####开机自动挂载（磁盘）</p>
-<pre><code># vi /etc/fstab
+<h5 id="此时注意，这样机器重启后就重置了，如果需要永久生效需要设置开机自动挂载（磁盘）"><a href="#此时注意，这样机器重启后就重置了，如果需要永久生效需要设置开机自动挂载（磁盘）" class="headerlink" title="此时注意，这样机器重启后就重置了，如果需要永久生效需要设置开机自动挂载（磁盘）"></a>此时注意，这样机器重启后就重置了，如果需要永久生效需要设置开机自动挂载（磁盘）</h5><h5 id="开机自动挂载（磁盘）"><a href="#开机自动挂载（磁盘）" class="headerlink" title="开机自动挂载（磁盘）"></a>开机自动挂载（磁盘）</h5><pre><code># vi /etc/fstab
 </code></pre><p>最后面添加</p>
 <pre><code>/dev/sda5 /data ext4 defaults 0 0
 /dev/sda6 /data2 ext4 defaults 0 0
 </code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-59ae777451c4b097.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>###tips:</p>
-<p>   ######第一列：分区的UUID或分区名 例如:/dev/sda5</p>
-<p>   ######第二列：Mount point：设备的挂载点，就是你要挂载到哪个目录下。</p>
-<p>   ######第三列：filesystem：磁盘文件系统的格式，包括ext2、ext3、reiserfs、nfs、vfat等</p>
-<p>   ######第四列：parameters：文件系统的参数<br>    Async/sync<br>    设置是否为同步方式运行，默认为async<br>    auto/noauto<br>     当下载mount -a 的命令时，此文件系统是否被主动挂载。默认为auto<br>    rw/ro<br>     是否以以只读或者读写模式挂载<br>    exec/noexec<br>     限制此文件系统内是否能够进行”执行”的操作<br>    user/nouser<br>    是否允许用户使用mount命令挂载<br>    suid/nosuid<br>    是否允许SUID的存在<br>    Usrquota<br>    启动文件系统支持磁盘配额模式<br>    Grpquota<br>    启动文件系统对群组磁盘配额模式的支持<br>    Defaults<br>    同事具有rw,suid,dev,exec,auto,nouser,async等默认参数的设置</p>
-<h6 id="第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1"><a href="#第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1" class="headerlink" title="第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1"></a>第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1</h6><pre><code>0    代表不要做dump备份
+<h3 id="tips"><a href="#tips" class="headerlink" title="tips:"></a>tips:</h3><h6 id="第一列：分区的UUID或分区名-例如-dev-sda5"><a href="#第一列：分区的UUID或分区名-例如-dev-sda5" class="headerlink" title="第一列：分区的UUID或分区名 例如:/dev/sda5"></a>第一列：分区的UUID或分区名 例如:/dev/sda5</h6><h6 id="第二列：Mount-point：设备的挂载点，就是你要挂载到哪个目录下。"><a href="#第二列：Mount-point：设备的挂载点，就是你要挂载到哪个目录下。" class="headerlink" title="第二列：Mount point：设备的挂载点，就是你要挂载到哪个目录下。"></a>第二列：Mount point：设备的挂载点，就是你要挂载到哪个目录下。</h6><h6 id="第三列：filesystem：磁盘文件系统的格式，包括ext2、ext3、reiserfs、nfs、vfat等"><a href="#第三列：filesystem：磁盘文件系统的格式，包括ext2、ext3、reiserfs、nfs、vfat等" class="headerlink" title="第三列：filesystem：磁盘文件系统的格式，包括ext2、ext3、reiserfs、nfs、vfat等"></a>第三列：filesystem：磁盘文件系统的格式，包括ext2、ext3、reiserfs、nfs、vfat等</h6><h6 id="第四列：parameters：文件系统的参数"><a href="#第四列：parameters：文件系统的参数" class="headerlink" title="第四列：parameters：文件系统的参数"></a>第四列：parameters：文件系统的参数</h6><pre><code>Async/sync
+设置是否为同步方式运行，默认为async
+auto/noauto 
+ 当下载mount -a 的命令时，此文件系统是否被主动挂载。默认为auto
+rw/ro        
+ 是否以以只读或者读写模式挂载
+exec/noexec        
+ 限制此文件系统内是否能够进行&quot;执行&quot;的操作
+user/nouser
+是否允许用户使用mount命令挂载
+suid/nosuid
+是否允许SUID的存在
+Usrquota
+启动文件系统支持磁盘配额模式
+Grpquota
+启动文件系统对群组磁盘配额模式的支持
+Defaults
+同事具有rw,suid,dev,exec,auto,nouser,async等默认参数的设置
+</code></pre><h6 id="第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1"><a href="#第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1" class="headerlink" title="第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1"></a>第五列：能否被dump备份命令作用：dump是一个用来作为备份的命令。通常这个参数的值为0或者1</h6><pre><code>0    代表不要做dump备份
 1    代表要每天进行dump的操作
 2    代表不定日期的进行dump操作
-</code></pre><p>   ######第六列：是否检验扇区：开机的过程中，系统默认会以fsck检验我们系统是否为完整（clean）。<br>    0    不要检验<br>    1    最早检验（一般根目录会选择）<br>    2    1级别检验完成之后进行检验</p>
-<p>####Tips:<br>    查看各个分区的UUID和磁盘文件系统的格式</p>
-<pre><code># blkid
+</code></pre><h6 id="第六列：是否检验扇区：开机的过程中，系统默认会以fsck检验我们系统是否为完整（clean）。"><a href="#第六列：是否检验扇区：开机的过程中，系统默认会以fsck检验我们系统是否为完整（clean）。" class="headerlink" title="第六列：是否检验扇区：开机的过程中，系统默认会以fsck检验我们系统是否为完整（clean）。"></a>第六列：是否检验扇区：开机的过程中，系统默认会以fsck检验我们系统是否为完整（clean）。</h6><pre><code>0    不要检验
+1    最早检验（一般根目录会选择）
+2    1级别检验完成之后进行检验
+</code></pre><h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h4><pre><code>查看各个分区的UUID和磁盘文件系统的格式
+# blkid
 </code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-a42a23c8dbe89e25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 
       

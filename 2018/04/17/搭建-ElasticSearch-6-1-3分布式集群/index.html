@@ -17,7 +17,7 @@
 <meta property="og:description" content="搭建 ElasticSearch 6.1.3分布式集群">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-04-17T07:58:01.983Z">
+<meta property="og:updated_time" content="2018-04-17T09:10:37.948Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建 ElasticSearch 6.1.3分布式集群">
 <meta name="twitter:description" content="搭建 ElasticSearch 6.1.3分布式集群">
@@ -197,8 +197,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####ELasticsearch 6.1.3要求JDK版本最低为1.8</p>
-<p>mac上的本机ip为192.168.1.111,设为master节点，配置如下：</p>
+        <h4 id="ELasticsearch-6-1-3要求JDK版本最低为1-8"><a href="#ELasticsearch-6-1-3要求JDK版本最低为1-8" class="headerlink" title="ELasticsearch 6.1.3要求JDK版本最低为1.8"></a>ELasticsearch 6.1.3要求JDK版本最低为1.8</h4><p>mac上的本机ip为192.168.1.111,设为master节点，配置如下：</p>
 <pre><code>cluster.name: my-application
 node.name: node-111
 
@@ -229,8 +228,7 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
 <pre><code>2017-06-07T11:33:39,369][INFO ][o.e.c.s.ClusterService   ] [node-102] detected_master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300}, added {{node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300},}, reason: zen-disco-receive(from master [master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300} committed version [8]])&apos;
 </code></pre><p>访问head，一个master一个slave组成集群，界面如下：</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这里写图片描述"></p>
-<p>###单机多节点集群配置</p>
-<p>如果想要在一台机器上启动多个节点，步骤如下：</p>
+<h3 id="单机多节点集群配置"><a href="#单机多节点集群配置" class="headerlink" title="单机多节点集群配置"></a>单机多节点集群配置</h3><p>如果想要在一台机器上启动多个节点，步骤如下：</p>
 <p>1、复制一份ELasticsearch的安装包<br>2、修改端口，比如一个是9200，一个是9205<br>3、删除data目录下的数据(如果是新解压的安装包就不必了)</p>
 
       

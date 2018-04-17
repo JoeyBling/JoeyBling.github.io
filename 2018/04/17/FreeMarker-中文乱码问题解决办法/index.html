@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="試毅-思伟">
 <meta property="og:description" content="Spring集成FreeMarker 中文乱码问题解决办法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-17T07:56:12.613Z">
+<meta property="og:updated_time" content="2018-04-17T09:11:26.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FreeMarker 中文乱码问题解决办法">
 <meta name="twitter:description" content="Spring集成FreeMarker 中文乱码问题解决办法">
@@ -215,9 +215,8 @@ datetime_format=yyyy-MM-dd HH:mm:Ss
        &lt;/props&gt;
        &lt;/property&gt;
     &lt;/bean&gt;
-</code></pre><p>###页面编码和charset要跟上面配置的一致才可以，<br>    <meta http-equiv="Content-type" content="text/html; charset=gbk"></p>
-<p>#####注意：还有一种常见的导致乱码问题：编辑器或文件保存的编码和页面设置的编码不一致会导致乱码，例如文件的编码(用记事本打开,另存为可以看到文件的编码)为UTF-8而页面的charset=gbk就会出现乱码，反之也一样。</p>
-
+</code></pre><h6 id="页面编码和charset要跟上面配置的一致才可以，"><a href="#页面编码和charset要跟上面配置的一致才可以，" class="headerlink" title="页面编码和charset要跟上面配置的一致才可以，"></a>页面编码和charset要跟上面配置的一致才可以，</h6><pre><code>&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html; charset=gbk&quot;&gt;
+</code></pre><h6 id="注意：还有一种常见的导致乱码问题：编辑器或文件保存的编码和页面设置的编码不一致会导致乱码，例如文件的编码-用记事本打开-另存为可以看到文件的编码-为UTF-8而页面的charset-gbk就会出现乱码，反之也一样。"><a href="#注意：还有一种常见的导致乱码问题：编辑器或文件保存的编码和页面设置的编码不一致会导致乱码，例如文件的编码-用记事本打开-另存为可以看到文件的编码-为UTF-8而页面的charset-gbk就会出现乱码，反之也一样。" class="headerlink" title="注意：还有一种常见的导致乱码问题：编辑器或文件保存的编码和页面设置的编码不一致会导致乱码，例如文件的编码(用记事本打开,另存为可以看到文件的编码)为UTF-8而页面的charset=gbk就会出现乱码，反之也一样。"></a>注意：还有一种常见的导致乱码问题：编辑器或文件保存的编码和页面设置的编码不一致会导致乱码，例如文件的编码(用记事本打开,另存为可以看到文件的编码)为UTF-8而页面的charset=gbk就会出现乱码，反之也一样。</h6>
       
 
       
