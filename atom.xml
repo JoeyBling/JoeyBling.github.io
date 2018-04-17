@@ -37,6 +37,37 @@
   </entry>
   
   <entry>
+    <title>Java中将一个文件夹下所有的文件压缩成一个文件</title>
+    <link href="https://joeybling.github.io/2018/04/17/Java%E4%B8%AD%E5%B0%86%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E6%89%80%E6%9C%89%E7%9A%84%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E6%88%90%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6/"/>
+    <id>https://joeybling.github.io/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/</id>
+    <published>2018-04-17T04:22:13.000Z</published>
+    <updated>2018-04-15T00:23:00.886Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>/** 缓冲 */static final byte[] buffer = new byte[2048];  // 来源  File inputDir = new File(request.getServletContext()      .getRealPath(Constant.getUploadPath()));  if (null != inputDir.listFiles()) {      // 压缩      zip(inputDir.listFiles(), &quot;&quot;, zip);  }  </code></pre><a id="more"></a><pre><code>/** * 压缩ZIP *  * @param files *            多个文件 * @param baseFolder *            压缩到ZIP的父级目录(目录后面跟上File.separator) * @param zos *            ZipOutputStream * @throws Exception */  private static void zip(File[] files, String baseFolder, ZipOutputStream zos)          throws Exception {      // 输入      FileInputStream fis = null;      // 条目      ZipEntry entry = null;      // 数目      int count = 0;      for (File file : files) {          if (file.isDirectory()) {          // 递归          zip(file.listFiles(),  baseFolder + file.getName() + File.separator, zos);          continue;          }          entry = new ZipEntry(baseFolder + file.getName());          // 加入          zos.putNextEntry(entry);          fis = new FileInputStream(file);          // 读取          while ((count = fis.read(buffer, 0, buffer.length)) != -1) {          // 写入          zos.write(buffer, 0, count);          }          zos.closeEntry(); // 释放资源      }  }  记得用完zip要close掉</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;pre&gt;&lt;code&gt;/** 缓冲 */
+static final byte[] buffer = new byte[2048];  
+
+
+// 来源  
+File inputDir = new File(request.getServletContext()  
+    .getRealPath(Constant.getUploadPath()));  
+if (null != inputDir.listFiles()) {  
+    // 压缩  
+    zip(inputDir.listFiles(), &amp;quot;&amp;quot;, zip);  
+}  
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://joeybling.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ELK之本地Grok Debugger配置</title>
     <link href="https://joeybling.github.io/2018/04/15/ELK%E4%B9%8B%E6%9C%AC%E5%9C%B0Grok-Debugger%E9%85%8D%E7%BD%AE/"/>
     <id>https://joeybling.github.io/2018/04/15/ELK之本地Grok-Debugger配置/</id>
