@@ -17,7 +17,7 @@
 <meta property="og:description" content="1、Ruby环境安装 清理已安装过的 #yum erase ruby ruby-libs ruby-mode ruby-rdoc ruby-irb ruby-ri ruby-docs #yum remove ruby  1.Ruby的安装 #yum install -y wget unzip #cd /usr/local #yum -y install  openssl-devel gcc #wg">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-ab527d48b90f29e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-04-15T00:15:21.449Z">
+<meta property="og:updated_time" content="2018-04-15T00:19:51.712Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ELK之本地Grok Debugger配置">
 <meta name="twitter:description" content="1、Ruby环境安装 清理已安装过的 #yum erase ruby ruby-libs ruby-mode ruby-rdoc ruby-irb ruby-ri ruby-docs #yum remove ruby  1.Ruby的安装 #yum install -y wget unzip #cd /usr/local #yum -y install  openssl-devel gcc #wg">
@@ -263,8 +263,10 @@ gem install unicorn -v=4.6.3
 8.替换Google的jquery源
 #cd /usr/local/grokbug
 #cd views 
-</code></pre><p>###执行下面5条语句<br>    sed -i ‘s#//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js#//lib.sinaapp.com/js/jquery/1.8.1/jquery.min.js#g’ index.haml</p>
-<pre><code>sed -i &apos;s#//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js#//lib.sinaapp.com/js/jquery-ui/1.9.2/jquery-ui.min.js#g&apos; index.haml
+</code></pre><p>###执行下面5条语句</p>
+<pre><code>sed -i &apos;s#//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js#//lib.sinaapp.com/js/jquery/1.8.1/jquery.min.js#g&apos; index.haml
+
+sed -i &apos;s#//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js#//lib.sinaapp.com/js/jquery-ui/1.9.2/jquery-ui.min.js#g&apos; index.haml
 
 sed -i &apos;s#//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js#//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js#g&apos; patterns.haml
 
