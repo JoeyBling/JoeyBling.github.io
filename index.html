@@ -60,6 +60,8 @@
 	        
 				<li><a href="/tags/java/">Java</a></li>
 	        
+				<li><a href="/tags/linux/">Linux</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -120,6 +122,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -141,12 +145,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/java/">Java</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/java/">Java</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/linux/">Linux</a></li>
 		        
 				</ul>
 			</nav>
@@ -163,35 +169,102 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-my-first-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Linux配置SSH-Key到GitHub" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/my-first-blog/">my-first-blog</a>
+      <a class="article-title" href="/2018/04/17/Linux配置SSH-Key到GitHub/">Linux配置SSH Key到GitHub</a>
     </h1>
   
 
         
-        <a href="/2018/04/17/my-first-blog/" class="archive-article-date">
-  	<time datetime="2018-04-17T02:30:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        <a href="/2018/04/17/Linux配置SSH-Key到GitHub/" class="archive-article-date">
+  	<time datetime="2018-04-17T06:48:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p>
-<ol>
-<li>全是静态文件，访问速度快；</li>
-<li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li>
-<li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li>
-</ol>
-        
-          <a class="article-more-a" href="/2018/04/17/my-first-blog/#more">more >></a>
-        
+        <h4 id="1-生成SSH-Key"><a href="#1-生成SSH-Key" class="headerlink" title="1.生成SSH Key"></a>1.生成SSH Key</h4><p>首先检查下本机是否已经安装了SSH，在终端输入ssh即可：</p>
+<div class="image-package"><br><div class="image-container" style="max-width: 544px; max-height: 141px; background-color: transparent;"><br><div class="image-container-fill" style="padding-bottom: 25.919999999999998%;"></div><br><div class="image-view" data-width="544" data-height="141"><img src="//upload-images.jianshu.io/upload_images/2743275-d5ee041fc6a3b53e.png" alt=""></div><br></div><br><div class="image-caption"></div><br></div>
+
+<p>如果没有安装进行yum安装</p>
+<pre><code>&lt;span class=&quot;hljs-comment&quot;&gt;# yum -y install openssh-clients&lt;/span&gt;
+`&lt;/pre&gt;
+
+###### 接下来就是生成ssh key了，输入ssh-keygen -t rsa，然后连续按回车键三次（注意：千万不要输入密码！）。
+
+&lt;div class=&quot;image-package&quot;&gt;
+&lt;div class=&quot;image-container&quot; style=&quot;max-width: 536px; max-height: 330px; background-color: transparent;&quot;&gt;
+&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 61.57%;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;image-view&quot; data-width=&quot;536&quot; data-height=&quot;330&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-7398d3f9f1eef72c.png)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+id_rsa.pub为公钥，id_rsa为私钥，它们都是隐藏文件。
+
+那么如何查看它们的内容呢？只需要继续执行以下两条命令即可。
+
+&lt;pre class=&quot;hljs bash&quot;&gt;`&lt;span class=&quot;hljs-comment&quot;&gt;# cd .ssh/&lt;/span&gt;
+&lt;span class=&quot;hljs-comment&quot;&gt;# cat id_rsa.pub&lt;/span&gt;
+`&lt;/pre&gt;
+&lt;div class=&quot;image-package&quot;&gt;
+&lt;div class=&quot;image-container&quot; style=&quot;max-width: 700px; max-height: 66px; background-color: transparent;&quot;&gt;
+&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 5.779999999999999%;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;image-view&quot; data-width=&quot;1142&quot; data-height=&quot;66&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-2c142d50f896e48b.png)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+#### 2.添加SSH Key到GitHub上
+
+&lt;div class=&quot;image-package&quot;&gt;
+&lt;div class=&quot;image-container&quot; style=&quot;max-width: 260px; max-height: 280px; background-color: transparent;&quot;&gt;
+&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 107.69%;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;image-view&quot; data-width=&quot;260&quot; data-height=&quot;280&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-062ea02946eb9af5.png)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+接着执行下面操作：
+
+&lt;div class=&quot;image-package&quot;&gt;
+&lt;div class=&quot;image-container&quot; style=&quot;max-width: 700px; max-height: 440px; background-color: transparent;&quot;&gt;
+&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 41.28%;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;image-view&quot; data-width=&quot;1066&quot; data-height=&quot;440&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-d2a6a8697131e8d7.png)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+点击New SSH Key按钮后进行Key的填写操作，完成SSH Key的添加。如下图：
+
+&lt;div class=&quot;image-package&quot;&gt;
+&lt;div class=&quot;image-container&quot; style=&quot;max-width: 700px; max-height: 664px; background-color: transparent;&quot;&gt;
+&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 58.4%;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;image-view&quot; data-width=&quot;1137&quot; data-height=&quot;664&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-1a8f4cd790d9d667.png)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;image-package&quot;&gt;
+&lt;div class=&quot;image-container&quot; style=&quot;max-width: 700px; max-height: 630px; background-color: transparent;&quot;&gt;
+&lt;div class=&quot;image-container-fill&quot; style=&quot;padding-bottom: 40.23%;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;image-view&quot; data-width=&quot;1566&quot; data-height=&quot;630&quot;&gt;![](//upload-images.jianshu.io/upload_images/2743275-cdbdf7fd81c8ac11.png)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+添加SSH Key成功之后，继续输入命令进行测试。
+&lt;pre class=&quot;hljs ruby&quot;&gt;`&lt;span class=&quot;hljs-comment&quot;&gt;# ssh -T git&lt;span class=&quot;hljs-doctag&quot;&gt;@github&lt;/span&gt;.com&lt;/span&gt;
+</code></pre><div class="image-package"><br><div class="image-container" style="max-width: 700px; max-height: 97px; background-color: transparent;"><br><div class="image-container-fill" style="padding-bottom: 13.4%;"></div><br><div class="image-view" data-width="724" data-height="97"><img src="//upload-images.jianshu.io/upload_images/2743275-5310d1ab738cb79a.png" alt=""></div><br></div><br><div class="image-caption"></div><br></div>
+
+<p>出现上图结果则说明添加SSH Key成功。</p>
+
       
 
       
@@ -204,7 +277,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -214,78 +287,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/17/my-first-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/14/hello-world/" class="archive-article-date">
-  	<time datetime="2018-04-14T02:42:48.575Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/14/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/04/17/Linux配置SSH-Key到GitHub/">展开全文 >></a>
         </p>
       
 
@@ -410,7 +412,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
             
             <div class="clearfix"></div>
