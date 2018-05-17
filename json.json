@@ -1,0 +1,49 @@
+{
+	"status": 200,
+	"message": null,
+	"data": {
+		"total": 19,
+		"previous": null,
+		"next": "http://192.168.11.6/api/association-main/?page=2",
+		"page": 1,
+		"page_size": 15,
+		"list": [{
+			"id": 27,
+			"username": "18770004745_9123",
+			"member_count": 0,
+			"district_detail": {
+				"areaId": "130203000000",
+				"areaName": "路北区",
+				"provinceId": "130000000000",
+				"cityId": "130200000000",
+				"countyId": "130203000000",
+				"parentId": "130200000000",
+				"level": "3",
+				"lon": "118.20079",
+				"lat": "39.62436",
+				"wholeName": "中国,河北省,唐山市,路北区"
+			},
+			"name": "万万总会总会总会uwww",
+			"brief_name": "万万总会总会总会ww",
+			"address": "万万总会总会总会",
+			"president_name": "万万总会总会总会",
+			"president_identity": "360201444477414",
+			"president_phone": "18200004747",
+			"president_unit": "总会总会总会",
+			"create_date": "2018-04-05",
+			"business": "总会总会总会",
+			"desc": "总会总会总会",
+			"contacts": "总会总会总会",
+			"mobile": "18270005555",
+			"telephone": null,
+			"email": null,
+			"remark": "总会总会总会",
+			"lock_remark": "",
+			"status": 0,
+			"create": "2018-04-23 17:56:33",
+			"logo": 114,
+			"district": "130203000000",
+			"user": 105
+		}]
+	}
+}
