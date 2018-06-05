@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://joeybling.github.io">
-  <title>Archives | 試毅-思伟</title>
+  <title>CentOS6.5 离线安装MySQL5.6.26 | 試毅-思伟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="試毅-思伟_技术博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="試毅-思伟">
-<meta property="og:url" content="https://joeybling.github.io/archives/page/2/index.html">
+  <meta name="description" content="CentOS6.5 离线安装MySQL5.6.26">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS6.5 离线安装MySQL5.6.26">
+<meta property="og:url" content="https://joeybling.github.io/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/index.html">
 <meta property="og:site_name" content="試毅-思伟">
-<meta property="og:description" content="試毅-思伟_技术博客">
+<meta property="og:description" content="CentOS6.5 离线安装MySQL5.6.26">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-1d296e2cb8b73d3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-6cdfd951579ad2d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-eb169140eb6b5b36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-06-05T11:35:03.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="試毅-思伟">
-<meta name="twitter:description" content="試毅-思伟_技术博客">
+<meta name="twitter:title" content="CentOS6.5 离线安装MySQL5.6.26">
+<meta name="twitter:description" content="CentOS6.5 离线安装MySQL5.6.26">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2743275-1d296e2cb8b73d3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="試毅-思伟" type="application/atom+xml">
   
@@ -173,112 +179,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CentOS6.5 离线安装MySQL5.6.26" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CentOS6.5 离线安装MySQL5.6.26
+    </h1>
+  
+
+        
+        <a href="/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/" class="archive-article-date">
+  	<time datetime="2018-06-06T07:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-06</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1、卸载之前安装的MySQL"><a href="#1、卸载之前安装的MySQL" class="headerlink" title="1、卸载之前安装的MySQL"></a>1、卸载之前安装的MySQL</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> rpm -qa | grep mysql   --查看系统之前是否已安装MySQL。</span><br><span class="line"><span class="meta">#</span> rpm -e --nodeps mysql-libs-5.1.71-1.el6.x86_64   --执行删除语句</span><br><span class="line"><span class="meta">#</span> rm -rf /var/lib/mysql*   --善后处理</span><br><span class="line"><span class="meta">#</span> rm -rf /usr/share/mysql*</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="2、安装MySQL"><a href="#2、安装MySQL" class="headerlink" title="2、安装MySQL"></a>2、安装MySQL</h4><h6 id="2-1-下载并安装-libaio"><a href="#2-1-下载并安装-libaio" class="headerlink" title="2.1 下载并安装 libaio"></a>2.1 下载并安装 libaio</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local</span><br><span class="line"><span class="meta">#</span> wget http://mirror.centos.org/centos/6/os/x86_64/Packages/libaio-0.3.107-10.el6.x86_64.rpm</span><br><span class="line"><span class="meta">#</span> rpm -ivh libaio-0.3.107-10.el6.x86_64.rpm</span><br></pre></td></tr></table></figure>
+<h6 id="2-2-下载并安装MySQL"><a href="#2-2-下载并安装MySQL" class="headerlink" title="2.2 下载并安装MySQL"></a>2.2 下载并安装MySQL</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local</span><br><span class="line"><span class="meta">#</span> wget https://dev.mysql.com/get/archives/mysql-5.6/MySQL-5.6.26-1.linux_glibc2.5.x86_64.rpm-bundle.tar</span><br><span class="line"><span class="meta">#</span> tar -xf MySQL-5.6.26-1.linux_glibc2.5.x86_64.rpm-bundle.tar</span><br><span class="line"><span class="meta">#</span> rpm -ivh MySQL-server-5.6.26-1.linux_glibc2.5.x86_64.rpm</span><br><span class="line"><span class="meta">#</span> rpm -ivh MySQL-client-5.6.26-1.linux_glibc2.5.x86_64.rpm</span><br></pre></td></tr></table></figure>
+<h6 id="2-3-查看并修改MySQL-root用户密码"><a href="#2-3-查看并修改MySQL-root用户密码" class="headerlink" title="2.3 查看并修改MySQL root用户密码"></a>2.3 查看并修改MySQL root用户密码</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> more /root/.mysql_secret</span><br><span class="line"><span class="meta">#</span> service mysql restart</span><br><span class="line"><span class="meta">#</span> mysqladmin -uroot -pFeyU2YjwMcAw9Nv0 password 'root'  --修改root密码为root</span><br><span class="line"><span class="meta">#</span> mysql -uroot -proot   --测试登陆</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2743275-1d296e2cb8b73d3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h6 id="2-4-配置MySQL数据库编码"><a href="#2-4-配置MySQL数据库编码" class="headerlink" title="2.4 配置MySQL数据库编码"></a>2.4 配置MySQL数据库编码</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cp -rp /usr/share/mysql/my-default.cnf /etc/my.cnf</span><br><span class="line"><span class="meta">#</span> 在mysqld下面增加</span><br><span class="line">init-connect='SET NAMES utf8'</span><br><span class="line">character-set-server = utf8</span><br><span class="line"><span class="meta">#</span> service mysql restart</span><br><span class="line"><span class="meta">#</span> mysql -uroot -proot  --验证是否成功</span><br><span class="line"><span class="meta">#</span> show variables like 'character%';</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2743275-6cdfd951579ad2d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<hr>
+<p><img src="https://upload-images.jianshu.io/upload_images/2743275-eb169140eb6b5b36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h6 id="2-5-配置MySQL远程访问"><a href="#2-5-配置MySQL远程访问" class="headerlink" title="2.5 配置MySQL远程访问"></a>2.5 配置MySQL远程访问</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> service iptables stop</span><br><span class="line"><span class="meta">#</span> chkconfig iptables off</span><br><span class="line"><span class="meta">#</span> mysql -uroot -proot</span><br><span class="line"><span class="meta">#</span> grant all privileges on *.* to root@'%' identified by 'root' WITH GRANT OPTION;</span><br><span class="line"><span class="meta">#</span> flush privileges;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/" class="archive-article-date">
-  	<time datetime="2018-04-17T04:22:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/">Java中将一个文件夹下所有的文件压缩成一个文件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/15/ELK之本地Grok-Debugger配置/" class="archive-article-date">
-  	<time datetime="2018-04-15T00:13:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/15/ELK之本地Grok-Debugger配置/">ELK之本地Grok Debugger配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ELK日志分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/17/Linux查看硬件信息/" class="archive-article-date">
-  	<time datetime="2018-03-17T08:06:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/17/Linux查看硬件信息/">Linux查看硬件信息</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -290,59 +259,105 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://joeybling.github.io/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/01/我听说/" class="archive-article-date">
-  	<time datetime="2017-01-01T08:57:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/01/我听说/">我听说</a>
-    </h1>
+  
+    <a href="/2018/06/05/Linux安装OpenResty api 网关 Orange/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux安装OpenResty api 网关 Orange</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
   
 
 
@@ -367,8 +382,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

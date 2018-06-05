@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="試毅-思伟">
 <meta property="og:description" content="Linux查看硬件信息">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-17T08:15:16.499Z">
+<meta property="og:updated_time" content="2018-06-05T11:35:03.935Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux查看硬件信息">
 <meta name="twitter:description" content="Linux查看硬件信息">
@@ -24,7 +24,7 @@
     <link rel="alternative" href="/atom.xml" title="試毅-思伟" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -62,9 +62,9 @@
 	        
 				<li><a href="/tags/Java/">Java</a></li>
 	        
-				<li><a href="/tags/Linux/">Linux</a></li>
+				<li><a href="/tags/Linux">Linux</a></li>
 	        
-				<li><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+				<li><a href="/tags/ELK日志分析">ELK日志分析</a></li>
 	        
 			</ul>
 		</nav>
@@ -158,9 +158,9 @@
 		        
 					<li style="width: 25%"><a href="/tags/Java/">Java</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/Linux/">Linux</a></li>
+					<li style="width: 25%"><a href="/tags/Linux">Linux</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+					<li style="width: 25%"><a href="/tags/ELK日志分析">ELK日志分析</a></li>
 		        
 				</ul>
 			</nav>
@@ -222,7 +222,7 @@
 # netstat -lntp          # 查看所有监听端口
 # netstat -antp          # 查看所有已经建立的连接
 # netstat -s             # 查看网络统计信息
-</code></pre><h5 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h5><pre><code># ps -ef                 # 查看所有进程
+</code></pre><h5 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h5><pre><code>  # ps -ef                 # 查看所有进程
 # top                    # 实时显示进程状态
 </code></pre><h5 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h5><pre><code># w                      # 查看活动用户
 # id &lt;用户名&gt;            # 查看指定用户信息
@@ -233,8 +233,8 @@
 </code></pre><h5 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h5><pre><code># chkconfig --list       # 列出所有系统服务
 # chkconfig --list | grep on    # 列出所有启动的系统服务  
 </code></pre><h5 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h5><pre><code># rpm -qa                # 查看所有安装的软件包  
-</code></pre><h5 id="查看网卡型号"><a href="#查看网卡型号" class="headerlink" title="查看网卡型号"></a>查看网卡型号</h5><pre><code># lspci | grep Ethernet  
-</code></pre><h5 id="查看内存和cpu最直接最常用的命令"><a href="#查看内存和cpu最直接最常用的命令" class="headerlink" title="查看内存和cpu最直接最常用的命令"></a>查看内存和cpu最直接最常用的命令</h5><pre><code># free
+</code></pre><h5 id="查看网卡型号"><a href="#查看网卡型号" class="headerlink" title="查看网卡型号"></a>查看网卡型号</h5><pre><code>#   lspci | grep Ethernet  
+</code></pre><h5 id="查看内存和cpu最直接最常用的命令"><a href="#查看内存和cpu最直接最常用的命令" class="headerlink" title="查看内存和cpu最直接最常用的命令"></a>查看内存和cpu最直接最常用的命令</h5><pre><code>  # free
 # cat /proc/cpuinfo   
 </code></pre><h5 id="查看硬盘信息（查看硬盘型号和硬盘序列号）"><a href="#查看硬盘信息（查看硬盘型号和硬盘序列号）" class="headerlink" title="查看硬盘信息（查看硬盘型号和硬盘序列号）"></a>查看硬盘信息（查看硬盘型号和硬盘序列号）</h5><pre><code># df -h  
 </code></pre>
@@ -390,17 +390,6 @@
   
   
   
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "https://joeybling.github.io/2018/03/17/Linux查看硬件信息/", 
-    sourceId: "Linux查看硬件信息",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-  
 
   
 
@@ -419,9 +408,8 @@
     		&copy; 2018 試毅-思伟
     	</div>
       	<div class="footer-right">
-      		GitHub:<a href="https://github.com/JoeyBling" target="_blank">Joey</a>  by Litten
+      		GitHub:<a href="https://github.com/JoeyBling" target="_blank">Joey</a> by Litten
       	</div>
-	
     </div>
   </div>
 </footer>
@@ -501,15 +489,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ELK日志分析</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
             
             <div class="clearfix"></div>
@@ -576,7 +564,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">联系QQ:2434387555&lt;br/&gt;&lt;br/&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">联系QQ:2434387555&lt;br&gt;&lt;br&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
   	  	
     	</section>
     
