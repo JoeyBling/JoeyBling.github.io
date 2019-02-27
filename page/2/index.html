@@ -60,9 +60,11 @@
 	        
 				<li><a href="/tags/Java/">Java</a></li>
 	        
-				<li><a href="/tags/Linux">Linux</a></li>
+				<li><a href="/tags/Linux/">Linux</a></li>
 	        
-				<li><a href="/tags/ELK日志分析">ELK日志分析</a></li>
+				<li><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+	        
+				<li><a href="/tags/日记本/">日记本</a></li>
 	        
 			</ul>
 		</nav>
@@ -130,6 +132,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -156,13 +160,15 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 20%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/Java/">Java</a></li>
+					<li style="width: 20%"><a href="/tags/Java/">Java</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/Linux">Linux</a></li>
+					<li style="width: 20%"><a href="/tags/Linux/">Linux</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/ELK日志分析">ELK日志分析</a></li>
+					<li style="width: 20%"><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+		        
+					<li style="width: 20%"><a href="/tags/日记本/">日记本</a></li>
 		        
 				</ul>
 			</nav>
@@ -179,217 +185,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Java中将一个文件夹下所有的文件压缩成一个文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-CentOS 6.X 安装VirtualBox-5.1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/">Java中将一个文件夹下所有的文件压缩成一个文件</a>
+      <a class="article-title" href="/2018/08/06/CentOS 6.X 安装VirtualBox-5.1/">CentOS 6.X 安装VirtualBox-5.1</a>
     </h1>
   
 
         
-        <a href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/" class="archive-article-date">
-  	<time datetime="2018-04-17T04:22:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        <a href="/2018/08/06/CentOS 6.X 安装VirtualBox-5.1/" class="archive-article-date">
+  	<time datetime="2018-08-06T08:19:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>/** 缓冲 */
-static final byte[] buffer = new byte[2048];  
-
-
-// 来源  
-File inputDir = new File(request.getServletContext()  
-    .getRealPath(Constant.getUploadPath()));  
-if (null != inputDir.listFiles()) {  
-    // 压缩  
-    zip(inputDir.listFiles(), &quot;&quot;, zip);  
-}  
-</code></pre>
+        <h5 id="一、安装virtualbox的yum源"><a href="#一、安装virtualbox的yum源" class="headerlink" title="一、安装virtualbox的yum源"></a>一、安装virtualbox的yum源</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> vim /etc/yum.repos.d/virtualbox.repo</span><br><span class="line"><span class="meta">#</span> 添加以下内容</span><br><span class="line">[virtualbox] </span><br><span class="line">name=Oracle Linux / RHEL / CentOS-$releasever / $basearch - VirtualBox </span><br><span class="line">baseurl=http://download.virtualbox.org/virtualbox/rpm/el/$releasever/$basearch </span><br><span class="line">enabled=1 </span><br><span class="line">gpgcheck=1 </span><br><span class="line">gpgkey=http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ELK之本地Grok-Debugger配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/15/ELK之本地Grok-Debugger配置/">ELK之本地Grok Debugger配置</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/15/ELK之本地Grok-Debugger配置/" class="archive-article-date">
-  	<time datetime="2018-04-15T00:13:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、Ruby环境安装</p>
-<pre><code>清理已安装过的
-#yum erase ruby ruby-libs ruby-mode ruby-rdoc ruby-irb ruby-ri ruby-docs
-#yum remove ruby
-
-1.Ruby的安装
-#yum install -y wget unzip
-#cd /usr/local
-#yum -y install  openssl-devel gcc
-#wget https://ruby.taobao.org/mirrors/ruby/2.1/ruby-2.1.7.tar.gz
-#tar zxf ruby-2.1.7.tar.gz
-#cd ruby-2.1.7
-#./configure --prefix=/usr/local/ruby2.1.7
-#make &amp;&amp; make install
-#echo &apos;export PATH=/usr/local/ruby2.1.7/bin:$PATH&apos;&gt;&gt;/etc/profile
-#source /etc/profile
-说明：别使用ruby最新的2.2或者2.3的版本，可能出现部分组件无法安装
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/04/15/ELK之本地Grok-Debugger配置/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ELK日志分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/15/ELK之本地Grok-Debugger配置/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux查看硬件信息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/17/Linux查看硬件信息/">Linux查看硬件信息</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/17/Linux查看硬件信息/" class="archive-article-date">
-  	<time datetime="2018-03-17T08:06:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h5><pre><code># uname -a               # 查看内核/操作系统/CPU信息
-# head -n 1 /etc/issue   # 查看操作系统版本
-# cat /proc/cpuinfo      # 查看CPU信息
-# hostname               # 查看计算机名
-# lspci -tv              # 列出所有PCI设备（yum install pciutils）
-# lsusb -tv              # 列出所有USB设备
-# lsmod                  # 列出加载的内核模块
-# env                    # 查看环境变量  
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/03/17/Linux查看硬件信息/#more">more >></a>
+          <a class="article-more-a" href="/2018/08/06/CentOS 6.X 安装VirtualBox-5.1/#more">more >></a>
         
       
 
@@ -413,7 +231,7 @@ if (null != inputDir.listFiles()) {
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/17/Linux查看硬件信息/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/08/06/CentOS 6.X 安装VirtualBox-5.1/">展开全文 >></a>
         </p>
       
 
@@ -443,52 +261,181 @@ if (null != inputDir.listFiles()) {
 
 
   
-    <article id="post-我听说" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-CentOS 6.X 安装VNC Server实现图形化访问" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/01/我听说/">我听说</a>
+      <a class="article-title" href="/2018/08/06/CentOS 6.X 安装VNC Server实现图形化访问/">CentOS 6.X 安装VNC Server实现图形化访问</a>
     </h1>
   
 
         
-        <a href="/2017/01/01/我听说/" class="archive-article-date">
-  	<time datetime="2017-01-01T08:57:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
+        <a href="/2018/08/06/CentOS 6.X 安装VNC Server实现图形化访问/" class="archive-article-date">
+  	<time datetime="2018-08-06T07:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/2743275-9bfadb628569fe76.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>　　我听说，有一种猫叫做雨猫。天气温暖时，它就变得蓬松毛绒绒的，像白云一样上浮，你可以拴着它，像放风筝一样走，它会变透明，阳光透得过它的身体。天气晦暗时它会变黑，坠在地上，满地乱跑，毛变得硬硬的，像刚刮过的胡茬一样。你得抱着它，等天气晴朗时，再把它放出去，就像风筝末梢放着一团棉花糖。</p>
-<hr>
-<p>　　我听说，有种青蛙，透明洁白，只吃茶叶。吃多之后，吐气如兰。冬天它便僵卧，张着大嘴，眠去一个季节。你往它肚里倒热水，水便成茶，馥郁芳香，可以倒在杯子里喝，香沁肺腑。有个女孩子，手头没有杯子，于是捧起青蛙，嘴对着嘴，把青蛙嘴当茶杯口。结果青蛙醒了，变成一白衣少年：“哪个公主吻了我？”</p>
-<hr>
-<p>　　我听说，有一种驯鹿，很爱长颈鹿的斑纹和气味，但是太矮，又碍于长颈鹿是哑巴，所以没法谈恋爱。于是它们就长起了杉树一样直拔云天的角，然后到处找一个人，在角的顶端造一个房子住着。每天，那个人负责在高树摘果子，送给长颈鹿吃，以促成驯鹿和长颈鹿的爱情——虽然见不到面，但灵魂相通的爱情。</p>
-<hr>
-<p>　　我听说，北方有一种松鼠，特别大，毛茸茸的，睡觉时喜欢摊开四肢，露出软绵绵的肚皮。你抓住一只，混熟了，就可以把它当床，睡在它的肚子上，用它的尾巴做被子。但它喜欢梦游，到处爬，所以你睡着前眼睛明明看见天花板的花纹，醒来时就可能看见松树枝、杉树枝、云、麻雀和松毛虫。</p>
-<hr>
-<p>　　我听说，有一种猫，特别怕冷，一遇到冷环境就全身长起蓬松松软绵绵的长毛，并且开始冬眠，怎么叫都不醒。冬天你把它挂在脖子上出门，就好像穿了件毛大衣。到了温暖的室内，它暖醒了，就喵一声跳下来，自己到炉子旁边去接着睡了。因为冬天很长，它在冬天基本是裘状，所以叫冬裘夏猫。</p>
-<hr>
-<p>　　我听说，有种野猪，睡一觉就长一层脂肪，起来跑一跑就练出一层肌肉，所以他身上肥瘦肥瘦，像夹心饼干。他爱去南方的海边泡澡，泡一身大粒子盐味，吹风，然后哼唧哼唧去温泉，一边蒸自己一边吃树叶子。你埋伏在温泉边，射倒它，能吃到现成的蒸火腿。你最好带蜂蜜，敷一遍再蒸，更好吃。</p>
-<hr>
-<p>　　我听说，以前有人喜欢在海蚌上写故事写诗。你走在海边，海蚌会跟你说：我身上有字，可以给你看噢，但有个条件，我不识字，你得念给我听。你答应了，海蚌就张开壳来，让你给它念故事。如果你看入神忘了继续念，或者企图摘抄剽窃，海蚌就会夹你一下；如果你念得好，海蚌就送你颗珍珠。</p>
-<hr>
-<p>　　我听说，南方有一种鸟，身材纤瘦，尾羽很长，善吟诗，平时看上去盈盈一握，却筋骨健壮。如果你和它混熟了，它就会把身体绷直，你可以握着它的腰，用它的嘴蘸墨、写字，画梅花、打印章时，还可以用它印个浅爪痕。可是它挑剔得很，墨质差，纸脏，字写得难看，或者句子毫无文采，它就会破口大骂：“居然用老娘写这么烂的文章！”</p>
-<hr>
-<p>我听说有种雪狐，极妩媚，皮毛柔滑。善学声音，爱恶作剧，喜在窗外学男主人女同学、女同事等声音，引女主人疑心吵架，引以为乐。被抓住后会要求：给你雪狐裘，放我走吧。若男主人不允，她便媚笑：原来是你舍不得我走啊嗯……女主人遂朝男主人双目圆睁：你留她干嘛，还不放走？心思又活络了嗯？！</p>
-<hr>
-<p>　　我听说，有种熊叫做云熊，其白如雪，其大若垂天之云。春天开始浮游，夏天吸取阳光。冬天，它随风在天空飘荡，到一个寒冷的地方，就开始下一团团的熊绒毛。熊绒可做大衣，闻得到夏天阳光的味道。熊绒落完，它也就飘下地来。你闻以蜂蜜，冬眠。到春天它长起了毛，就又变成云浮起来了。</p>
-<hr>
-<p>　　我听说有种蜗牛，寿命很长，以八千岁为春，以八千岁为秋。丈夫对妻子说，我要吻你一下，然后出门去买报纸。妻子就闭上眼，等了八天，吻到了，于是丈夫出门了。等他回来，妻子抱怨说：你这一走就是六百年，我好担心。丈夫说：哎呀，我是怕又过时了，站在那里花二百年把新闻看了嘛。</p>
-<hr>
-<p>　　我听说有种章鱼，善于下厨。你坐柜台后面，问它要三明治寿司刺身铁板烧咖啡茶涮锅烤串回锅肉，它舞起手臂们，切剔炒烹翻炸调撒料颠勺，又快又好，还能剩出三只手，一只负责收钱，两只和你打扑克解闷。但它开不起玩笑，偶尔它不小心手臂被铁板烫到，你可不能说“那我要这条章鱼烧！” 不然它就会舞起锅铲，任你是三头六臂也挡不住它四面八方朝你扔鱼丸。</p>
-<hr>
-<p>　　我听说有种虎鲸，很温柔，喜欢光，不潜游，但又怕晒。你在它背上铺沙子，张阳伞，它便喜欢你，任你在它背上住下，钓鱼、睡午觉、接吻、喝果汁。每天它张嘴吞许多小鱼，自己吃些，剩下的喷水送给你，于是你天天有新鲜刺身吃。偶然它也馋，愿意吃熟的，就会张嘴，要你抛给吃章鱼烧。</p>
+        <h5 id="一、安装gnome图形化桌面"><a href="#一、安装gnome图形化桌面" class="headerlink" title="一、安装gnome图形化桌面"></a>一、安装gnome图形化桌面</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> yum groupinstall -y "X Window System"</span><br><span class="line"><span class="meta">#</span> yum groupinstall -y "Desktop"</span><br><span class="line"><span class="meta">#</span> yum groupinstall -y "Chinese Support"</span><br></pre></td></tr></table></figure>
+<h5 id="二、安装vncserver（vnc是一款优秀的远程控制软件）"><a href="#二、安装vncserver（vnc是一款优秀的远程控制软件）" class="headerlink" title="二、安装vncserver（vnc是一款优秀的远程控制软件）"></a>二、安装vncserver（vnc是一款优秀的远程控制软件）</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> yum install -y tigervnc-server</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/08/06/CentOS 6.X 安装VNC Server实现图形化访问/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/CentOS 6.X 安装VNC Server实现图形化访问/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CentOS 6.X 图形界面安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/06/CentOS 6.X 图形界面安装/">CentOS 6.X 图形界面安装</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/06/CentOS 6.X 图形界面安装/" class="archive-article-date">
+  	<time datetime="2018-08-06T07:39:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="一、安装图形界面"><a href="#一、安装图形界面" class="headerlink" title="一、安装图形界面"></a>一、安装图形界面</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> yum groupinstall -y "Desktop" "Desktop Platform" "Fonts" "General Purpose Desktop" "Graphical Administration Tools" "Input Methods" "Legacy X Window System compatibility" "Remote Desktop Clients" "X Window System"</span><br><span class="line"><span class="meta">#</span> vi /etc/inittab</span><br><span class="line"><span class="meta">#</span> 修改最后一行为id:5:initdefault:</span><br><span class="line"><span class="meta">#</span> startx</span><br><span class="line"><span class="meta">#</span> reboot</span><br></pre></td></tr></table></figure>
+<h5 id="二、安装中文输入法-可选"><a href="#二、安装中文输入法-可选" class="headerlink" title="二、安装中文输入法(可选)"></a>二、安装中文输入法(可选)</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> yum -y install "@Chinese Support"</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/CentOS 6.X 图形界面安装/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux临时和永久关闭selinux" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/02/Linux临时和永久关闭selinux/">Linux临时和永久关闭selinux</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/02/Linux临时和永久关闭selinux/" class="archive-article-date">
+  	<time datetime="2018-08-02T06:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="临时关闭："><a href="#临时关闭：" class="headerlink" title="临时关闭："></a>临时关闭：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> setenforce 0</span><br></pre></td></tr></table></figure>
+<h4 id="永久关闭："><a href="#永久关闭：" class="headerlink" title="永久关闭："></a>永久关闭：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> vim /etc/sysconfig/selinux</span><br></pre></td></tr></table></figure>
+<p>SELINUX=enforcing 改为 SELINUX=disabled</p>
+<p>重启服务reboot</p>
 
       
 
@@ -497,11 +444,481 @@ if (null != inputDir.listFiles()) {
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/01/我听说/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/08/02/Linux临时和永久关闭selinux/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux下同步网络时间" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/01/Linux下同步网络时间/">Linux下同步网络时间</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/01/Linux下同步网络时间/" class="archive-article-date">
+  	<time datetime="2018-08-01T07:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一、安装ntp"><a href="#一、安装ntp" class="headerlink" title="一、安装ntp"></a>一、安装ntp</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> yum install -y ntpdate</span><br></pre></td></tr></table></figure>
+<h4 id="二、同步时间"><a href="#二、同步时间" class="headerlink" title="二、同步时间"></a>二、同步时间</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 方式一、使用域名连接，要经过DNS解析，速度慢。</span><br><span class="line"><span class="meta">#</span> ntpdate pool.ntp.org</span><br><span class="line"><span class="meta">#</span> 方式二、使用IP连接，超级快。</span><br><span class="line"><span class="meta">#</span> ntpdate 120.24.81.91</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/01/Linux下同步网络时间/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CentOS6.5 离线安装MySQL5.6.26" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/">CentOS6.5 离线安装MySQL5.6.26</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/" class="archive-article-date">
+  	<time datetime="2018-06-06T07:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1、卸载之前安装的MySQL"><a href="#1、卸载之前安装的MySQL" class="headerlink" title="1、卸载之前安装的MySQL"></a>1、卸载之前安装的MySQL</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> rpm -qa | grep mysql   --查看系统之前是否已安装MySQL。</span><br><span class="line"><span class="meta">#</span> rpm -e --nodeps mysql-libs-5.1.71-1.el6.x86_64   --执行删除语句</span><br><span class="line"><span class="meta">#</span> rm -rf /var/lib/mysql*   --善后处理</span><br><span class="line"><span class="meta">#</span> rm -rf /usr/share/mysql*</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux搭建GitLab并汉化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/04/Linux搭建GitLab并汉化/">Linux搭建GitLab并汉化</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/04/Linux搭建GitLab并汉化/" class="archive-article-date">
+  	<time datetime="2018-06-04T08:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h3><h5 id="1-1-下载wget"><a href="#1-1-下载wget" class="headerlink" title="1.1 下载wget"></a>1.1 下载wget</h5><pre><code># yum install -y vim
+# yum install -y wget
+# cd /usr/local
+# wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el6/gitlab-ce-10.0.2-ce.0.el6.x86_64.rpm
+</code></pre><h5 id="1-2-关闭防火墙"><a href="#1-2-关闭防火墙" class="headerlink" title="1.2 关闭防火墙"></a>1.2 关闭防火墙</h5><pre><code># service iptables stop
+# chkconfig iptables off
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/06/04/Linux搭建GitLab并汉化/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/04/Linux搭建GitLab并汉化/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux安装OpenResty api 网关 Orange" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/30/Linux安装OpenResty api 网关 Orange/">Linux安装OpenResty api 网关 Orange</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/30/Linux安装OpenResty api 网关 Orange/" class="archive-article-date">
+  	<time datetime="2018-05-30T08:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-安装openresty"><a href="#1-安装openresty" class="headerlink" title="1.安装openresty"></a>1.安装openresty</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> yum -y install libuuid-devel pcre-devel openssl-devel gcc-c++ wget</span><br><span class="line"><span class="meta">#</span> mkdir /openresty</span><br><span class="line"><span class="meta">#</span> cd /openresty</span><br><span class="line"><span class="meta">#</span> wget https://openresty.org/download/openresty-1.9.15.1.tar.gz</span><br><span class="line"><span class="meta">#</span> tar -zxf openresty-1.9.15.1.tar.gz</span><br><span class="line"><span class="meta">#</span> cd openresty-1.9.15.1</span><br><span class="line"><span class="meta">#</span> ./configure --with-http_stub_status_module --with-http_v2_module --with-http_ssl_module </span><br><span class="line"><span class="meta">#</span> gmake &amp;&amp; gmake install</span><br><span class="line"><span class="meta">#</span> ln -s /usr/local/openresty/nginx/sbin/nginx /usr/sbin/nginx</span><br><span class="line"><span class="meta">#</span> nginx -v</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/05/30/Linux安装OpenResty api 网关 Orange/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/30/Linux安装OpenResty api 网关 Orange/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SpringBoot设置默认首页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/26/SpringBoot设置默认首页/">SpringBoot设置默认首页</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/26/SpringBoot设置默认首页/" class="archive-article-date">
+  	<time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultView</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurerAdapter</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addViewControllers</span><span class="params">(ViewControllerRegistry registry)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>.addViewControllers(registry);</span><br><span class="line">		<span class="comment">//主页</span></span><br><span class="line">		registry.addViewController(<span class="string">"/"</span>).setViewName(<span class="string">"forward:/index"</span>);</span><br><span class="line">	&#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/26/SpringBoot设置默认首页/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-解决MariaDB中文乱码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/26/解决MariaDB中文乱码/">解决MariaDB中文乱码</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/26/解决MariaDB中文乱码/" class="archive-article-date">
+  	<time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-检查自己数据库编码"><a href="#1-检查自己数据库编码" class="headerlink" title="1.检查自己数据库编码"></a>1.检查自己数据库编码</h4><pre><code># mysql -uroot -proot
+# show VARIABLES like &apos;char%&apos;;
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-aed00e544adf23d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/04/26/解决MariaDB中文乱码/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/26/解决MariaDB中文乱码/">展开全文 >></a>
         </p>
       
 
@@ -533,7 +950,7 @@ if (null != inputDir.listFiles()) {
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -545,10 +962,10 @@ if (null != inputDir.listFiles()) {
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 試毅-思伟
+    		&copy; 2019 試毅-思伟
     	</div>
       	<div class="footer-right">
-      		GitHub:<a href="https://github.com/JoeyBling" target="_blank">Joey</a> by Litten
+      		码云:<a href="https://gitee.com/zhousiwei" target="_blank">思伟</a> by Litten
       	</div>
     </div>
   </div>
@@ -638,6 +1055,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">日记本</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
               </li>
             
             <div class="clearfix"></div>
