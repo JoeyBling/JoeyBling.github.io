@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://joeybling.github.io">
-  <title>搭建 ElasticSearch 6.1.3分布式集群 | 試毅-思伟</title>
+  <title>Linux下安装rabbitMq | 試毅-思伟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="keywords" content="ELK日志分析">
+  <meta name="description" content="Linux下安装rabbitMq">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta property="og:url" content="https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/index.html">
+<meta property="og:title" content="Linux下安装rabbitMq">
+<meta property="og:url" content="https://joeybling.github.io/2019/03/07/Linux下安装rabbitMq/index.html">
 <meta property="og:site_name" content="試毅-思伟">
-<meta property="og:description" content="搭建 ElasticSearch 6.1.3分布式集群">
+<meta property="og:description" content="Linux下安装rabbitMq">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-05T11:40:32.352Z">
+<meta property="og:updated_time" content="2019-03-12T01:38:23.638Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="twitter:description" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Linux下安装rabbitMq">
+<meta name="twitter:description" content="Linux下安装rabbitMq">
   
     <link rel="alternative" href="/atom.xml" title="試毅-思伟" type="application/atom+xml">
   
@@ -187,60 +185,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搭建-ElasticSearch-6-1-3分布式集群" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux下安装rabbitMq" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      搭建 ElasticSearch 6.1.3分布式集群
+      Linux下安装rabbitMq
     </h1>
   
 
 
         
-        <a href="/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" class="archive-article-date">
-  	<time datetime="2018-04-17T07:57:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        <a href="/2019/03/07/Linux下安装rabbitMq/" class="archive-article-date">
+  	<time datetime="2019-03-07T01:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="ELasticsearch-6-1-3要求JDK版本最低为1-8"><a href="#ELasticsearch-6-1-3要求JDK版本最低为1-8" class="headerlink" title="ELasticsearch 6.1.3要求JDK版本最低为1.8"></a>ELasticsearch 6.1.3要求JDK版本最低为1.8</h4><p>mac上的本机ip为192.168.1.111,设为master节点，配置如下：</p>
-<pre><code>cluster.name: my-application
-node.name: node-111
-
-network.host: 192.168.1.111
-http.port: 9200
-
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-
-node.master: true
-node.data: true
-discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
-</code></pre><a id="more"></a>
-<p>Ubuntu机器的ip位192.168.1.102，配置如下：</p>
-<pre><code>cluster.name: my-application
-node.name: node-102
-
-network.host: 192.168.1.102
-http.port: 9200
-
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-
-node.master: false
-node.data: true
-discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
-</code></pre><p>先启动mac上的master，再启动Ubuntu上的slave节点，观察输出，会有一个node-102探测到master节点的提示：</p>
-<pre><code>2017-06-07T11:33:39,369][INFO ][o.e.c.s.ClusterService   ] [node-102] detected_master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300}, added {{node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300},}, reason: zen-disco-receive(from master [master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300} committed version [8]])&apos;
-</code></pre><p>访问head，一个master一个slave组成集群，界面如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这里写图片描述"></p>
-<h3 id="单机多节点集群配置"><a href="#单机多节点集群配置" class="headerlink" title="单机多节点集群配置"></a>单机多节点集群配置</h3><p>如果想要在一台机器上启动多个节点，步骤如下：</p>
-<p>1、复制一份ELasticsearch的安装包<br>2、修改端口，比如一个是9200，一个是9205<br>3、删除data目录下的数据(如果是新解压的安装包就不必了)</p>
+        <h3 id="Linux下安装rabbitMq"><a href="#Linux下安装rabbitMq" class="headerlink" title="Linux下安装rabbitMq"></a>Linux下安装rabbitMq</h3><p><strong>必须有Erlang环境——&gt;&gt;&gt;<a href="https://www.jianshu.com/p/998f9f978f57" title="Linux下安装Erlang" target="_blank" rel="noopener">Linux下安装Erlang</a></strong></p>
+<h5 id="一、安装rabbitMq"><a href="#一、安装rabbitMq" class="headerlink" title="一、安装rabbitMq"></a>一、安装rabbitMq</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local/</span><br><span class="line"><span class="meta">#</span> yum install -y xz</span><br><span class="line"><span class="meta">#</span> wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.2/rabbitmq-server-generic-unix-3.6.2.tar.xz</span><br><span class="line"><span class="meta">#</span> xz -d rabbitmq-server-generic-unix-3.6.2.tar.xz</span><br><span class="line"><span class="meta">#</span> tar -xvf rabbitmq-server-generic-unix-3.6.2.tar</span><br><span class="line">--配置rabbitMq环境变量</span><br><span class="line"><span class="meta">#</span> vim /etc/profile</span><br><span class="line">文件末尾添加 export PATH=$PATH:/usr/local/rabbitmq_server-3.6.2/sbin</span><br><span class="line"><span class="meta">#</span> source /etc/profile</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<hr>
+<h5 id="二、配置网页插件"><a href="#二、配置网页插件" class="headerlink" title="二、配置网页插件"></a>二、配置网页插件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> rabbitmq-plugins enable rabbitmq_management</span><br><span class="line">--启动rabbitMq</span><br><span class="line"><span class="meta">#</span> rabbitmq-server –detached</span><br><span class="line">Tips:rabbitmq默认会创建guest账号，只能用于localhost登录页面管理员</span><br><span class="line">--添加admin用户并且密码为admin</span><br><span class="line"><span class="meta">#</span> rabbitmqctl add_user admin admin</span><br><span class="line">--授权admin用户为管理员</span><br><span class="line"><span class="meta">#</span> rabbitmqctl set_user_tags admin administrator</span><br><span class="line">--授权访问权限</span><br><span class="line"><span class="meta">#</span> rabbitmqctl set_permissions -p "/" admin "." "." ".*"</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="三、验证rabbitMq是否安装成功"><a href="#三、验证rabbitMq是否安装成功" class="headerlink" title="三、验证rabbitMq是否安装成功"></a>三、验证rabbitMq是否安装成功</h5><ul>
+<li>端口：15672 网页管理，  5672 AMQP端口</li>
+<li>访问 <a href="http://IP:15672" target="_blank" rel="noopener">http://IP:15672</a></li>
+</ul>
+<hr>
+<h5 id="四、rabbitMq常用命令："><a href="#四、rabbitMq常用命令：" class="headerlink" title="四、rabbitMq常用命令："></a>四、rabbitMq常用命令：</h5><ul>
+<li>启动：<code>rabbitmq-server –detached</code></li>
+<li>查看服务状态：<code>rabbitmqctl status</code></li>
+<li>关闭服务：<code>rabbitmqctl stop</code></li>
+<li>查看所有用户：<code>rabbitmqctl list_users</code></li>
+<li>添加用户：<code>rabbitmqctl add_user admin admin</code></li>
+<li>授权用户管理员：<code>rabbitmqctl set_user_tags admin administrator</code></li>
+<li>授权访问权限：<code>rabbitmqctl set_permissions -p &quot;/&quot; admin &quot;.&quot; &quot;.&quot; &quot;.*&quot;</code></li>
+<li>添加虚拟机：<code>rabbitmqctl add_vhost admin_vhost</code></li>
+<li>授权用户到虚拟机：<code>rabbitmqctl set_permissions -p admin_vhost admin &quot;.*&quot; &quot;.*&quot; &quot;.*&quot;</code></li>
+</ul>
 
       
 
@@ -285,7 +272,7 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ELK日志分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -341,7 +328,7 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://joeybling.github.io/2019/03/07/Linux下安装rabbitMq/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -356,18 +343,9 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
   
 <nav id="article-nav">
   
-    <a href="/2018/04/17/Linux-新建扩展分区/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Linux 新建扩展分区
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/17/FreeMarker-中文乱码问题解决办法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">FreeMarker 中文乱码问题解决办法</div>
+    <a href="/2019/03/01/Linux下安装Erlang/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux下安装Erlang</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,9 +385,9 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
 <link rel="stylesheet" href="/gitment/gitment.css">
 <script src="/gitment/gitment.js"></script>
 <script>
-<!-- id: "搭建 ElasticSearch 6.1.3分布式集群" -->
+<!-- id: "Linux下安装rabbitMq" -->
 var gitment = new Gitment({
-  id: "https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/",
+  id: "https://joeybling.github.io/2019/03/07/Linux下安装rabbitMq/",
   owner: 'JoeyBling',
   repo: 'JoeyBling.github.io',
   oauth: {

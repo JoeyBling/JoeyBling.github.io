@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-8969029b19517563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-fc6779f38f7ccb43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-40d4fd8413ae4065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-05T11:40:32.129Z">
+<meta property="og:updated_time" content="2019-03-12T01:34:39.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 卸载分区">
 <meta name="twitter:description" content="Linux 卸载分区">
@@ -55,7 +55,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #D3D1DC"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -122,7 +122,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #D3D1DC"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -207,6 +207,7 @@
     </h1>
   
 
+
         
         <a href="/2018/04/17/Linux-卸载分区/" class="archive-article-date">
   	<time datetime="2018-04-17T08:01:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
@@ -217,33 +218,33 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h5 id="注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份"><a href="#注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份" class="headerlink" title="注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份"></a>注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份</h5><pre><code># df -hT
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-d7fb0c77ed1e94d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-d7fb0c77ed1e94d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <a id="more"></a>    
 <pre><code>准备卸载/dev/sda6这个分区
 # umount /data2    
 重新检查一下 
 # df -hT
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-2af8caea924f6612.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-2af8caea924f6612.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <pre><code># fdisk -l
 发现待分区的磁盘 /dev/sda
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-c079a22b84557f0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-c079a22b84557f0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <pre><code>对该磁盘进行卸载分区，输入m并回车
 # fdisk /dev/sda
 # m 输入帮助
 # p 打印分区表
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-85bcd2afce1808d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/2743275-95439e347a38fcf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>卸载/dev/sda6分区<br>此时注意/dev/sda6是刚刚卸载了/data2的分区名<br><img src="https://upload-images.jianshu.io/upload_images/2743275-d7fb0c77ed1e94d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-85bcd2afce1808d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="https://upload-images.jianshu.io/upload_images/2743275-95439e347a38fcf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>卸载/dev/sda6分区<br>此时注意/dev/sda6是刚刚卸载了/data2的分区名<br><img src="https://upload-images.jianshu.io/upload_images/2743275-d7fb0c77ed1e94d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <pre><code># d 删除一个分区
 # 6  删除第六个分区
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-b7cbc678d5616a01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-b7cbc678d5616a01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <pre><code>重新打印分区表发现已卸载/dev/sda6分区
 # p 
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-8969029b19517563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-8969029b19517563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <pre><code># w   将表写入磁盘并退出
 再检查一遍
 # fdisk /dev/sda
 # p 打印分区表 
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-fc6779f38f7ccb43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/2743275-40d4fd8413ae4065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-fc6779f38f7ccb43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="https://upload-images.jianshu.io/upload_images/2743275-40d4fd8413ae4065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 
       
 
@@ -404,6 +405,26 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<!-- <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css"> -->
+<!-- <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+<link rel="stylesheet" href="/gitment/gitment.css">
+<script src="/gitment/gitment.js"></script>
+<script>
+<!-- id: "Linux 卸载分区" -->
+var gitment = new Gitment({
+  id: "https://joeybling.github.io/2018/04/17/Linux-卸载分区/",
+  owner: 'JoeyBling',
+  repo: 'JoeyBling.github.io',
+  oauth: {
+    client_id: '084c0dc4233f68ab3ff1',
+    client_secret: '39e1e3bf79509ad8670c81f57d3af0b4bb33255e',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+
+  
 
 
           </div>
@@ -431,7 +452,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -505,11 +526,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -517,7 +538,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
+                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
               </li>
             
             <div class="clearfix"></div>
@@ -574,6 +595,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://gitee.com/zhousiwei" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>码云</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简书</a>
             </li>
           
         </ul>

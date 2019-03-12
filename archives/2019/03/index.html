@@ -6,22 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://joeybling.github.io">
-  <title>搭建 ElasticSearch 6.1.3分布式集群 | 試毅-思伟</title>
+  <title>Archives: 2019/3 | 試毅-思伟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="keywords" content="ELK日志分析">
-<meta property="og:type" content="article">
-<meta property="og:title" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta property="og:url" content="https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/index.html">
+  <meta name="description" content="試毅-思伟_技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="試毅-思伟">
+<meta property="og:url" content="https://joeybling.github.io/archives/2019/03/index.html">
 <meta property="og:site_name" content="試毅-思伟">
-<meta property="og:description" content="搭建 ElasticSearch 6.1.3分布式集群">
+<meta property="og:description" content="試毅-思伟_技术博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-05T11:40:32.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="twitter:description" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="試毅-思伟">
+<meta name="twitter:description" content="試毅-思伟_技术博客">
   
     <link rel="alternative" href="/atom.xml" title="試毅-思伟" type="application/atom+xml">
   
@@ -187,240 +183,104 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搭建-ElasticSearch-6-1-3分布式集群" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      搭建 ElasticSearch 6.1.3分布式集群
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/07/Linux下安装rabbitMq/" class="archive-article-date">
+  	<time datetime="2019-03-07T01:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+	
+	      <a class="archive-article-title" href="/2019/03/07/Linux下安装rabbitMq/" target="_blank">Linux下安装rabbitMq</a>
+        
     </h1>
   
 
 
-        
-        <a href="/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" class="archive-article-date">
-  	<time datetime="2018-04-17T07:57:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="ELasticsearch-6-1-3要求JDK版本最低为1-8"><a href="#ELasticsearch-6-1-3要求JDK版本最低为1-8" class="headerlink" title="ELasticsearch 6.1.3要求JDK版本最低为1.8"></a>ELasticsearch 6.1.3要求JDK版本最低为1.8</h4><p>mac上的本机ip为192.168.1.111,设为master节点，配置如下：</p>
-<pre><code>cluster.name: my-application
-node.name: node-111
-
-network.host: 192.168.1.111
-http.port: 9200
-
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-
-node.master: true
-node.data: true
-discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
-</code></pre><a id="more"></a>
-<p>Ubuntu机器的ip位192.168.1.102，配置如下：</p>
-<pre><code>cluster.name: my-application
-node.name: node-102
-
-network.host: 192.168.1.102
-http.port: 9200
-
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-
-node.master: false
-node.data: true
-discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
-</code></pre><p>先启动mac上的master，再启动Ubuntu上的slave节点，观察输出，会有一个node-102探测到master节点的提示：</p>
-<pre><code>2017-06-07T11:33:39,369][INFO ][o.e.c.s.ClusterService   ] [node-102] detected_master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300}, added {{node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300},}, reason: zen-disco-receive(from master [master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300} committed version [8]])&apos;
-</code></pre><p>访问head，一个master一个slave组成集群，界面如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这里写图片描述"></p>
-<h3 id="单机多节点集群配置"><a href="#单机多节点集群配置" class="headerlink" title="单机多节点集群配置"></a>单机多节点集群配置</h3><p>如果想要在一台机器上启动多个节点，步骤如下：</p>
-<p>1、复制一份ELasticsearch的安装包<br>2、修改端口，比如一个是9200，一个是9205<br>3、删除data目录下的数据(如果是新解压的安装包就不必了)</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ELK日志分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a> -->
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" alt="微信分享二维码"> -->
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2018/04/17/Linux-新建扩展分区/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Linux 新建扩展分区
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/04/17/FreeMarker-中文乱码问题解决办法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">FreeMarker 中文乱码问题解决办法</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/01/Linux下安装Erlang/" class="archive-article-date">
+  	<time datetime="2019-03-01T08:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-01</time>
+</a>
         </div>
+    	 
+  
+    <h1 itemprop="name">
+	
+	      <a class="archive-article-title" href="/2019/03/01/Linux下安装Erlang/" target="_blank">Linux下安装Erlang</a>
         
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </h1>
   
 
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
   
 
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<!-- <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css"> -->
-<!-- <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
-<link rel="stylesheet" href="/gitment/gitment.css">
-<script src="/gitment/gitment.js"></script>
-<script>
-<!-- id: "搭建 ElasticSearch 6.1.3分布式集群" -->
-var gitment = new Gitment({
-  id: "https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/",
-  owner: 'JoeyBling',
-  repo: 'JoeyBling.github.io',
-  oauth: {
-    client_id: '084c0dc4233f68ab3ff1',
-    client_secret: '39e1e3bf79509ad8670c81f57d3af0b4bb33255e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-
-  
+    
 
 
           </div>
@@ -444,8 +304,8 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

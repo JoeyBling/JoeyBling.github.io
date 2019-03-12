@@ -42,7 +42,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #D3D1DC"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -109,7 +109,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #D3D1DC"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -185,6 +185,165 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux下安装rabbitMq" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2019/03/07/Linux下安装rabbitMq/" target="_blank">Linux下安装rabbitMq</a>
+        
+    </h1>
+  
+
+
+        
+        <a href="/2019/03/07/Linux下安装rabbitMq/" class="archive-article-date">
+  	<time datetime="2019-03-07T01:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Linux下安装rabbitMq"><a href="#Linux下安装rabbitMq" class="headerlink" title="Linux下安装rabbitMq"></a>Linux下安装rabbitMq</h3><p><strong>必须有Erlang环境——&gt;&gt;&gt;<a href="https://www.jianshu.com/p/998f9f978f57" title="Linux下安装Erlang" target="_blank" rel="noopener">Linux下安装Erlang</a></strong></p>
+<h5 id="一、安装rabbitMq"><a href="#一、安装rabbitMq" class="headerlink" title="一、安装rabbitMq"></a>一、安装rabbitMq</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local/</span><br><span class="line"><span class="meta">#</span> yum install -y xz</span><br><span class="line"><span class="meta">#</span> wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.2/rabbitmq-server-generic-unix-3.6.2.tar.xz</span><br><span class="line"><span class="meta">#</span> xz -d rabbitmq-server-generic-unix-3.6.2.tar.xz</span><br><span class="line"><span class="meta">#</span> tar -xvf rabbitmq-server-generic-unix-3.6.2.tar</span><br><span class="line">--配置rabbitMq环境变量</span><br><span class="line"><span class="meta">#</span> vim /etc/profile</span><br><span class="line">文件末尾添加 export PATH=$PATH:/usr/local/rabbitmq_server-3.6.2/sbin</span><br><span class="line"><span class="meta">#</span> source /etc/profile</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/03/07/Linux下安装rabbitMq/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/07/Linux下安装rabbitMq/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux下安装Erlang" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2019/03/01/Linux下安装Erlang/" target="_blank">Linux下安装Erlang</a>
+        
+    </h1>
+  
+
+
+        
+        <a href="/2019/03/01/Linux下安装Erlang/" class="archive-article-date">
+  	<time datetime="2019-03-01T08:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Linux下安装Erlang"><a href="#Linux下安装Erlang" class="headerlink" title="Linux下安装Erlang"></a>Linux下安装Erlang</h3><h5 id="一、升级openssl"><a href="#一、升级openssl" class="headerlink" title="一、升级openssl"></a>一、升级openssl</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local/</span><br><span class="line"><span class="meta">#</span> wget http://www.openssl.org/source/openssl-1.0.1s.tar.gz</span><br><span class="line"><span class="meta">#</span> tar -zxvf openssl-1.0.1s.tar.gz</span><br><span class="line"><span class="meta">#</span> cd openssl-1.0.1s</span><br><span class="line"><span class="meta">#</span> ./config --prefix=/usr/local/openssl</span><br><span class="line"><span class="meta">#</span> vim Makefile</span><br><span class="line">--修改CFLAG= -DOPENSSL_THREADS 修改成 CFLAG= -fPIC -DOPENSSL_THREADS</span><br><span class="line">--也就是添加 -fPIC</span><br><span class="line"><span class="meta">#</span> make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/03/01/Linux下安装Erlang/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/01/Linux下安装Erlang/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-新增Hexo博客文章置顶功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -192,9 +351,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/25/新增Hexo博客文章置顶功能/">新增Hexo博客文章置顶功能</a>
+	
+	      <a class="article-title" href="/2019/02/25/新增Hexo博客文章置顶功能/" target="_blank">新增Hexo博客文章置顶功能</a>
+        
     </h1>
   
+
 
         
         <a href="/2019/02/25/新增Hexo博客文章置顶功能/" class="archive-article-date">
@@ -268,9 +430,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/18/解决Tomcat在IDEA控制台中文乱码的问题/">解决Tomcat在IDEA控制台中文乱码的问题</a>
+	
+	      <a class="article-title" href="/2019/02/18/解决Tomcat在IDEA控制台中文乱码的问题/" target="_blank">解决Tomcat在IDEA控制台中文乱码的问题</a>
+        
     </h1>
   
+
 
         
         <a href="/2019/02/18/解决Tomcat在IDEA控制台中文乱码的问题/" class="archive-article-date">
@@ -343,9 +508,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/25/IDEA安装插件(阿里的编码约束)/">IDEA安装插件(阿里的编码约束)</a>
+	
+	      <a class="article-title" href="/2019/01/25/IDEA安装插件(阿里的编码约束)/" target="_blank">IDEA安装插件(阿里的编码约束)</a>
+        
     </h1>
   
+
 
         
         <a href="/2019/01/25/IDEA安装插件(阿里的编码约束)/" class="archive-article-date">
@@ -421,9 +589,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/23/IDEA设置后端代码开发规范/">IDEA设置后端代码开发规范</a>
+	
+	      <a class="article-title" href="/2019/01/23/IDEA设置后端代码开发规范/" target="_blank">IDEA设置后端代码开发规范</a>
+        
     </h1>
   
+
 
         
         <a href="/2019/01/23/IDEA设置后端代码开发规范/" class="archive-article-date">
@@ -497,9 +668,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/21/ElasticSearch5.x安装Elasticsearch-head插件/">ElasticSearch5.x安装Elasticsearch-head插件</a>
+	
+	      <a class="article-title" href="/2018/08/21/ElasticSearch5.x安装Elasticsearch-head插件/" target="_blank">ElasticSearch5.x安装Elasticsearch-head插件</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/08/21/ElasticSearch5.x安装Elasticsearch-head插件/" class="archive-article-date">
@@ -573,9 +747,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/21/SpringBoot 2.0 更新记录/">SpringBoot 2.0 更新记录</a>
+	
+	      <a class="article-title" href="/2018/08/21/SpringBoot 2.0 更新记录/" target="_blank">SpringBoot 2.0 更新记录</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/08/21/SpringBoot 2.0 更新记录/" class="archive-article-date">
@@ -680,9 +857,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/17/SpringBoot配置文件中context-path不起作用/">SpringBoot配置文件中context-path不起作用</a>
+	
+	      <a class="article-title" href="/2018/08/17/SpringBoot配置文件中context-path不起作用/" target="_blank">SpringBoot配置文件中context-path不起作用</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/08/17/SpringBoot配置文件中context-path不起作用/" class="archive-article-date">
@@ -760,9 +940,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/11/nohup-和-dev-null-2-1/">nohup 和&gt;/dev/null 2&gt;&amp;1</a>
+	
+	      <a class="article-title" href="/2018/08/11/nohup-和-dev-null-2-1/" target="_blank">nohup 和&gt;/dev/null 2&gt;&amp;1</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/08/11/nohup-和-dev-null-2-1/" class="archive-article-date">
@@ -833,161 +1016,6 @@
 
 
   
-    <article id="post-Linux下Tomcat指定JDK和设置内存大小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/Linux下Tomcat指定JDK和设置内存大小/">Linux下Tomcat指定JDK和设置内存大小</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/06/Linux下Tomcat指定JDK和设置内存大小/" class="archive-article-date">
-  	<time datetime="2018-08-06T09:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="一、Linux下Tomcat指定JDK"><a href="#一、Linux下Tomcat指定JDK" class="headerlink" title="一、Linux下Tomcat指定JDK"></a>一、Linux下Tomcat指定JDK</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> vim bin/setclasspath.sh</span><br></pre></td></tr></table></figure>
-<p>在脚本开头的地方指定JAVA_HOME和JRE_HOME<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/local/jdk1.8.0_40</span><br><span class="line">export JRE_HOME=/usr/local/jdk1.8.0_40/jre</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2018/08/06/Linux下Tomcat指定JDK和设置内存大小/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/06/Linux下Tomcat指定JDK和设置内存大小/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux下更改MySQL的存储目录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/Linux下更改MySQL的存储目录/">Linux下更改MySQL的存储目录</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/06/Linux下更改MySQL的存储目录/" class="archive-article-date">
-  	<time datetime="2018-08-06T09:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="重要步骤：一定要先停止Mysql"><a href="#重要步骤：一定要先停止Mysql" class="headerlink" title="重要步骤：一定要先停止Mysql"></a>重要步骤：一定要先停止Mysql</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> service mysqld stop</span><br></pre></td></tr></table></figure>
-<h5 id="1、创建目标文件夹"><a href="#1、创建目标文件夹" class="headerlink" title="1、创建目标文件夹"></a>1、创建目标文件夹</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> mkdir -p /data/mysql</span><br><span class="line"><span class="meta">#</span> chown -R mysql.mysql /data/mysql/</span><br></pre></td></tr></table></figure>
-<h5 id="2、迁移命令"><a href="#2、迁移命令" class="headerlink" title="2、迁移命令"></a>2、迁移命令</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> mysql_install_db --user=mysql --basedir=/usr --datadir=/data/mysql</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/08/06/Linux下更改MySQL的存储目录/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/06/Linux下更改MySQL的存储目录/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1020,7 +1048,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -1094,11 +1122,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1106,7 +1134,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
+                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1163,6 +1191,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://gitee.com/zhousiwei" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>码云</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简书</a>
             </li>
           
         </ul>

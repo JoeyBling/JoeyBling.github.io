@@ -42,7 +42,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #D3D1DC"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -109,7 +109,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #D3D1DC"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -185,6 +185,167 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux下Tomcat指定JDK和设置内存大小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2018/08/06/Linux下Tomcat指定JDK和设置内存大小/" target="_blank">Linux下Tomcat指定JDK和设置内存大小</a>
+        
+    </h1>
+  
+
+
+        
+        <a href="/2018/08/06/Linux下Tomcat指定JDK和设置内存大小/" class="archive-article-date">
+  	<time datetime="2018-08-06T09:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="一、Linux下Tomcat指定JDK"><a href="#一、Linux下Tomcat指定JDK" class="headerlink" title="一、Linux下Tomcat指定JDK"></a>一、Linux下Tomcat指定JDK</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> vim bin/setclasspath.sh</span><br></pre></td></tr></table></figure>
+<p>在脚本开头的地方指定JAVA_HOME和JRE_HOME<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/local/jdk1.8.0_40</span><br><span class="line">export JRE_HOME=/usr/local/jdk1.8.0_40/jre</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/08/06/Linux下Tomcat指定JDK和设置内存大小/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/Linux下Tomcat指定JDK和设置内存大小/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux下更改MySQL的存储目录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2018/08/06/Linux下更改MySQL的存储目录/" target="_blank">Linux下更改MySQL的存储目录</a>
+        
+    </h1>
+  
+
+
+        
+        <a href="/2018/08/06/Linux下更改MySQL的存储目录/" class="archive-article-date">
+  	<time datetime="2018-08-06T09:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="重要步骤：一定要先停止Mysql"><a href="#重要步骤：一定要先停止Mysql" class="headerlink" title="重要步骤：一定要先停止Mysql"></a>重要步骤：一定要先停止Mysql</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> service mysqld stop</span><br></pre></td></tr></table></figure>
+<h5 id="1、创建目标文件夹"><a href="#1、创建目标文件夹" class="headerlink" title="1、创建目标文件夹"></a>1、创建目标文件夹</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> mkdir -p /data/mysql</span><br><span class="line"><span class="meta">#</span> chown -R mysql.mysql /data/mysql/</span><br></pre></td></tr></table></figure>
+<h5 id="2、迁移命令"><a href="#2、迁移命令" class="headerlink" title="2、迁移命令"></a>2、迁移命令</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> mysql_install_db --user=mysql --basedir=/usr --datadir=/data/mysql</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/08/06/Linux下更改MySQL的存储目录/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/Linux下更改MySQL的存储目录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CentOS 6.X 安装VirtualBox-5.1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -192,9 +353,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/CentOS 6.X 安装VirtualBox-5.1/">CentOS 6.X 安装VirtualBox-5.1</a>
+	
+	      <a class="article-title" href="/2018/08/06/CentOS 6.X 安装VirtualBox-5.1/" target="_blank">CentOS 6.X 安装VirtualBox-5.1</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/08/06/CentOS 6.X 安装VirtualBox-5.1/" class="archive-article-date">
@@ -268,9 +432,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/CentOS 6.X 安装VNC Server实现图形化访问/">CentOS 6.X 安装VNC Server实现图形化访问</a>
+	
+	      <a class="article-title" href="/2018/08/06/CentOS 6.X 安装VNC Server实现图形化访问/" target="_blank">CentOS 6.X 安装VNC Server实现图形化访问</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/08/06/CentOS 6.X 安装VNC Server实现图形化访问/" class="archive-article-date">
@@ -345,9 +512,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/CentOS 6.X 图形界面安装/">CentOS 6.X 图形界面安装</a>
+	
+	      <a class="article-title" href="/2018/08/06/CentOS 6.X 图形界面安装/" target="_blank">CentOS 6.X 图形界面安装</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/08/06/CentOS 6.X 图形界面安装/" class="archive-article-date">
@@ -419,9 +589,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/02/Linux临时和永久关闭selinux/">Linux临时和永久关闭selinux</a>
+	
+	      <a class="article-title" href="/2018/08/02/Linux临时和永久关闭selinux/" target="_blank">Linux临时和永久关闭selinux</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/08/02/Linux临时和永久关闭selinux/" class="archive-article-date">
@@ -496,9 +669,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/01/Linux下同步网络时间/">Linux下同步网络时间</a>
+	
+	      <a class="article-title" href="/2018/08/01/Linux下同步网络时间/" target="_blank">Linux下同步网络时间</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/08/01/Linux下同步网络时间/" class="archive-article-date">
@@ -570,9 +746,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/">CentOS6.5 离线安装MySQL5.6.26</a>
+	
+	      <a class="article-title" href="/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/" target="_blank">CentOS6.5 离线安装MySQL5.6.26</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/06/06/CentOS6.5 离线安装MySQL5.6.26/" class="archive-article-date">
@@ -646,9 +825,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/04/Linux搭建GitLab并汉化/">Linux搭建GitLab并汉化</a>
+	
+	      <a class="article-title" href="/2018/06/04/Linux搭建GitLab并汉化/" target="_blank">Linux搭建GitLab并汉化</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/06/04/Linux搭建GitLab并汉化/" class="archive-article-date">
@@ -728,9 +910,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/30/Linux安装OpenResty api 网关 Orange/">Linux安装OpenResty api 网关 Orange</a>
+	
+	      <a class="article-title" href="/2018/05/30/Linux安装OpenResty api 网关 Orange/" target="_blank">Linux安装OpenResty api 网关 Orange</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/05/30/Linux安装OpenResty api 网关 Orange/" class="archive-article-date">
@@ -797,157 +982,6 @@
 
 
   
-    <article id="post-SpringBoot设置默认首页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/26/SpringBoot设置默认首页/">SpringBoot设置默认首页</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/26/SpringBoot设置默认首页/" class="archive-article-date">
-  	<time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultView</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurerAdapter</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addViewControllers</span><span class="params">(ViewControllerRegistry registry)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>.addViewControllers(registry);</span><br><span class="line">		<span class="comment">//主页</span></span><br><span class="line">		registry.addViewController(<span class="string">"/"</span>).setViewName(<span class="string">"forward:/index"</span>);</span><br><span class="line">	&#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/26/SpringBoot设置默认首页/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-解决MariaDB中文乱码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/26/解决MariaDB中文乱码/">解决MariaDB中文乱码</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/26/解决MariaDB中文乱码/" class="archive-article-date">
-  	<time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-检查自己数据库编码"><a href="#1-检查自己数据库编码" class="headerlink" title="1.检查自己数据库编码"></a>1.检查自己数据库编码</h4><pre><code># mysql -uroot -proot
-# show VARIABLES like &apos;char%&apos;;
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-aed00e544adf23d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-        
-          <a class="article-more-a" href="/2018/04/26/解决MariaDB中文乱码/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/26/解决MariaDB中文乱码/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -980,7 +1014,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -1054,11 +1088,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1066,7 +1100,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
+                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1123,6 +1157,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://gitee.com/zhousiwei" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>码云</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简书</a>
             </li>
           
         </ul>

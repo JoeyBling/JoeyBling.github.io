@@ -6,22 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://joeybling.github.io">
-  <title>搭建 ElasticSearch 6.1.3分布式集群 | 試毅-思伟</title>
+  <title>Linux下安装Erlang | 試毅-思伟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="keywords" content="ELK日志分析">
+  <meta name="description" content="Linux下安装Erlang">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta property="og:url" content="https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/index.html">
+<meta property="og:title" content="Linux下安装Erlang">
+<meta property="og:url" content="https://joeybling.github.io/2019/03/01/Linux下安装Erlang/index.html">
 <meta property="og:site_name" content="試毅-思伟">
-<meta property="og:description" content="搭建 ElasticSearch 6.1.3分布式集群">
+<meta property="og:description" content="Linux下安装Erlang">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-05T11:40:32.352Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-dfbc236a0a6fc515.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-81a99d09c5fb870d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-12T01:36:18.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="twitter:description" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Linux下安装Erlang">
+<meta name="twitter:description" content="Linux下安装Erlang">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2743275-dfbc236a0a6fc515.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="試毅-思伟" type="application/atom+xml">
   
@@ -187,60 +188,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搭建-ElasticSearch-6-1-3分布式集群" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux下安装Erlang" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      搭建 ElasticSearch 6.1.3分布式集群
+      Linux下安装Erlang
     </h1>
   
 
 
         
-        <a href="/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" class="archive-article-date">
-  	<time datetime="2018-04-17T07:57:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        <a href="/2019/03/01/Linux下安装Erlang/" class="archive-article-date">
+  	<time datetime="2019-03-01T08:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="ELasticsearch-6-1-3要求JDK版本最低为1-8"><a href="#ELasticsearch-6-1-3要求JDK版本最低为1-8" class="headerlink" title="ELasticsearch 6.1.3要求JDK版本最低为1.8"></a>ELasticsearch 6.1.3要求JDK版本最低为1.8</h4><p>mac上的本机ip为192.168.1.111,设为master节点，配置如下：</p>
-<pre><code>cluster.name: my-application
-node.name: node-111
-
-network.host: 192.168.1.111
-http.port: 9200
-
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-
-node.master: true
-node.data: true
-discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
-</code></pre><a id="more"></a>
-<p>Ubuntu机器的ip位192.168.1.102，配置如下：</p>
-<pre><code>cluster.name: my-application
-node.name: node-102
-
-network.host: 192.168.1.102
-http.port: 9200
-
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-
-node.master: false
-node.data: true
-discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
-</code></pre><p>先启动mac上的master，再启动Ubuntu上的slave节点，观察输出，会有一个node-102探测到master节点的提示：</p>
-<pre><code>2017-06-07T11:33:39,369][INFO ][o.e.c.s.ClusterService   ] [node-102] detected_master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300}, added {{node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300},}, reason: zen-disco-receive(from master [master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300} committed version [8]])&apos;
-</code></pre><p>访问head，一个master一个slave组成集群，界面如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这里写图片描述"></p>
-<h3 id="单机多节点集群配置"><a href="#单机多节点集群配置" class="headerlink" title="单机多节点集群配置"></a>单机多节点集群配置</h3><p>如果想要在一台机器上启动多个节点，步骤如下：</p>
-<p>1、复制一份ELasticsearch的安装包<br>2、修改端口，比如一个是9200，一个是9205<br>3、删除data目录下的数据(如果是新解压的安装包就不必了)</p>
+        <h3 id="Linux下安装Erlang"><a href="#Linux下安装Erlang" class="headerlink" title="Linux下安装Erlang"></a>Linux下安装Erlang</h3><h5 id="一、升级openssl"><a href="#一、升级openssl" class="headerlink" title="一、升级openssl"></a>一、升级openssl</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local/</span><br><span class="line"><span class="meta">#</span> wget http://www.openssl.org/source/openssl-1.0.1s.tar.gz</span><br><span class="line"><span class="meta">#</span> tar -zxvf openssl-1.0.1s.tar.gz</span><br><span class="line"><span class="meta">#</span> cd openssl-1.0.1s</span><br><span class="line"><span class="meta">#</span> ./config --prefix=/usr/local/openssl</span><br><span class="line"><span class="meta">#</span> vim Makefile</span><br><span class="line">--修改CFLAG= -DOPENSSL_THREADS 修改成 CFLAG= -fPIC -DOPENSSL_THREADS</span><br><span class="line">--也就是添加 -fPIC</span><br><span class="line"><span class="meta">#</span> make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><img src="https://upload-images.jianshu.io/upload_images/2743275-dfbc236a0a6fc515.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h5 id="二、安装Erlang"><a href="#二、安装Erlang" class="headerlink" title="二、安装Erlang"></a>二、安装Erlang</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local/</span><br><span class="line"><span class="meta">#</span> wget http://erlang.org/download/otp_src_18.3.tar.gz</span><br><span class="line"><span class="meta">#</span> tar -zxvf otp_src_18.3.tar.gz</span><br><span class="line"><span class="meta">#</span> cd otp_src_18.3</span><br><span class="line">--创建Erlang安装目录</span><br><span class="line"><span class="meta">#</span> mkdir /usr/local/erlang</span><br><span class="line">--ErLang安装依赖</span><br><span class="line"><span class="meta">#</span> yum install -y gcc gcc-c++ unixODBC-devel openssl-devel ncurses-devel</span><br><span class="line"><span class="meta">#</span> ./configure --prefix=/usr/local/erlang</span><br><span class="line"><span class="meta">#</span> make &amp;&amp; make install</span><br><span class="line">--配置Erlang环境变量</span><br><span class="line"><span class="meta">#</span> vim /etc/profile</span><br><span class="line">文件末尾添加 export PATH=$PATH:/usr/local/erlang/bin</span><br><span class="line"><span class="meta">#</span> source /etc/profile</span><br></pre></td></tr></table></figure>
+<h5 id="三、验证erlang是否安装成功"><a href="#三、验证erlang是否安装成功" class="headerlink" title="三、验证erlang是否安装成功"></a>三、验证erlang是否安装成功</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> erl</span><br><span class="line"><span class="meta">#</span> ssl:versions().</span><br><span class="line"><span class="meta">#</span> halt().</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2743275-81a99d09c5fb870d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 
       
 
@@ -285,7 +259,7 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ELK日志分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -341,7 +315,7 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://joeybling.github.io/2019/03/01/Linux下安装Erlang/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -356,18 +330,18 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
   
 <nav id="article-nav">
   
-    <a href="/2018/04/17/Linux-新建扩展分区/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/07/Linux下安装rabbitMq/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Linux 新建扩展分区
+          Linux下安装rabbitMq
         
       </div>
     </a>
   
   
-    <a href="/2018/04/17/FreeMarker-中文乱码问题解决办法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">FreeMarker 中文乱码问题解决办法</div>
+    <a href="/2019/02/25/新增Hexo博客文章置顶功能/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">新增Hexo博客文章置顶功能</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,9 +381,9 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
 <link rel="stylesheet" href="/gitment/gitment.css">
 <script src="/gitment/gitment.js"></script>
 <script>
-<!-- id: "搭建 ElasticSearch 6.1.3分布式集群" -->
+<!-- id: "Linux下安装Erlang" -->
 var gitment = new Gitment({
-  id: "https://joeybling.github.io/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/",
+  id: "https://joeybling.github.io/2019/03/01/Linux下安装Erlang/",
   owner: 'JoeyBling',
   repo: 'JoeyBling.github.io',
   oauth: {

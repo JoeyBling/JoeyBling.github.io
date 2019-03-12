@@ -42,7 +42,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #D3D1DC"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -109,7 +109,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #D3D1DC"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -185,6 +185,163 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-解决MariaDB中文乱码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2018/04/26/解决MariaDB中文乱码/" target="_blank">解决MariaDB中文乱码</a>
+        
+    </h1>
+  
+
+
+        
+        <a href="/2018/04/26/解决MariaDB中文乱码/" class="archive-article-date">
+  	<time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-检查自己数据库编码"><a href="#1-检查自己数据库编码" class="headerlink" title="1.检查自己数据库编码"></a>1.检查自己数据库编码</h4><pre><code># mysql -uroot -proot
+# show VARIABLES like &apos;char%&apos;;
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-aed00e544adf23d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/04/26/解决MariaDB中文乱码/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/26/解决MariaDB中文乱码/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SpringBoot设置默认首页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2018/04/26/SpringBoot设置默认首页/" target="_blank">SpringBoot设置默认首页</a>
+        
+    </h1>
+  
+
+
+        
+        <a href="/2018/04/26/SpringBoot设置默认首页/" class="archive-article-date">
+  	<time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultView</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurerAdapter</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addViewControllers</span><span class="params">(ViewControllerRegistry registry)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>.addViewControllers(registry);</span><br><span class="line">		<span class="comment">//主页</span></span><br><span class="line">		registry.addViewController(<span class="string">"/"</span>).setViewName(<span class="string">"forward:/index"</span>);</span><br><span class="line">	&#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/26/SpringBoot设置默认首页/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Linux上安装node和npm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -192,9 +349,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/20/Linux上安装node和npm/">Linux上安装node和npm</a>
+	
+	      <a class="article-title" href="/2018/04/20/Linux上安装node和npm/" target="_blank">Linux上安装node和npm</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/04/20/Linux上安装node和npm/" class="archive-article-date">
@@ -205,8 +365,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####一、下载Node</p>
-<p>  官网下载链接：<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/</a><br><img src="https://upload-images.jianshu.io/upload_images/2743275-497a8e6f4e7c11d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+        <h4 id="一、下载Node"><a href="#一、下载Node" class="headerlink" title="一、下载Node"></a>一、下载Node</h4><p>  官网下载链接：<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/</a><br><img src="https://upload-images.jianshu.io/upload_images/2743275-497a8e6f4e7c11d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
         
           <a class="article-more-a" href="/2018/04/20/Linux上安装node和npm/#more">more >></a>
         
@@ -269,9 +428,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/Linux-查看网卡UUID/">Linux 查看网卡UUID</a>
+	
+	      <a class="article-title" href="/2018/04/17/Linux-查看网卡UUID/" target="_blank">Linux 查看网卡UUID</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/04/17/Linux-查看网卡UUID/" class="archive-article-date">
@@ -346,9 +508,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/Linux-卸载分区/">Linux 卸载分区</a>
+	
+	      <a class="article-title" href="/2018/04/17/Linux-卸载分区/" target="_blank">Linux 卸载分区</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/04/17/Linux-卸载分区/" class="archive-article-date">
@@ -360,7 +525,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h5 id="注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份"><a href="#注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份" class="headerlink" title="注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份"></a>注意，卸载分区会格式化分区内所有的数据，请谨慎操作或进行数据备份</h5><pre><code># df -hT
-</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-d7fb0c77ed1e94d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/2743275-d7fb0c77ed1e94d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
         
           <a class="article-more-a" href="/2018/04/17/Linux-卸载分区/#more">more >></a>
         
@@ -423,9 +588,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/Linux-新建扩展分区/">Linux 新建扩展分区</a>
+	
+	      <a class="article-title" href="/2018/04/17/Linux-新建扩展分区/" target="_blank">Linux 新建扩展分区</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/04/17/Linux-新建扩展分区/" class="archive-article-date">
@@ -500,9 +668,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/">搭建 ElasticSearch 6.1.3分布式集群</a>
+	
+	      <a class="article-title" href="/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" target="_blank">搭建 ElasticSearch 6.1.3分布式集群</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" class="archive-article-date">
@@ -589,9 +760,12 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/FreeMarker-中文乱码问题解决办法/">FreeMarker 中文乱码问题解决办法</a>
+	
+	      <a class="article-title" href="/2018/04/17/FreeMarker-中文乱码问题解决办法/" target="_blank">FreeMarker 中文乱码问题解决办法</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/04/17/FreeMarker-中文乱码问题解决办法/" class="archive-article-date">
@@ -672,9 +846,12 @@ datetime_format=yyyy-MM-dd HH:mm:Ss
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/">SpringBoot集成Druid不支持多条SQL</a>
+	
+	      <a class="article-title" href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/" target="_blank">SpringBoot集成Druid不支持多条SQL</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/" class="archive-article-date">
@@ -783,9 +960,12 @@ import com.alibaba.druid.wall.WallFilter;
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/Linux配置SSH-Key到GitHub/">Linux配置SSH Key到GitHub</a>
+	
+	      <a class="article-title" href="/2018/04/17/Linux配置SSH-Key到GitHub/" target="_blank">Linux配置SSH Key到GitHub</a>
+        
     </h1>
   
+
 
         
         <a href="/2018/04/17/Linux配置SSH-Key到GitHub/" class="archive-article-date">
@@ -852,186 +1032,6 @@ import com.alibaba.druid.wall.WallFilter;
 
 
   
-    <article id="post-Java中将一个文件夹下所有的文件压缩成一个文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/">Java中将一个文件夹下所有的文件压缩成一个文件</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/" class="archive-article-date">
-  	<time datetime="2018-04-17T04:22:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>/** 缓冲 */
-static final byte[] buffer = new byte[2048];  
-
-
-// 来源  
-File inputDir = new File(request.getServletContext()  
-    .getRealPath(Constant.getUploadPath()));  
-if (null != inputDir.listFiles()) {  
-    // 压缩  
-    zip(inputDir.listFiles(), &quot;&quot;, zip);  
-}  
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/17/Java中将一个文件夹下所有的文件压缩成一个文件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ELK之本地Grok-Debugger配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/15/ELK之本地Grok-Debugger配置/">ELK之本地Grok Debugger配置</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/15/ELK之本地Grok-Debugger配置/" class="archive-article-date">
-  	<time datetime="2018-04-15T00:13:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、Ruby环境安装</p>
-<pre><code>清理已安装过的
-#yum erase ruby ruby-libs ruby-mode ruby-rdoc ruby-irb ruby-ri ruby-docs
-#yum remove ruby
-
-1.Ruby的安装
-#yum install -y wget unzip
-#cd /usr/local
-#yum -y install  openssl-devel gcc
-#wget https://ruby.taobao.org/mirrors/ruby/2.1/ruby-2.1.7.tar.gz
-#tar zxf ruby-2.1.7.tar.gz
-#cd ruby-2.1.7
-#./configure --prefix=/usr/local/ruby2.1.7
-#make &amp;&amp; make install
-#echo &apos;export PATH=/usr/local/ruby2.1.7/bin:$PATH&apos;&gt;&gt;/etc/profile
-#source /etc/profile
-说明：别使用ruby最新的2.2或者2.3的版本，可能出现部分组件无法安装
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/04/15/ELK之本地Grok-Debugger配置/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ELK日志分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/15/ELK之本地Grok-Debugger配置/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1064,7 +1064,7 @@ if (null != inputDir.listFiles()) {
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -1138,11 +1138,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1150,7 +1150,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
+                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1207,6 +1207,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://gitee.com/zhousiwei" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>码云</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简书</a>
             </li>
           
         </ul>

@@ -17,7 +17,7 @@
 <meta property="og:description" content="Linux上安装node和npm">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-497a8e6f4e7c11d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-02-26T13:51:51.602Z">
+<meta property="og:updated_time" content="2019-03-12T01:33:31.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux上安装node和npm">
 <meta name="twitter:description" content="Linux上安装node和npm">
@@ -46,7 +46,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #D3D1DC"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -113,7 +113,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #D3D1DC"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -198,6 +198,7 @@
     </h1>
   
 
+
         
         <a href="/2018/04/20/Linux上安装node和npm/" class="archive-article-date">
   	<time datetime="2018-04-20T07:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
@@ -207,13 +208,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####一、下载Node</p>
-<p>  官网下载链接：<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/</a><br><img src="https://upload-images.jianshu.io/upload_images/2743275-497a8e6f4e7c11d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+        <h4 id="一、下载Node"><a href="#一、下载Node" class="headerlink" title="一、下载Node"></a>一、下载Node</h4><p>  官网下载链接：<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/</a><br><img src="https://upload-images.jianshu.io/upload_images/2743275-497a8e6f4e7c11d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <a id="more"></a>
 <p>解压目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># yum install -y xz</span><br><span class="line"># xz -d node-v8.11.1-linux-x64.tar.xz</span><br><span class="line"># tar -xf node-v8.11.1-linux-x64.tar</span><br></pre></td></tr></table></figure></p>
 <p>这里想要全局使用npm 和 node,就需要做相关软链，如下！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># cd /usr/local/bin</span><br><span class="line"># ln -s /usr/local/src/node-v8.10.0-linux-x64/bin/npm</span><br><span class="line"># ln -s /usr/local/src/node-v8.10.0-linux-x64/bin/node</span><br></pre></td></tr></table></figure></p>
 <p>然后即可在任意位置执行 node  -v   npm  -v  查看相应的版本，则安装完成！</p>
-<p>####二、使用淘宝镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># npm config get registry // https://registry.npmjs.org/</span><br><span class="line"># npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></p>
+<h4 id="二、使用淘宝镜像"><a href="#二、使用淘宝镜像" class="headerlink" title="二、使用淘宝镜像"></a>二、使用淘宝镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># npm config get registry // https://registry.npmjs.org/</span><br><span class="line"># npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 
       
 
@@ -374,6 +374,26 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<!-- <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css"> -->
+<!-- <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+<link rel="stylesheet" href="/gitment/gitment.css">
+<script src="/gitment/gitment.js"></script>
+<script>
+<!-- id: "Linux上安装node和npm" -->
+var gitment = new Gitment({
+  id: "https://joeybling.github.io/2018/04/20/Linux上安装node和npm/",
+  owner: 'JoeyBling',
+  repo: 'JoeyBling.github.io',
+  oauth: {
+    client_id: '084c0dc4233f68ab3ff1',
+    client_secret: '39e1e3bf79509ad8670c81f57d3af0b4bb33255e',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+
+  
 
 
           </div>
@@ -401,7 +421,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -475,11 +495,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -487,7 +507,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ELK日志分析平台</a>
+                <a href="javascript:void(0)" class="js-tag color2">记录生活点滴</a>
               </li>
             
             <div class="clearfix"></div>
@@ -544,6 +564,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://gitee.com/zhousiwei" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>码云</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简书</a>
             </li>
           
         </ul>
