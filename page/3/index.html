@@ -42,7 +42,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #D3D1DC"></div>
+<div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -109,7 +109,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #D3D1DC"></div>
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -185,6 +185,87 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux安装OpenResty api 网关 Orange" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2018/05/30/Linux安装OpenResty api 网关 Orange/" target="_blank">Linux安装OpenResty api 网关 Orange</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2018/05/30/Linux安装OpenResty api 网关 Orange/" class="archive-article-date">
+        <time datetime="2018-05-30T08:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-安装openresty"><a href="#1-安装openresty" class="headerlink" title="1.安装openresty"></a>1.安装openresty</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> yum -y install libuuid-devel pcre-devel openssl-devel gcc-c++ wget</span><br><span class="line"><span class="meta">#</span> mkdir /openresty</span><br><span class="line"><span class="meta">#</span> cd /openresty</span><br><span class="line"><span class="meta">#</span> wget https://openresty.org/download/openresty-1.9.15.1.tar.gz</span><br><span class="line"><span class="meta">#</span> tar -zxf openresty-1.9.15.1.tar.gz</span><br><span class="line"><span class="meta">#</span> cd openresty-1.9.15.1</span><br><span class="line"><span class="meta">#</span> ./configure --with-http_stub_status_module --with-http_v2_module --with-http_ssl_module </span><br><span class="line"><span class="meta">#</span> gmake &amp;&amp; gmake install</span><br><span class="line"><span class="meta">#</span> ln -s /usr/local/openresty/nginx/sbin/nginx /usr/sbin/nginx</span><br><span class="line"><span class="meta">#</span> nginx -v</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/05/30/Linux安装OpenResty api 网关 Orange/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/30/Linux安装OpenResty api 网关 Orange/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-解决MariaDB中文乱码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -200,9 +281,11 @@
 
 
         
-        <a href="/2018/04/26/解决MariaDB中文乱码/" class="archive-article-date">
-  	<time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
+        
+<a href="/2018/04/26/解决MariaDB中文乱码/" class="archive-article-date">
+        <time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
 </a>
+
         
       </header>
     
@@ -281,9 +364,11 @@
 
 
         
-        <a href="/2018/04/26/SpringBoot设置默认首页/" class="archive-article-date">
-  	<time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
+        
+<a href="/2018/04/26/SpringBoot设置默认首页/" class="archive-article-date">
+        <time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
 </a>
+
         
       </header>
     
@@ -357,9 +442,11 @@
 
 
         
-        <a href="/2018/04/20/Linux上安装node和npm/" class="archive-article-date">
-  	<time datetime="2018-04-20T07:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
+        
+<a href="/2018/04/20/Linux上安装node和npm/" class="archive-article-date">
+        <time datetime="2018-04-20T07:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
 </a>
+
         
       </header>
     
@@ -436,9 +523,11 @@
 
 
         
-        <a href="/2018/04/17/Linux-查看网卡UUID/" class="archive-article-date">
-  	<time datetime="2018-04-17T08:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        
+<a href="/2018/04/17/Linux-查看网卡UUID/" class="archive-article-date">
+        <time datetime="2018-04-17T08:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
 </a>
+
         
       </header>
     
@@ -516,9 +605,11 @@
 
 
         
-        <a href="/2018/04/17/Linux-卸载分区/" class="archive-article-date">
-  	<time datetime="2018-04-17T08:01:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        
+<a href="/2018/04/17/Linux-卸载分区/" class="archive-article-date">
+        <time datetime="2018-04-17T08:01:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
 </a>
+
         
       </header>
     
@@ -596,9 +687,11 @@
 
 
         
-        <a href="/2018/04/17/Linux-新建扩展分区/" class="archive-article-date">
-  	<time datetime="2018-04-17T07:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        
+<a href="/2018/04/17/Linux-新建扩展分区/" class="archive-article-date">
+        <time datetime="2018-04-17T07:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
 </a>
+
         
       </header>
     
@@ -676,9 +769,11 @@
 
 
         
-        <a href="/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" class="archive-article-date">
-  	<time datetime="2018-04-17T07:57:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        
+<a href="/2018/04/17/搭建-ElasticSearch-6-1-3分布式集群/" class="archive-article-date">
+        <time datetime="2018-04-17T07:57:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
 </a>
+
         
       </header>
     
@@ -768,9 +863,11 @@ discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
 
 
         
-        <a href="/2018/04/17/FreeMarker-中文乱码问题解决办法/" class="archive-article-date">
-  	<time datetime="2018-04-17T07:53:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        
+<a href="/2018/04/17/FreeMarker-中文乱码问题解决办法/" class="archive-article-date">
+        <time datetime="2018-04-17T07:53:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
 </a>
+
         
       </header>
     
@@ -854,9 +951,11 @@ datetime_format=yyyy-MM-dd HH:mm:Ss
 
 
         
-        <a href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/" class="archive-article-date">
-  	<time datetime="2018-04-17T07:49:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+        
+<a href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/" class="archive-article-date">
+        <time datetime="2018-04-17T07:49:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
 </a>
+
         
       </header>
     
@@ -953,85 +1052,6 @@ import com.alibaba.druid.wall.WallFilter;
 
 
   
-    <article id="post-Linux配置SSH-Key到GitHub" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2018/04/17/Linux配置SSH-Key到GitHub/" target="_blank">Linux配置SSH Key到GitHub</a>
-        
-    </h1>
-  
-
-
-        
-        <a href="/2018/04/17/Linux配置SSH-Key到GitHub/" class="archive-article-date">
-  	<time datetime="2018-04-17T06:48:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-生成SSH-Key"><a href="#1-生成SSH-Key" class="headerlink" title="1.生成SSH Key"></a>1.生成SSH Key</h4><p>首先检查下本机是否已经安装了SSH，在终端输入ssh即可：<br><img src="https://upload-images.jianshu.io/upload_images/2743275-d5ee041fc6a3b53e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>如果没有安装进行yum安装</p>
-        
-          <a class="article-more-a" href="/2018/04/17/Linux配置SSH-Key到GitHub/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/17/Linux配置SSH-Key到GitHub/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1053,6 +1073,17 @@ import com.alibaba.druid.wall.WallFilter;
       	</div>
     </div>
   </div>
+  
+  	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_site_pv">
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	</span>
+        <span class="post-meta-divider">|</span>
+  	<span id="busuanzi_container_site_uv" style='display:none'>
+  		本站访客数<span id="busuanzi_value_site_uv"></span>人
+  	</span>
+  	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 </footer>
 
     </div>
