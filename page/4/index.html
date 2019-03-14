@@ -185,6 +185,122 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-SpringBoot集成Druid不支持多条SQL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/" target="_blank">SpringBoot集成Druid不支持多条SQL</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/" class="archive-article-date">
+        <time datetime="2018-04-17T07:49:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在DataSource 初始化Bean 添加 </p>
+<pre><code>List&lt;Filter&gt; proxyFilters = new ArrayList&lt;Filter&gt;();
+WallFilter statFilter = new WallFilter();
+WallConfig config = new WallConfig();
+config.setMultiStatementAllow(true); // 批量操作
+statFilter.setConfig(config);
+proxyFilters.add(statFilter);
+druidDataSource.setProxyFilters(proxyFilters);
+</code></pre><p>贴上自己的Config</p>
+<pre><code>package com.wstro.config;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.sql.DataSource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import com.alibaba.druid.filter.Filter;
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.support.http.StatViewServlet;
+import com.alibaba.druid.support.http.WebStatFilter;
+import com.alibaba.druid.wall.WallConfig;
+import com.alibaba.druid.wall.WallFilter;
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Linux配置SSH-Key到GitHub" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -456,95 +572,6 @@ if (null != inputDir.listFiles()) {
 
 
   
-    <article id="post-Linux查看硬件信息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2018/03/17/Linux查看硬件信息/" target="_blank">Linux查看硬件信息</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2018/03/17/Linux查看硬件信息/" class="archive-article-date">
-        <time datetime="2018-03-17T08:06:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h5><pre><code># uname -a               # 查看内核/操作系统/CPU信息
-# head -n 1 /etc/issue   # 查看操作系统版本
-# cat /proc/cpuinfo      # 查看CPU信息
-# hostname               # 查看计算机名
-# lspci -tv              # 列出所有PCI设备（yum install pciutils）
-# lsusb -tv              # 列出所有USB设备
-# lsmod                  # 列出加载的内核模块
-# env                    # 查看环境变量  
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/03/17/Linux查看硬件信息/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/17/Linux查看硬件信息/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-赵丽颖：没有什么配不配，你的努力发光了，你就是值得的！" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -726,10 +753,10 @@ if (null != inputDir.listFiles()) {
   </div>
   
   	<!-- 不蒜子统计 -->
-	<span id="busuanzi_container_site_pv">
+	<span id="busuanzi_container_site_pv" style='display:none'>
 		本站总访问量<span id="busuanzi_value_site_pv"></span>次
 	</span>
-        <span class="post-meta-divider">|</span>
+        <span class="post-meta-divider" >|</span>
   	<span id="busuanzi_container_site_uv" style='display:none'>
   		本站访客数<span id="busuanzi_value_site_uv"></span>人
   	</span>

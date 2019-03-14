@@ -185,6 +185,100 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux查看硬件信息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2018/03/17/Linux查看硬件信息/" target="_blank">Linux查看硬件信息</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2018/03/17/Linux查看硬件信息/" class="archive-article-date">
+        <time datetime="2018-03-17T08:06:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h5><pre><code># uname -a               # 查看内核/操作系统/CPU信息
+# head -n 1 /etc/issue   # 查看操作系统版本
+# cat /proc/cpuinfo      # 查看CPU信息
+# hostname               # 查看计算机名
+# lspci -tv              # 列出所有PCI设备（yum install pciutils）
+# lsusb -tv              # 列出所有USB设备
+# lsmod                  # 列出加载的内核模块
+# env                    # 查看环境变量  
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/03/17/Linux查看硬件信息/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/17/Linux查看硬件信息/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Hexo博客添加访问量统计" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -953,91 +1047,6 @@
 
 
   
-    <article id="post-SpringBoot配置文件中context-path不起作用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2018/08/17/SpringBoot配置文件中context-path不起作用/" target="_blank">SpringBoot配置文件中context-path不起作用</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2018/08/17/SpringBoot配置文件中context-path不起作用/" class="archive-article-date">
-        <time datetime="2018-08-17T07:29:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="SpringBoot-2-0-0-RELEASE版本后更新"><a href="#SpringBoot-2-0-0-RELEASE版本后更新" class="headerlink" title="SpringBoot 2.0.0.RELEASE版本后更新"></a>SpringBoot 2.0.0.RELEASE版本后更新</h4><ul>
-<li><p>yml写法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">    servlet:</span><br><span class="line">        context-path: /example</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>properties写法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.servlet.context-path=/example</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/17/SpringBoot配置文件中context-path不起作用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1061,10 +1070,10 @@
   </div>
   
   	<!-- 不蒜子统计 -->
-	<span id="busuanzi_container_site_pv">
+	<span id="busuanzi_container_site_pv" style='display:none'>
 		本站总访问量<span id="busuanzi_value_site_pv"></span>次
 	</span>
-        <span class="post-meta-divider">|</span>
+        <span class="post-meta-divider" >|</span>
   	<span id="busuanzi_container_site_uv" style='display:none'>
   		本站访客数<span id="busuanzi_value_site_uv"></span>人
   	</span>

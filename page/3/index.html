@@ -185,6 +185,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux搭建GitLab并汉化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2018/06/04/Linux搭建GitLab并汉化/" target="_blank">Linux搭建GitLab并汉化</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2018/06/04/Linux搭建GitLab并汉化/" class="archive-article-date">
+        <time datetime="2018-06-04T08:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h3><h5 id="1-1-下载wget"><a href="#1-1-下载wget" class="headerlink" title="1.1 下载wget"></a>1.1 下载wget</h5><pre><code># yum install -y vim
+# yum install -y wget
+# cd /usr/local
+# wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el6/gitlab-ce-10.0.2-ce.0.el6.x86_64.rpm
+</code></pre><h5 id="1-2-关闭防火墙"><a href="#1-2-关闭防火墙" class="headerlink" title="1.2 关闭防火墙"></a>1.2 关闭防火墙</h5><pre><code># service iptables stop
+# chkconfig iptables off
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/06/04/Linux搭建GitLab并汉化/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/04/Linux搭建GitLab并汉化/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Linux安装OpenResty api 网关 Orange" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -237,6 +324,84 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/05/30/Linux安装OpenResty api 网关 Orange/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SpringBoot设置默认首页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2018/04/26/SpringBoot设置默认首页/" target="_blank">SpringBoot设置默认首页</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2018/04/26/SpringBoot设置默认首页/" class="archive-article-date">
+        <time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultView</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurerAdapter</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addViewControllers</span><span class="params">(ViewControllerRegistry registry)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>.addViewControllers(registry);</span><br><span class="line">		<span class="comment">//主页</span></span><br><span class="line">		registry.addViewController(<span class="string">"/"</span>).setViewName(<span class="string">"forward:/index"</span>);</span><br><span class="line">	&#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/26/SpringBoot设置默认首页/">展开全文 >></a>
         </p>
       
 
@@ -320,84 +485,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/04/26/解决MariaDB中文乱码/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SpringBoot设置默认首页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2018/04/26/SpringBoot设置默认首页/" target="_blank">SpringBoot设置默认首页</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2018/04/26/SpringBoot设置默认首页/" class="archive-article-date">
-        <time datetime="2018-04-26T07:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultView</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurerAdapter</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addViewControllers</span><span class="params">(ViewControllerRegistry registry)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>.addViewControllers(registry);</span><br><span class="line">		<span class="comment">//主页</span></span><br><span class="line">		registry.addViewController(<span class="string">"/"</span>).setViewName(<span class="string">"forward:/index"</span>);</span><br><span class="line">	&#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/26/SpringBoot设置默认首页/">展开全文 >></a>
         </p>
       
 
@@ -936,122 +1023,6 @@ datetime_format=yyyy-MM-dd HH:mm:Ss
 
 
   
-    <article id="post-SpringBoot集成Druid不支持多条SQL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/" target="_blank">SpringBoot集成Druid不支持多条SQL</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/" class="archive-article-date">
-        <time datetime="2018-04-17T07:49:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在DataSource 初始化Bean 添加 </p>
-<pre><code>List&lt;Filter&gt; proxyFilters = new ArrayList&lt;Filter&gt;();
-WallFilter statFilter = new WallFilter();
-WallConfig config = new WallConfig();
-config.setMultiStatementAllow(true); // 批量操作
-statFilter.setConfig(config);
-proxyFilters.add(statFilter);
-druidDataSource.setProxyFilters(proxyFilters);
-</code></pre><p>贴上自己的Config</p>
-<pre><code>package com.wstro.config;
-
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.sql.DataSource;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-import com.alibaba.druid.filter.Filter;
-import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.support.http.StatViewServlet;
-import com.alibaba.druid.support.http.WebStatFilter;
-import com.alibaba.druid.wall.WallConfig;
-import com.alibaba.druid.wall.WallFilter;
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/17/SpringBoot集成Druid不支持多条SQL/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1075,10 +1046,10 @@ import com.alibaba.druid.wall.WallFilter;
   </div>
   
   	<!-- 不蒜子统计 -->
-	<span id="busuanzi_container_site_pv">
+	<span id="busuanzi_container_site_pv" style='display:none'>
 		本站总访问量<span id="busuanzi_value_site_pv"></span>次
 	</span>
-        <span class="post-meta-divider">|</span>
+        <span class="post-meta-divider" >|</span>
   	<span id="busuanzi_container_site_uv" style='display:none'>
   		本站访客数<span id="busuanzi_value_site_uv"></span>人
   	</span>

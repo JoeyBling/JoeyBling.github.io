@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="試毅-思伟">
 <meta property="og:description" content="Linux查看硬件信息">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-25T13:47:03.669Z">
+<meta property="og:updated_time" content="2019-03-14T02:32:09.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux查看硬件信息">
 <meta name="twitter:description" content="Linux查看硬件信息">
@@ -240,7 +240,7 @@
 # netstat -lntp          # 查看所有监听端口
 # netstat -antp          # 查看所有已经建立的连接
 # netstat -s             # 查看网络统计信息
-</code></pre><h5 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h5><pre><code>  # ps -ef                 # 查看所有进程
+</code></pre><h5 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h5><pre><code># ps -ef                 # 查看所有进程
 # top                    # 实时显示进程状态
 </code></pre><h5 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h5><pre><code># w                      # 查看活动用户
 # id &lt;用户名&gt;            # 查看指定用户信息
@@ -251,8 +251,8 @@
 </code></pre><h5 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h5><pre><code># chkconfig --list       # 列出所有系统服务
 # chkconfig --list | grep on    # 列出所有启动的系统服务  
 </code></pre><h5 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h5><pre><code># rpm -qa                # 查看所有安装的软件包  
-</code></pre><h5 id="查看网卡型号"><a href="#查看网卡型号" class="headerlink" title="查看网卡型号"></a>查看网卡型号</h5><pre><code>#   lspci | grep Ethernet  
-</code></pre><h5 id="查看内存和cpu最直接最常用的命令"><a href="#查看内存和cpu最直接最常用的命令" class="headerlink" title="查看内存和cpu最直接最常用的命令"></a>查看内存和cpu最直接最常用的命令</h5><pre><code>  # free
+</code></pre><h5 id="查看网卡型号"><a href="#查看网卡型号" class="headerlink" title="查看网卡型号"></a>查看网卡型号</h5><pre><code># lspci | grep Ethernet  
+</code></pre><h5 id="查看内存和cpu最直接最常用的命令"><a href="#查看内存和cpu最直接最常用的命令" class="headerlink" title="查看内存和cpu最直接最常用的命令"></a>查看内存和cpu最直接最常用的命令</h5><pre><code># free
 # cat /proc/cpuinfo   
 </code></pre><h5 id="查看硬盘信息（查看硬盘型号和硬盘序列号）"><a href="#查看硬盘信息（查看硬盘型号和硬盘序列号）" class="headerlink" title="查看硬盘信息（查看硬盘型号和硬盘序列号）"></a>查看硬盘信息（查看硬盘型号和硬盘序列号）</h5><pre><code># df -h  
 </code></pre>
@@ -292,6 +292,11 @@
       
     </div>
     <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
       
 	<div class="article-tag tagcloud">
@@ -454,10 +459,10 @@ gitment.render('gitment-ctn')
   </div>
   
   	<!-- 不蒜子统计 -->
-	<span id="busuanzi_container_site_pv">
+	<span id="busuanzi_container_site_pv" style='display:none'>
 		本站总访问量<span id="busuanzi_value_site_pv"></span>次
 	</span>
-        <span class="post-meta-divider">|</span>
+        <span class="post-meta-divider" >|</span>
   	<span id="busuanzi_container_site_uv" style='display:none'>
   		本站访客数<span id="busuanzi_value_site_uv"></span>人
   	</span>
