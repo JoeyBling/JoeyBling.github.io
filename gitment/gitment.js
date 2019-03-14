@@ -3426,7 +3426,8 @@ var Gitment = function () {
         _this.update();
       }).catch(function (e) {
         _this.state.user.isLoggingIn = false;
-        alert(e);
+        console.log("gitment初始化错误:" + e);
+	//alert(e);
       });
     } else {
       this.update();
