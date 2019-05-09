@@ -12,6 +12,9 @@
 1. [Java](https://joeybling.github.io/tags/Java/)
 2. [Linux](https://joeybling.github.io/tags/Linux/)
 3. [ELK日志分析](https://joeybling.github.io/tags/ELK%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/)
+4. [MySQL](https://joeybling.github.io/tags/MySQL)
+5. [Hexo](https://joeybling.github.io/tags/Hexo)
+6. [日记本](https://joeybling.github.io/tags/%E6%97%A5%E8%AE%B0%E6%9C%AC/)
 
 ## 捐赠
 &#160;&#160;&#160;&#160;**如果感觉对您有帮助，请作者喝杯咖啡吧，请注明您的名字或者昵称，方便作者感谢o(*￣︶￣*)o**
