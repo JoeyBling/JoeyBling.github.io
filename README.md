@@ -16,17 +16,17 @@
 5. [Hexo](https://joeybling.github.io/tags/Hexo)
 6. [日记本](https://joeybling.github.io/tags/%E6%97%A5%E8%AE%B0%E6%9C%AC/)
 
-## 試毅-思伟_开发笔记：[https://joeybling.github.io/myBook/](https://joeybling.github.io/myBook/)
+## 試毅-思伟_开发笔记：[https://joeybling.github.io/ibooks/](https://joeybling.github.io/ibooks/)
 
 - 包含了`开源项目介绍`、`Java笔记`、`前端开发笔记`、`Hexo博客笔记`、`日记本`、`Linux笔记`、`ELK日志分析`
 
-1. [开源项目介绍](https://joeybling.github.io/myBook/)
-2. [Java笔记](https://joeybling.github.io/myBook/java/springboot2.html)
-3. [前端开发笔记](https://joeybling.github.io/myBook/web/)
-4. [Hexo博客笔记](https://joeybling.github.io/myBook/hexo/hexo_music.html)
-5. [日记本](https://joeybling.github.io/myBook/notes/git_branch.html)
-6. [Linux笔记](https://joeybling.github.io/myBook/linux/glibc.html)
-7. [ELK日志分析](https://joeybling.github.io/myBook/elk/linux_es5.html)
+1. [开源项目介绍](https://joeybling.github.io/ibooks/)
+2. [Java笔记](https://joeybling.github.io/ibooks/java/springboot2.html)
+3. [前端开发笔记](https://joeybling.github.io/ibooks/web/)
+4. [Hexo博客笔记](https://joeybling.github.io/ibooks/hexo/hexo_music.html)
+5. [日记本](https://joeybling.github.io/ibooks/notes/git_branch.html)
+6. [Linux笔记](https://joeybling.github.io/ibooks/linux/glibc.html)
+7. [ELK日志分析](https://joeybling.github.io/ibooks/elk/linux_es5.html)
 
 ## 捐赠
 &#160;&#160;&#160;&#160;**如果感觉对您有帮助，请作者喝杯咖啡吧，请注明您的名字或者昵称，方便作者感谢o(*￣︶￣*)o**
