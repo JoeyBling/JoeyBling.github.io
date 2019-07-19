@@ -8,6 +8,7 @@
   <link rel="dns-prefetch" href="https://joeybling.github.io">
   <title>ElasticSearch5.x安装Elasticsearch-head插件 | 試毅-思伟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
   <meta name="description" content="ElasticSearch5.x安装Elasticsearch-head插件">
 <meta name="keywords" content="ELK日志分析平台">
 <meta property="og:type" content="article">
@@ -16,16 +17,16 @@
 <meta property="og:site_name" content="試毅-思伟">
 <meta property="og:description" content="ElasticSearch5.x安装Elasticsearch-head插件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-10a0c4aae4bb3efb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-c94e1e6952bc69c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-68b0592e86fdf36f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-38e4c25912195708.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-5f43e2a56b85e914.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-02-25T17:03:58.560Z">
+<meta property="og:image" content="https://joeybling.github.io/images/2743275-10a0c4aae4bb3efb.png">
+<meta property="og:image" content="https://joeybling.github.io/images/2743275-c94e1e6952bc69c4.png">
+<meta property="og:image" content="https://joeybling.github.io/images/2743275-68b0592e86fdf36f.png">
+<meta property="og:image" content="https://joeybling.github.io/images/2743275-38e4c25912195708.png">
+<meta property="og:image" content="https://joeybling.github.io/images/2743275-5f43e2a56b85e914.png">
+<meta property="og:updated_time" content="2019-07-12T08:34:29.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ElasticSearch5.x安装Elasticsearch-head插件">
 <meta name="twitter:description" content="ElasticSearch5.x安装Elasticsearch-head插件">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2743275-10a0c4aae4bb3efb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://joeybling.github.io/images/2743275-10a0c4aae4bb3efb.png">
   
     <link rel="alternative" href="/atom.xml" title="試毅-思伟" type="application/atom+xml">
   
@@ -64,15 +65,17 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/" target="_blank" >主页</a></li>
 	        
-				<li><a href="/anires/index.html">个人简历</a></li>
+				<li><a href="https://joeybling.github.io/ibooks/" target="_blank" >技术笔记</a></li>
 	        
-				<li><a href="/tags/Java/">Java</a></li>
+				<li><a href="https://zhousiwei.gitee.io/cv/" target="_blank" >个人简历</a></li>
 	        
-				<li><a href="/tags/Linux/">Linux</a></li>
+				<li><a href="/anires/index.html" target="_blank" >动态简历</a></li>
 	        
-				<li><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+				<li><a href="/tags/Java/" target="_blank" >Java</a></li>
+	        
+				<li><a href="/tags/Linux/" target="_blank" >Linux</a></li>
 	        
 			</ul>
 		</nav>
@@ -98,15 +101,17 @@
 		        
 					<a class="gitee" target="_blank" href="https://gitee.com/zhousiwei" title="gitee"><i class="icon-gitee"></i></a>
 		        
-					<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/02cbf31a043a" title="jianshu"><i class="icon-jianshu"></i></a>
+		        
+					<a class="csdn" target="_blank" href="https://blog.csdn.net/qq_30930805" title="csdn"><i class="icon-csdn"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="https://zhihu.com/people/joeybling" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="qq" target="_blank" href="/img/2434387555.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="weixin" target="_blank" href="/img/weixin_.png" title="weixin"><i class="icon-weixin"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
 		        
 			</div>
 		</nav>
@@ -142,6 +147,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -151,15 +158,17 @@
 			        
 						<a class="gitee" target="_blank" href="https://gitee.com/zhousiwei" title="gitee"><i class="icon-gitee"></i></a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/02cbf31a043a" title="jianshu"><i class="icon-jianshu"></i></a>
+			        
+						<a class="csdn" target="_blank" href="https://blog.csdn.net/qq_30930805" title="csdn"><i class="icon-csdn"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://zhihu.com/people/joeybling" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="qq" target="_blank" href="/img/2434387555.jpg" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="weixin" target="_blank" href="/img/weixin_.png" title="weixin"><i class="icon-weixin"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
 			        
 				</div>
 			</nav>
@@ -168,15 +177,17 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 20%"><a href="/">主页</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">主页</a></li>
 		        
-					<li style="width: 20%"><a href="/anires/index.html">个人简历</a></li>
+					<li style="width: 16.666666666666668%"><a href="https://joeybling.github.io/ibooks/">技术笔记</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/Java/">Java</a></li>
+					<li style="width: 16.666666666666668%"><a href="https://zhousiwei.gitee.io/cv/">个人简历</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/Linux/">Linux</a></li>
+					<li style="width: 16.666666666666668%"><a href="/anires/index.html">动态简历</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/Java/">Java</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/tags/Linux/">Linux</a></li>
 		        
 				</ul>
 			</nav>
@@ -221,13 +232,12 @@
       
         <h4 id="一、安装Node-js环境"><a href="#一、安装Node-js环境" class="headerlink" title="一、安装Node.js环境"></a>一、安装Node.js环境</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local</span><br><span class="line"><span class="meta">#</span> wget https://nodejs.org/dist/v8.11.4/node-v8.11.4-linux-x64.tar.xz</span><br><span class="line"><span class="meta">#</span> yum install -y xz</span><br><span class="line"><span class="meta">#</span> xz -d node-v8.11.4-linux-x64.tar.xz</span><br><span class="line"><span class="meta">#</span> tar -xf node-v8.11.4-linux-x64.tar</span><br><span class="line"><span class="meta">#</span> cd /usr/local/bin   //全局使用 npm 和 node,需要做相关软链</span><br><span class="line"><span class="meta">#</span> ln -s /usr/local/node-v8.11.4-linux-x64/bin/node</span><br><span class="line"><span class="meta">#</span> ln -s /usr/local/node-v8.11.4-linux-x64/bin/npm</span><br><span class="line"><span class="meta">#</span> node -v</span><br><span class="line"><span class="meta">#</span> npm -v</span><br><span class="line">//使用淘宝镜像</span><br><span class="line"><span class="meta">#</span> npm config get registry // https://registry.npmjs.org/</span><br><span class="line"><span class="meta">#</span> npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h4 id="二、下载插件包"><a href="#二、下载插件包" class="headerlink" title="二、下载插件包"></a>二、下载插件包</h4><p>去<a href="https://github.com/mobz/elasticsearch-head" target="_blank" rel="noopener">https://github.com/mobz/elasticsearch-head</a> 下载代码上传到服务器上<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd elasticsearch-head</span><br><span class="line"><span class="meta">#</span> npm install -g grunt -cli</span><br><span class="line"><span class="meta">#</span> npm install   //有报错忽略</span><br><span class="line"><span class="meta">#</span> npm install grunt --save  //有报错忽略</span><br><span class="line"><span class="meta">#</span> vim Gruntfile.js   // server.options增加 hostname: '0.0.0.0',</span><br><span class="line"><span class="meta">#</span> vim _site/app.js  //修改ES端口与IP 默认为 http://localhost:9200</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2743275-10a0c4aae4bb3efb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2743275-c94e1e6952bc69c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="二、下载插件包"><a href="#二、下载插件包" class="headerlink" title="二、下载插件包"></a>二、下载插件包</h4><p>去 <a href="https://github.com/mobz/elasticsearch-head" target="_blank" rel="noopener">https://github.com/mobz/elasticsearch-head</a> 下载代码上传到服务器上<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd elasticsearch-head</span><br><span class="line"><span class="meta">#</span> npm install -g grunt -cli</span><br><span class="line"><span class="meta">#</span> npm install   //有报错忽略</span><br><span class="line"><span class="meta">#</span> npm install grunt --save  //有报错忽略</span><br><span class="line"><span class="meta">#</span> vim Gruntfile.js   // server.options增加 hostname: '0.0.0.0',</span><br><span class="line"><span class="meta">#</span> vim _site/app.js  //修改ES端口与IP 默认为 http://localhost:9200</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/2743275-10a0c4aae4bb3efb.png" alt=""><br><img src="/images/2743275-c94e1e6952bc69c4.png" alt=""></p>
 <h4 id="三、修改Elasticsearch配置"><a href="#三、修改Elasticsearch配置" class="headerlink" title="三、修改Elasticsearch配置"></a>三、修改Elasticsearch配置</h4><p>修改elasticsearch.yml文件加入以下内容：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 是否支持跨域</span><br><span class="line">http.cors.enabled: true</span><br><span class="line"><span class="meta">#</span> *表示支持所有域名</span><br><span class="line">http.cors.allow-origin: "*"</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2743275-68b0592e86fdf36f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="/images/2743275-68b0592e86fdf36f.png" alt=""></p>
 <h4 id="四、重启Elasticsearch（一定要重启不然配置不生效）"><a href="#四、重启Elasticsearch（一定要重启不然配置不生效）" class="headerlink" title="四、重启Elasticsearch（一定要重启不然配置不生效）"></a>四、重启Elasticsearch（一定要重启不然配置不生效）</h4><h4 id="五、启动elasticsearch-head插件"><a href="#五、启动elasticsearch-head插件" class="headerlink" title="五、启动elasticsearch-head插件"></a>五、启动elasticsearch-head插件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local/bin/</span><br><span class="line"><span class="meta">#</span> ln -s /usr/local/node-v8.11.4-linux-x64/bin/grunt</span><br><span class="line"><span class="meta">#</span> cd /usr/local/elasticsearch-5.5.2/elasticsearch-head</span><br><span class="line"><span class="meta">#</span> grunt server (后台运行 + &amp;)</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/2743275-38e4c25912195708.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="https://upload-images.jianshu.io/upload_images/2743275-5f43e2a56b85e914.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="/images/2743275-38e4c25912195708.png" alt=""><br><img src="/images/2743275-5f43e2a56b85e914.png" alt=""></p>
 
       
 
@@ -609,6 +619,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
+              <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>技术笔记</a>
+            </li>
+          
+            <li class="search-li">
               <a href="https://github.com/JoeyBling" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>GitHub</a>
             </li>
           
@@ -620,6 +634,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简书</a>
             </li>
           
+            <li class="search-li">
+              <a href="https://blog.csdn.net/qq_30930805" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>CSDN</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.zhihu.com/people/joeybling" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>知乎</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://weibo.com/jayinfo" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>微博</a>
+            </li>
+          
         </ul>
   		
     	</section>
@@ -628,7 +654,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">联系QQ:2434387555&lt;br&gt;&lt;br&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">主要涉及技术：&lt;br&gt;Java后端开发、聚合支付、&lt;br&gt;公众号开发、开源爱好者、Linux&lt;br&gt;&lt;br&gt;联系QQ:2434387555&lt;br&gt;&lt;br&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
   	  	
     	</section>
     

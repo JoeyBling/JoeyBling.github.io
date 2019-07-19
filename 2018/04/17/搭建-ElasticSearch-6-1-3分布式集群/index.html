@@ -8,6 +8,7 @@
   <link rel="dns-prefetch" href="https://joeybling.github.io">
   <title>搭建 ElasticSearch 6.1.3分布式集群 | 試毅-思伟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
   <meta name="description" content="搭建 ElasticSearch 6.1.3分布式集群">
 <meta name="keywords" content="ELK日志分析">
 <meta property="og:type" content="article">
@@ -16,12 +17,12 @@
 <meta property="og:site_name" content="試毅-思伟">
 <meta property="og:description" content="搭建 ElasticSearch 6.1.3分布式集群">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-05T11:40:32.352Z">
+<meta property="og:image" content="https://joeybling.github.io/images/2743275-72a9f7da67487398.png">
+<meta property="og:updated_time" content="2019-07-12T08:34:30.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建 ElasticSearch 6.1.3分布式集群">
 <meta name="twitter:description" content="搭建 ElasticSearch 6.1.3分布式集群">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://joeybling.github.io/images/2743275-72a9f7da67487398.png">
   
     <link rel="alternative" href="/atom.xml" title="試毅-思伟" type="application/atom+xml">
   
@@ -60,15 +61,17 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/" target="_blank" >主页</a></li>
 	        
-				<li><a href="/anires/index.html">个人简历</a></li>
+				<li><a href="https://joeybling.github.io/ibooks/" target="_blank" >技术笔记</a></li>
 	        
-				<li><a href="/tags/Java/">Java</a></li>
+				<li><a href="https://zhousiwei.gitee.io/cv/" target="_blank" >个人简历</a></li>
 	        
-				<li><a href="/tags/Linux/">Linux</a></li>
+				<li><a href="/anires/index.html" target="_blank" >动态简历</a></li>
 	        
-				<li><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+				<li><a href="/tags/Java/" target="_blank" >Java</a></li>
+	        
+				<li><a href="/tags/Linux/" target="_blank" >Linux</a></li>
 	        
 			</ul>
 		</nav>
@@ -94,15 +97,17 @@
 		        
 					<a class="gitee" target="_blank" href="https://gitee.com/zhousiwei" title="gitee"><i class="icon-gitee"></i></a>
 		        
-					<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/02cbf31a043a" title="jianshu"><i class="icon-jianshu"></i></a>
+		        
+					<a class="csdn" target="_blank" href="https://blog.csdn.net/qq_30930805" title="csdn"><i class="icon-csdn"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="https://zhihu.com/people/joeybling" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="qq" target="_blank" href="/img/2434387555.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="weixin" target="_blank" href="/img/weixin_.png" title="weixin"><i class="icon-weixin"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
 		        
 			</div>
 		</nav>
@@ -138,6 +143,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -147,15 +154,17 @@
 			        
 						<a class="gitee" target="_blank" href="https://gitee.com/zhousiwei" title="gitee"><i class="icon-gitee"></i></a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/02cbf31a043a" title="jianshu"><i class="icon-jianshu"></i></a>
+			        
+						<a class="csdn" target="_blank" href="https://blog.csdn.net/qq_30930805" title="csdn"><i class="icon-csdn"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://zhihu.com/people/joeybling" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="qq" target="_blank" href="/img/2434387555.jpg" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="weixin" target="_blank" href="/img/weixin_.png" title="weixin"><i class="icon-weixin"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
 			        
 				</div>
 			</nav>
@@ -164,15 +173,17 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 20%"><a href="/">主页</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">主页</a></li>
 		        
-					<li style="width: 20%"><a href="/anires/index.html">个人简历</a></li>
+					<li style="width: 16.666666666666668%"><a href="https://joeybling.github.io/ibooks/">技术笔记</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/Java/">Java</a></li>
+					<li style="width: 16.666666666666668%"><a href="https://zhousiwei.gitee.io/cv/">个人简历</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/Linux/">Linux</a></li>
+					<li style="width: 16.666666666666668%"><a href="/anires/index.html">动态简历</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/Java/">Java</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/tags/Linux/">Linux</a></li>
 		        
 				</ul>
 			</nav>
@@ -215,39 +226,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="ELasticsearch-6-1-3要求JDK版本最低为1-8"><a href="#ELasticsearch-6-1-3要求JDK版本最低为1-8" class="headerlink" title="ELasticsearch 6.1.3要求JDK版本最低为1.8"></a>ELasticsearch 6.1.3要求JDK版本最低为1.8</h4><p>mac上的本机ip为192.168.1.111,设为master节点，配置如下：</p>
-<pre><code>cluster.name: my-application
-node.name: node-111
-
-network.host: 192.168.1.111
-http.port: 9200
-
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-
-node.master: true
-node.data: true
-discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
-</code></pre><a id="more"></a>
+        <blockquote>
+<p>ELasticsearch 6.1.3要求JDK版本最低为<code>1.8</code></p>
+</blockquote>
+<p>mac上的本机ip为192.168.1.111,设为<code>master</code>节点，配置如下：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cluster.name:</span> <span class="string">my-application</span></span><br><span class="line"><span class="string">node.name:</span> <span class="string">node-111</span></span><br><span class="line"></span><br><span class="line"><span class="string">network.host:</span> <span class="number">192.168</span><span class="number">.1</span><span class="number">.111</span></span><br><span class="line"><span class="string">http.port:</span> <span class="number">9200</span></span><br><span class="line"></span><br><span class="line"><span class="string">http.cors.enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="string">http.cors.allow-origin:</span> <span class="string">"*"</span></span><br><span class="line"></span><br><span class="line"><span class="string">node.master:</span> <span class="literal">true</span></span><br><span class="line"><span class="string">node.data:</span> <span class="literal">true</span></span><br><span class="line"><span class="string">discovery.zen.ping.unicast.hosts:</span> <span class="string">["192.168.1.111"]</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>Ubuntu机器的ip位192.168.1.102，配置如下：</p>
-<pre><code>cluster.name: my-application
-node.name: node-102
-
-network.host: 192.168.1.102
-http.port: 9200
-
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-
-node.master: false
-node.data: true
-discovery.zen.ping.unicast.hosts: [&quot;192.168.1.111&quot;]
-</code></pre><p>先启动mac上的master，再启动Ubuntu上的slave节点，观察输出，会有一个node-102探测到master节点的提示：</p>
-<pre><code>2017-06-07T11:33:39,369][INFO ][o.e.c.s.ClusterService   ] [node-102] detected_master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300}, added {{node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300},}, reason: zen-disco-receive(from master [master {node-111}{3dQd1RRVTMiKdTckM68nPQ}{H6Zu7PAQRWewUBcllsQWTQ}{192.168.1.111}{192.168.1.111:9300} committed version [8]])&apos;
-</code></pre><p>访问head，一个master一个slave组成集群，界面如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2743275-72a9f7da67487398?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这里写图片描述"></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cluster.name:</span> <span class="string">my-application</span></span><br><span class="line"><span class="string">node.name:</span> <span class="string">node-102</span></span><br><span class="line"></span><br><span class="line"><span class="string">network.host:</span> <span class="number">192.168</span><span class="number">.1</span><span class="number">.102</span></span><br><span class="line"><span class="string">http.port:</span> <span class="number">9200</span></span><br><span class="line"></span><br><span class="line"><span class="string">http.cors.enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="string">http.cors.allow-origin:</span> <span class="string">"*"</span></span><br><span class="line"></span><br><span class="line"><span class="string">node.master:</span> <span class="literal">false</span></span><br><span class="line"><span class="string">node.data:</span> <span class="literal">true</span></span><br><span class="line"><span class="string">discovery.zen.ping.unicast.hosts:</span> <span class="string">["192.168.1.111"]</span></span><br></pre></td></tr></table></figure>
+<p>先启动mac上的master，再启动Ubuntu上的slave节点，观察输出，会有一个node-102探测到master节点的提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2017-06-07T11:33:39,369][INFO ][o.e.c.s.ClusterService   ] [node-102] detected_master &#123;node-111&#125;&#123;3dQd1RRVTMiKdTckM68nPQ&#125;&#123;H6Zu7PAQRWewUBcllsQWTQ&#125;&#123;192.168.1.111&#125;&#123;192.168.1.111:9300&#125;, added &#123;&#123;node-111&#125;&#123;3dQd1RRVTMiKdTckM68nPQ&#125;&#123;H6Zu7PAQRWewUBcllsQWTQ&#125;&#123;192.168.1.111&#125;&#123;192.168.1.111:9300&#125;,&#125;, reason: zen-disco-receive(from master [master &#123;node-111&#125;&#123;3dQd1RRVTMiKdTckM68nPQ&#125;&#123;H6Zu7PAQRWewUBcllsQWTQ&#125;&#123;192.168.1.111&#125;&#123;192.168.1.111:9300&#125; committed version [8]])&apos;</span><br></pre></td></tr></table></figure>
+<p>访问<code>head</code>，一个master一个slave组成集群，界面如下：</p>
+<p><img src="/images/2743275-72a9f7da67487398.png" alt=""></p>
 <h3 id="单机多节点集群配置"><a href="#单机多节点集群配置" class="headerlink" title="单机多节点集群配置"></a>单机多节点集群配置</h3><p>如果想要在一台机器上启动多个节点，步骤如下：</p>
-<p>1、复制一份ELasticsearch的安装包<br>2、修改端口，比如一个是9200，一个是9205<br>3、删除data目录下的数据(如果是新解压的安装包就不必了)</p>
+<ul>
+<li>1、复制一份ELasticsearch的安装包</li>
+<li>2、修改端口，比如一个是9200，一个是9205</li>
+<li>3、删除data目录下的数据(如果是新解压的安装包就不必了)</li>
+</ul>
 
       
 
@@ -629,6 +624,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
+              <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>技术笔记</a>
+            </li>
+          
+            <li class="search-li">
               <a href="https://github.com/JoeyBling" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>GitHub</a>
             </li>
           
@@ -640,6 +639,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简书</a>
             </li>
           
+            <li class="search-li">
+              <a href="https://blog.csdn.net/qq_30930805" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>CSDN</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.zhihu.com/people/joeybling" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>知乎</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://weibo.com/jayinfo" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>微博</a>
+            </li>
+          
         </ul>
   		
     	</section>
@@ -648,7 +659,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">联系QQ:2434387555&lt;br&gt;&lt;br&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">主要涉及技术：&lt;br&gt;Java后端开发、聚合支付、&lt;br&gt;公众号开发、开源爱好者、Linux&lt;br&gt;&lt;br&gt;联系QQ:2434387555&lt;br&gt;&lt;br&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
   	  	
     	</section>
     

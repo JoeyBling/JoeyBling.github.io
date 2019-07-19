@@ -8,6 +8,10 @@
   <link rel="dns-prefetch" href="https://joeybling.github.io">
   <title>試毅-思伟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <!-- 辅助函数（Helpers）https://hexo.io/zh-cn/docs/helpers.html#%E6%9D%A1%E4%BB%B6%E5%87%BD%E6%95%B0 -->
+    <meta name="keywords" content="試毅-思伟_技术博客">
+  
   <meta name="description" content="試毅-思伟_技术博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="試毅-思伟">
@@ -56,15 +60,17 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/" target="_blank" >主页</a></li>
 	        
-				<li><a href="/anires/index.html">个人简历</a></li>
+				<li><a href="https://joeybling.github.io/ibooks/" target="_blank" >技术笔记</a></li>
 	        
-				<li><a href="/tags/Java/">Java</a></li>
+				<li><a href="https://zhousiwei.gitee.io/cv/" target="_blank" >个人简历</a></li>
 	        
-				<li><a href="/tags/Linux/">Linux</a></li>
+				<li><a href="/anires/index.html" target="_blank" >动态简历</a></li>
 	        
-				<li><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+				<li><a href="/tags/Java/" target="_blank" >Java</a></li>
+	        
+				<li><a href="/tags/Linux/" target="_blank" >Linux</a></li>
 	        
 			</ul>
 		</nav>
@@ -90,15 +96,17 @@
 		        
 					<a class="gitee" target="_blank" href="https://gitee.com/zhousiwei" title="gitee"><i class="icon-gitee"></i></a>
 		        
-					<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/02cbf31a043a" title="jianshu"><i class="icon-jianshu"></i></a>
+		        
+					<a class="csdn" target="_blank" href="https://blog.csdn.net/qq_30930805" title="csdn"><i class="icon-csdn"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="https://zhihu.com/people/joeybling" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="qq" target="_blank" href="/img/2434387555.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="weixin" target="_blank" href="/img/weixin_.png" title="weixin"><i class="icon-weixin"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
 		        
 			</div>
 		</nav>
@@ -134,6 +142,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -143,15 +153,17 @@
 			        
 						<a class="gitee" target="_blank" href="https://gitee.com/zhousiwei" title="gitee"><i class="icon-gitee"></i></a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/02cbf31a043a" title="jianshu"><i class="icon-jianshu"></i></a>
+			        
+						<a class="csdn" target="_blank" href="https://blog.csdn.net/qq_30930805" title="csdn"><i class="icon-csdn"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://zhihu.com/people/joeybling" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="qq" target="_blank" href="/img/2434387555.jpg" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="weixin" target="_blank" href="/img/weixin_.png" title="weixin"><i class="icon-weixin"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
 			        
 				</div>
 			</nav>
@@ -160,15 +172,17 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 20%"><a href="/">主页</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">主页</a></li>
 		        
-					<li style="width: 20%"><a href="/anires/index.html">个人简历</a></li>
+					<li style="width: 16.666666666666668%"><a href="https://joeybling.github.io/ibooks/">技术笔记</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/Java/">Java</a></li>
+					<li style="width: 16.666666666666668%"><a href="https://zhousiwei.gitee.io/cv/">个人简历</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/Linux/">Linux</a></li>
+					<li style="width: 16.666666666666668%"><a href="/anires/index.html">动态简历</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/Java/">Java</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/tags/Linux/">Linux</a></li>
 		        
 				</ul>
 			</nav>
@@ -210,15 +224,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h5><pre><code># uname -a               # 查看内核/操作系统/CPU信息
-# head -n 1 /etc/issue   # 查看操作系统版本
-# cat /proc/cpuinfo      # 查看CPU信息
-# hostname               # 查看计算机名
-# lspci -tv              # 列出所有PCI设备（yum install pciutils）
-# lsusb -tv              # 列出所有USB设备
-# lsmod                  # 列出加载的内核模块
-# env                    # 查看环境变量  
-</code></pre>
+        <h5 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> uname -a               # 查看内核/操作系统/CPU信息</span><br><span class="line"><span class="meta">#</span> head -n 1 /etc/issue   # 查看操作系统版本</span><br><span class="line"><span class="meta">#</span> cat /proc/cpuinfo      # 查看CPU信息</span><br><span class="line"><span class="meta">#</span> hostname               # 查看计算机名</span><br><span class="line"><span class="meta">#</span> lspci -tv              # 列出所有PCI设备（yum install pciutils）</span><br><span class="line"><span class="meta">#</span> lsusb -tv              # 列出所有USB设备</span><br><span class="line"><span class="meta">#</span> lsmod                  # 列出加载的内核模块</span><br><span class="line"><span class="meta">#</span> env                    # 查看环境变量</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2018/03/17/Linux查看硬件信息/#more">more >></a>
         
@@ -279,7 +285,7 @@
 
 
   
-    <article id="post-Hexo博客yilia主题添加背景音乐(网易云音乐)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-GitBook生成pdf出现中文不显示或乱码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -287,7 +293,7 @@
   
     <h1 itemprop="name">
 	
-	      <a class="article-title" href="/2019/05/09/Hexo博客yilia主题添加背景音乐(网易云音乐)/" target="_blank">Hexo博客yilia主题添加背景音乐 （网易云音乐）</a>
+	      <a class="article-title" href="/2019/07/02/GitBook生成pdf出现中文不显示或乱码/" target="_blank">GitBook生成pdf出现中文不显示或乱码</a>
         
     </h1>
   
@@ -295,8 +301,8 @@
 
         
         
-<a href="/2019/05/09/Hexo博客yilia主题添加背景音乐(网易云音乐)/" class="archive-article-date">
-        <time datetime="2019-05-09T06:29:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
+<a href="/2019/07/02/GitBook生成pdf出现中文不显示或乱码/" class="archive-article-date">
+        <time datetime="2019-07-02T09:44:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
 </a>
 
         
@@ -304,452 +310,526 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><a href="https://zhousiwei.gitee.io/" target="_blank" rel="noopener">博主博客地址</a></li>
+        <h5 id="1、在book-json文件plugins属性上添加yahei插件"><a href="#1、在book-json文件plugins属性上添加yahei插件" class="headerlink" title="1、在book.json文件plugins属性上添加yahei插件"></a>1、在<code>book.json</code>文件<code>plugins</code>属性上添加<code>yahei</code>插件</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["yahei"]</span><br></pre></td></tr></table></figure>
+<h5 id="2、配置pluginsConfig下fontSettings属性，使用msyh-gt-微软雅黑字体"><a href="#2、配置pluginsConfig下fontSettings属性，使用msyh-gt-微软雅黑字体" class="headerlink" title="2、配置pluginsConfig下fontSettings属性，使用msyh &gt; 微软雅黑字体"></a>2、配置<code>pluginsConfig</code>下<code>fontSettings</code>属性，使用<code>msyh</code> &gt; 微软雅黑字体</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"pluginsConfig": &#123;</span><br><span class="line">        "fontSettings": &#123;</span><br><span class="line">                "family": "msyh",</span><br><span class="line">                "size": 2</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/07/02/GitBook生成pdf出现中文不显示或乱码/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">日记本</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/02/GitBook生成pdf出现中文不显示或乱码/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux下安装GLIBC_2.18和libstdc++.so" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2019/07/02/Linux下安装GLIBC_2.18和libstdc++.so/" target="_blank">Linux下安装GLIBC_2.18和libstdc++.so</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2019/07/02/Linux下安装GLIBC_2.18和libstdc++.so/" class="archive-article-date">
+        <time datetime="2019-07-02T08:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Tips-如果不装libstdc-so会报错：ImportError-usr-lib64-libstdc-so-6-version-39-GLIBCXX-3-4-15-39-not-found-required-by-opt-calibre-lib-libQt5WebKit-so-5"><a href="#Tips-如果不装libstdc-so会报错：ImportError-usr-lib64-libstdc-so-6-version-39-GLIBCXX-3-4-15-39-not-found-required-by-opt-calibre-lib-libQt5WebKit-so-5" class="headerlink" title="Tips:如果不装libstdc++.so会报错：ImportError: /usr/lib64/libstdc++.so.6: version &#39;GLIBCXX_3.4.15&#39; not found (required by /opt/calibre/lib/libQt5WebKit.so.5)"></a>Tips:如果不装libstdc++.so会报错：<code>ImportError: /usr/lib64/libstdc++.so.6: version &#39;GLIBCXX_3.4.15&#39; not found (required by /opt/calibre/lib/libQt5WebKit.so.5)</code></h5><ul>
+<li><code>GLIBC_2.18</code>,<code>GLIBCXX_3.4.19</code></li>
 </ul>
-<h5 id="1、打开网易云音乐首页，复制选择的背景音乐分享外链"><a href="#1、打开网易云音乐首页，复制选择的背景音乐分享外链" class="headerlink" title="1、打开网易云音乐首页，复制选择的背景音乐分享外链"></a>1、打开网易云音乐首页，复制选择的背景音乐分享外链</h5><blockquote>
-<p><a href="http://music.163.com/" target="_blank" rel="noopener">网易云音乐</a></p>
+        
+          <a class="article-more-a" href="/2019/07/02/Linux下安装GLIBC_2.18和libstdc++.so/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/02/Linux下安装GLIBC_2.18和libstdc++.so/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Git分支的创建、删除、切换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2019/07/01/Git分支的创建、删除、切换/" target="_blank">Git分支的创建、删除、切换</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2019/07/01/Git分支的创建、删除、切换/" class="archive-article-date">
+        <time datetime="2019-07-01T02:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="1、本地创建新分支并切换到新分支"><a href="#1、本地创建新分支并切换到新分支" class="headerlink" title="1、本地创建新分支并切换到新分支"></a>1、本地创建新分支并切换到新分支</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> git checkout -b 分支名</span></span><br></pre></td></tr></table></figure>
+<h5 id="2、提交分支到远程仓库"><a href="#2、提交分支到远程仓库" class="headerlink" title="2、提交分支到远程仓库"></a>2、提交分支到远程仓库</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> git push origin 分支名</span></span><br></pre></td></tr></table></figure>
+<h5 id="3、切换分支"><a href="#3、切换分支" class="headerlink" title="3、切换分支"></a>3、切换分支</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> git checkout 分支名</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/07/01/Git分支的创建、删除、切换/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">日记本</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/01/Git分支的创建、删除、切换/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux安装python2.7.9" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2019/06/24/Linux安装python2.7.9/" target="_blank">Linux安装python2.7.9</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2019/06/24/Linux安装python2.7.9/" class="archive-article-date">
+        <time datetime="2019-06-24T09:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-24</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>官网地址：<a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a></p>
+</blockquote>
+<h3 id="1、Linux下安装-其他系统请自行前往官网安装"><a href="#1、Linux下安装-其他系统请自行前往官网安装" class="headerlink" title="1、Linux下安装(其他系统请自行前往官网安装)"></a>1、Linux下安装<code>(其他系统请自行前往官网安装)</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">--- 安装依赖包</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> /usr/<span class="built_in">local</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make -y</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> tar -xzvf Python-2.7.9.tgz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> Python-2.7.9</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ./configure --prefix=/usr/<span class="built_in">local</span>/Python2.7.9 --<span class="built_in">enable</span>-shared -<span class="built_in">enable</span>-unicode=ucs4</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> make</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> make install</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> python -V</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/06/24/Linux安装python2.7.9/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/24/Linux安装python2.7.9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-GitBook相关配置及优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2019/06/24/GitBook相关配置及优化/" target="_blank">GitBook相关配置及优化</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2019/06/24/GitBook相关配置及优化/" class="archive-article-date">
+        <time datetime="2019-06-24T08:58:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-24</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、GitBook配置说明"><a href="#1、GitBook配置说明" class="headerlink" title="1、GitBook配置说明"></a>1、GitBook配置说明</h3><h6 id="1-1、目录结构"><a href="#1-1、目录结构" class="headerlink" title="1.1、目录结构"></a>1.1、目录结构</h6><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">├── book.json</span><br><span class="line">├── README.md</span><br><span class="line">├── SUMMARY.md</span><br><span class="line">├── chapter<span class="number">-1</span>/</span><br><span class="line">|    ├── README.md</span><br><span class="line">|    ├── something.md</span><br><span class="line">├── chapter<span class="number">-2</span>/</span><br><span class="line">|    ├── README.md</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/06/24/GitBook相关配置及优化/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">日记本</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/24/GitBook相关配置及优化/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux下安装calibre-ebook" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2019/06/24/Linux下安装calibre-ebook/" target="_blank">Linux下安装calibre-ebook</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2019/06/24/Linux下安装calibre-ebook/" class="archive-article-date">
+        <time datetime="2019-06-24T08:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-24</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>官网地址：<a href="https://calibre-ebook.com/download" target="_blank" rel="noopener">https://calibre-ebook.com/download</a></p>
+</blockquote>
+<ul>
+<li><strong>需要有python环境 ➡️ <a href="https://www.jianshu.com/p/f42cdca948de" target="_blank" rel="noopener">Linux安装python2.7.9</a></strong></li>
+<li><strong>需要支持GLIBC_2.17和libstdc++.so ➡️ <a href="https://www.jianshu.com/p/f23129adb8c4" target="_blank" rel="noopener">Linux下安装GLIBC_2.18和libstdc++.so</a></strong></li>
+</ul>
+<blockquote>
+<p>官网的说法：- <strong>You need GLIBC 2.17 or higher and libstdc++.so.6.0.17 (from gcc 4.7.0) or higher to run calibre</strong><br>
+        
+          <a class="article-more-a" href="/2019/06/24/Linux下安装calibre-ebook/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">日记本</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/24/Linux下安装calibre-ebook/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-GitBook的安装、卸载、常见问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2019/06/20/GitBook的安装、卸载、常见问题/" target="_blank">GitBook的安装、卸载、常见问题</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2019/06/20/GitBook的安装、卸载、常见问题/" class="archive-article-date">
+        <time datetime="2019-06-20T06:27:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-20</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Tips-博主使用的版本"><a href="#Tips-博主使用的版本" class="headerlink" title="Tips:博主使用的版本"></a>Tips:博主使用的版本</h5><ul>
+<li><a href="https://zhousiwei.gitee.io/" target="_blank" rel="noopener">博主博客地址</a></li>
+<li><a href="https://zhousiwei.gitee.io/myBook" target="_blank" rel="noopener">博主Gitbook</a></li>
+<li><strong><code>Node v8.11.2</code> <code>npm v6.9.0</code> <code>gitbook v3.2.3</code> <code>服务器 CentOS6.5</code></strong><blockquote>
+<p>官方GitHub:<a href="https://github.com/GitbookIO/gitbook-cli" target="_blank" rel="noopener">https://github.com/GitbookIO/gitbook-cli</a></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/53fccf623f1c" target="_blank" rel="noopener">GitBook相关配置及优化</a></p>
 </blockquote>
 <hr>
-<h5 id="2、引入播放器代码"><a href="#2、引入播放器代码" class="headerlink" title="2、引入播放器代码"></a>2、引入播放器代码</h5><p>&#160;&#160;&#160;&#160;在<code>themes/yilia/layout/_partial/left-col.ejs</code>文件<code>nav</code>标签中添加代码<br>
         
-          <a class="article-more-a" href="/2019/05/09/Hexo博客yilia主题添加背景音乐(网易云音乐)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/09/Hexo博客yilia主题添加背景音乐(网易云音乐)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-玩转MySQL优化命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2019/05/06/玩转MySQL优化命令/" target="_blank">玩转MySQL优化命令</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2019/05/06/玩转MySQL优化命令/" class="archive-article-date">
-        <time datetime="2019-05-06T10:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-06</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="1、MySQL更改为只能本地登录"><a href="#1、MySQL更改为只能本地登录" class="headerlink" title="1、MySQL更改为只能本地登录"></a>1、MySQL更改为只能本地登录</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> use mysql;</span><br><span class="line"><span class="meta">#</span> select user,host,Password from user where user='root';</span><br><span class="line"><span class="meta">#</span> delete from user where user='root' and host='%';</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/05/06/玩转MySQL优化命令/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/06/玩转MySQL优化命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-IDEA+JRebel全自动热部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2019/05/05/IDEA+JRebel全自动热部署/" target="_blank">IDEA+JRebel全自动热部署</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2019/05/05/IDEA+JRebel全自动热部署/" class="archive-article-date">
-        <time datetime="2019-05-05T10:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-05</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>链接：<a href="https://pan.baidu.com/s/1ZE5cv1vhFQhdaj91dFD-GA" target="_blank" rel="noopener">https://pan.baidu.com/s/1ZE5cv1vhFQhdaj91dFD-GA</a> 密码：b2k8<br>下载后解压</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/2743275-5eeeee6b3feaff69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-        
-          <a class="article-more-a" href="/2019/05/05/IDEA+JRebel全自动热部署/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IDEA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/05/IDEA+JRebel全自动热部署/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hexo博客添加helper-live2d动态模型插件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2019/05/05/Hexo博客添加helper-live2d动态模型插件/" target="_blank">Hexo博客添加helper-live2d动态模型插件</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2019/05/05/Hexo博客添加helper-live2d动态模型插件/" class="archive-article-date">
-        <time datetime="2019-05-05T08:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-05</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="Tips-前导必备"><a href="#Tips-前导必备" class="headerlink" title="Tips:前导必备"></a>Tips:前导必备</h5><ul>
-<li><a href="https://zhousiwei.gitee.io/" target="_blank" rel="noopener">博主博客地址</a></li>
-<li>博主使用的是<code>yilia</code>主题</li>
-<li>插件的github地址<a href="https://github.com/EYHN/hexo-helper-live2d" title="hexo-helper-live2d" target="_blank" rel="noopener">hexo-helper-live2d</a></li>
-<li><a href="https://github.com/xiazeyu/live2d-widget-models" title="live2d模型仓库" target="_blank" rel="noopener">live2d模型仓库</a></li>
-<li>必须有Node环境 ➡️ <a href="https://www.jianshu.com/p/f8b0a4f7a822" target="_blank" rel="noopener">Linux下安装node和npm</a></li>
-</ul>
-<hr>
-        
-          <a class="article-more-a" href="/2019/05/05/Hexo博客添加helper-live2d动态模型插件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/05/Hexo博客添加helper-live2d动态模型插件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-vi或vim粘贴内容时,保留原文件内容格式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2019/05/05/vi或vim粘贴内容时,保留原文件内容格式/" target="_blank">vi/vim 粘贴内容时,保留原文件内容格式</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2019/05/05/vi或vim粘贴内容时,保留原文件内容格式/" class="archive-article-date">
-        <time datetime="2019-05-05T07:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-05</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在vi/vim普通模式下执行<code>:set paste</code>命令，再按 i 插入就会保留原文件格式</p>
-<ul>
-<li><code>:set paste</code> 打开粘贴命令</li>
-<li><code>:set nopaste</code> 关闭命令</li>
-<li><code>:h paste</code> 帮助</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/05/vi或vim粘贴内容时,保留原文件内容格式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hexo博客添加访问量统计" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2019/03/13/Hexo博客添加访问量统计/" target="_blank">Hexo博客添加访问量统计</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2019/03/13/Hexo博客添加访问量统计/" class="archive-article-date">
-        <time datetime="2019-03-13T03:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-13</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="Tips-前导必备"><a href="#Tips-前导必备" class="headerlink" title="Tips:前导必备"></a>Tips:前导必备</h5><ul>
-<li><a href="https://joeybling.github.io/">博主博客地址</a></li>
-<li>博主使用的是<code>yilia</code>主题</li>
-<li>访问量统计使用<strong><a href="http://busuanzi.ibruce.info/" title="不蒜子" target="_blank" rel="noopener">不蒜子</a></strong></li>
-</ul>
-<hr>
-<h5 id="1、配置是否开启不蒜子访问量统计功能"><a href="#1、配置是否开启不蒜子访问量统计功能" class="headerlink" title="1、配置是否开启不蒜子访问量统计功能"></a>1、配置是否开启不蒜子访问量统计功能</h5><p>&#160;&#160;&#160;&#160;在<code>themes/yilia/_config.yml</code>添加属性<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 是否开启访问量统计功能(不蒜子)</span></span><br><span class="line"><span class="attr">busuanzi:</span></span><br><span class="line"><span class="attr"> enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2019/03/13/Hexo博客添加访问量统计/#more">more >></a>
+          <a class="article-more-a" href="/2019/06/20/GitBook的安装、卸载、常见问题/#more">more >></a>
         
       
 
@@ -773,7 +853,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/13/Hexo博客添加访问量统计/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/06/20/GitBook的安装、卸载、常见问题/">展开全文 >></a>
         </p>
       
 
@@ -803,7 +883,7 @@
 
 
   
-    <article id="post-Linux下安装rabbitMq" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Git彻底删除历史提交记录的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -811,7 +891,7 @@
   
     <h1 itemprop="name">
 	
-	      <a class="article-title" href="/2019/03/07/Linux下安装rabbitMq/" target="_blank">Linux下安装rabbitMq</a>
+	      <a class="article-title" href="/2019/06/05/Git彻底删除历史提交记录的方法/" target="_blank">Git彻底删除历史提交记录的方法</a>
         
     </h1>
   
@@ -819,8 +899,8 @@
 
         
         
-<a href="/2019/03/07/Linux下安装rabbitMq/" class="archive-article-date">
-        <time datetime="2019-03-07T01:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
+<a href="/2019/06/05/Git彻底删除历史提交记录的方法/" class="archive-article-date">
+        <time datetime="2019-06-05T02:22:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-05</time>
 </a>
 
         
@@ -828,172 +908,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Linux下安装rabbitMq"><a href="#Linux下安装rabbitMq" class="headerlink" title="Linux下安装rabbitMq"></a>Linux下安装rabbitMq</h3><p><strong>必须有Erlang环境——&gt;&gt;&gt;<a href="https://www.jianshu.com/p/998f9f978f57" title="Linux下安装Erlang" target="_blank" rel="noopener">Linux下安装Erlang</a></strong></p>
-<h5 id="一、安装rabbitMq"><a href="#一、安装rabbitMq" class="headerlink" title="一、安装rabbitMq"></a>一、安装rabbitMq</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local/</span><br><span class="line"><span class="meta">#</span> yum install -y xz</span><br><span class="line"><span class="meta">#</span> wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.2/rabbitmq-server-generic-unix-3.6.2.tar.xz</span><br><span class="line"><span class="meta">#</span> xz -d rabbitmq-server-generic-unix-3.6.2.tar.xz</span><br><span class="line"><span class="meta">#</span> tar -xvf rabbitmq-server-generic-unix-3.6.2.tar</span><br><span class="line">--配置rabbitMq环境变量</span><br><span class="line"><span class="meta">#</span> vim /etc/profile</span><br><span class="line">文件末尾添加 export PATH=$PATH:/usr/local/rabbitmq_server-3.6.2/sbin</span><br><span class="line"><span class="meta">#</span> source /etc/profile</span><br></pre></td></tr></table></figure>
+        <h6 id="1、查看Git提交记录"><a href="#1、查看Git提交记录" class="headerlink" title="1、查看Git提交记录"></a>1、查看Git提交记录</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> git <span class="built_in">log</span></span></span><br></pre></td></tr></table></figure>
+<hr>
+<h6 id="2、找到需要回滚到的提交点，复制它的hash值"><a href="#2、找到需要回滚到的提交点，复制它的hash值" class="headerlink" title="2、找到需要回滚到的提交点，复制它的hash值"></a>2、找到需要回滚到的提交点，复制它的hash值</h6><p><img src="/images/2743275-f79de5b6d7280d81.png" alt=""><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> git reset --hard 你复制的<span class="built_in">hash</span>值</span></span><br></pre></td></tr></table></figure></p>
         
-          <a class="article-more-a" href="/2019/03/07/Linux下安装rabbitMq/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/07/Linux下安装rabbitMq/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux下安装Erlang" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2019/03/01/Linux下安装Erlang/" target="_blank">Linux下安装Erlang</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2019/03/01/Linux下安装Erlang/" class="archive-article-date">
-        <time datetime="2019-03-01T08:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-01</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Linux下安装Erlang"><a href="#Linux下安装Erlang" class="headerlink" title="Linux下安装Erlang"></a>Linux下安装Erlang</h3><h5 id="一、升级openssl"><a href="#一、升级openssl" class="headerlink" title="一、升级openssl"></a>一、升级openssl</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local/</span><br><span class="line"><span class="meta">#</span> wget http://www.openssl.org/source/openssl-1.0.1s.tar.gz</span><br><span class="line"><span class="meta">#</span> tar -zxvf openssl-1.0.1s.tar.gz</span><br><span class="line"><span class="meta">#</span> cd openssl-1.0.1s</span><br><span class="line"><span class="meta">#</span> ./config --prefix=/usr/local/openssl</span><br><span class="line"><span class="meta">#</span> vim Makefile</span><br><span class="line">--修改CFLAG= -DOPENSSL_THREADS 修改成 CFLAG= -fPIC -DOPENSSL_THREADS</span><br><span class="line">--也就是添加 -fPIC</span><br><span class="line"><span class="meta">#</span> make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/03/01/Linux下安装Erlang/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/01/Linux下安装Erlang/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-新增Hexo博客文章置顶功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-	
-	      <a class="article-title" href="/2019/02/25/新增Hexo博客文章置顶功能/" target="_blank">新增Hexo博客文章置顶功能</a>
-        
-    </h1>
-  
-
-
-        
-        
-<a href="/2019/02/25/新增Hexo博客文章置顶功能/" class="archive-article-date">
-        <time datetime="2019-02-25T03:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-25</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="修改Hexo文件夹下的node-modules-hexo-generator-index-lib-generator-js"><a href="#修改Hexo文件夹下的node-modules-hexo-generator-index-lib-generator-js" class="headerlink" title="修改Hexo文件夹下的node_modules/hexo-generator-index/lib/generator.js"></a>修改Hexo文件夹下的node_modules/hexo-generator-index/lib/generator.js</h6><p>需要添加的代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123;</span><br><span class="line">          <span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date;</span><br><span class="line">          <span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2019/02/25/新增Hexo博客文章置顶功能/#more">more >></a>
+          <a class="article-more-a" href="/2019/06/05/Git彻底删除历史提交记录的方法/#more">more >></a>
         
       
 
@@ -1017,7 +936,90 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/25/新增Hexo博客文章置顶功能/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/06/05/Git彻底删除历史提交记录的方法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-BitComet服务器列表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+	
+	      <a class="article-title" href="/2019/05/13/BitComet服务器列表/" target="_blank">BitComet服务器列表</a>
+        
+    </h1>
+  
+
+
+        
+        
+<a href="/2019/05/13/BitComet服务器列表/" class="archive-article-date">
+        <time datetime="2019-05-13T06:56:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-13</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>udp://mgtracker.org:2710/announce<br><a href="http://share.camoe.cn:8080/announce" target="_blank" rel="noopener">http://share.camoe.cn:8080/announce</a><br>udp://11.rarbg.me:80/announce<br><a href="http://tracker.tfile.me/announce" target="_blank" rel="noopener">http://tracker.tfile.me/announce</a><br><a href="http://open.acgtracker.com:1096/announce" target="_blank" rel="noopener">http://open.acgtracker.com:1096/announce</a><br><a href="http://mgtracker.org:2710/announce" target="_blank" rel="noopener">http://mgtracker.org:2710/announce</a><br>udp://tracker.ex.ua:80/announce<br><a href="http://tracker.longwangbt.com:2710/announce" target="_blank" rel="noopener">http://tracker.longwangbt.com:2710/announce</a><br>udp://tracker.openbittorrent.com:80/announce<br><a href="http://tracker.publicbt.com/announce" target="_blank" rel="noopener">http://tracker.publicbt.com/announce</a><br><a href="http://tracker.prq.to/announce" target="_blank" rel="noopener">http://tracker.prq.to/announce</a></p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2019/05/13/BitComet服务器列表/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">日记本</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/13/BitComet服务器列表/">展开全文 >></a>
         </p>
       
 
@@ -1049,7 +1051,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1252,6 +1254,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
+              <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>技术笔记</a>
+            </li>
+          
+            <li class="search-li">
               <a href="https://github.com/JoeyBling" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>GitHub</a>
             </li>
           
@@ -1263,6 +1269,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简书</a>
             </li>
           
+            <li class="search-li">
+              <a href="https://blog.csdn.net/qq_30930805" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>CSDN</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.zhihu.com/people/joeybling" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>知乎</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://weibo.com/jayinfo" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>微博</a>
+            </li>
+          
         </ul>
   		
     	</section>
@@ -1271,7 +1289,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">联系QQ:2434387555&lt;br&gt;&lt;br&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">主要涉及技术：&lt;br&gt;Java后端开发、聚合支付、&lt;br&gt;公众号开发、开源爱好者、Linux&lt;br&gt;&lt;br&gt;联系QQ:2434387555&lt;br&gt;&lt;br&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
   	  	
     	</section>
     

@@ -8,6 +8,7 @@
   <link rel="dns-prefetch" href="https://joeybling.github.io">
   <title>CentOS6.5 离线安装MySQL5.6.26 | 試毅-思伟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
   <meta name="description" content="CentOS6.5 离线安装MySQL5.6.26">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
@@ -16,14 +17,14 @@
 <meta property="og:site_name" content="試毅-思伟">
 <meta property="og:description" content="CentOS6.5 离线安装MySQL5.6.26">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-1d296e2cb8b73d3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-6cdfd951579ad2d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2743275-eb169140eb6b5b36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-05T11:40:31.968Z">
+<meta property="og:image" content="https://joeybling.github.io/images/2743275-1d296e2cb8b73d3c.png">
+<meta property="og:image" content="https://joeybling.github.io/images/2743275-6cdfd951579ad2d3.png">
+<meta property="og:image" content="https://joeybling.github.io/images/2743275-eb169140eb6b5b36.png">
+<meta property="og:updated_time" content="2019-07-12T08:34:34.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS6.5 离线安装MySQL5.6.26">
 <meta name="twitter:description" content="CentOS6.5 离线安装MySQL5.6.26">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2743275-1d296e2cb8b73d3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://joeybling.github.io/images/2743275-1d296e2cb8b73d3c.png">
   
     <link rel="alternative" href="/atom.xml" title="試毅-思伟" type="application/atom+xml">
   
@@ -62,15 +63,17 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/" target="_blank" >主页</a></li>
 	        
-				<li><a href="/anires/index.html">个人简历</a></li>
+				<li><a href="https://joeybling.github.io/ibooks/" target="_blank" >技术笔记</a></li>
 	        
-				<li><a href="/tags/Java/">Java</a></li>
+				<li><a href="https://zhousiwei.gitee.io/cv/" target="_blank" >个人简历</a></li>
 	        
-				<li><a href="/tags/Linux/">Linux</a></li>
+				<li><a href="/anires/index.html" target="_blank" >动态简历</a></li>
 	        
-				<li><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+				<li><a href="/tags/Java/" target="_blank" >Java</a></li>
+	        
+				<li><a href="/tags/Linux/" target="_blank" >Linux</a></li>
 	        
 			</ul>
 		</nav>
@@ -96,15 +99,17 @@
 		        
 					<a class="gitee" target="_blank" href="https://gitee.com/zhousiwei" title="gitee"><i class="icon-gitee"></i></a>
 		        
-					<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/02cbf31a043a" title="jianshu"><i class="icon-jianshu"></i></a>
+		        
+					<a class="csdn" target="_blank" href="https://blog.csdn.net/qq_30930805" title="csdn"><i class="icon-csdn"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="https://zhihu.com/people/joeybling" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="qq" target="_blank" href="/img/2434387555.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="weixin" target="_blank" href="/img/weixin_.png" title="weixin"><i class="icon-weixin"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
 		        
 			</div>
 		</nav>
@@ -140,6 +145,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -149,15 +156,17 @@
 			        
 						<a class="gitee" target="_blank" href="https://gitee.com/zhousiwei" title="gitee"><i class="icon-gitee"></i></a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/02cbf31a043a" title="jianshu"><i class="icon-jianshu"></i></a>
+			        
+						<a class="csdn" target="_blank" href="https://blog.csdn.net/qq_30930805" title="csdn"><i class="icon-csdn"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://zhihu.com/people/joeybling" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="qq" target="_blank" href="/img/2434387555.jpg" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="weixin" target="_blank" href="/img/weixin_.png" title="weixin"><i class="icon-weixin"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/jayinfo" title="weibo"><i class="icon-weibo"></i></a>
 			        
 				</div>
 			</nav>
@@ -166,15 +175,17 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 20%"><a href="/">主页</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">主页</a></li>
 		        
-					<li style="width: 20%"><a href="/anires/index.html">个人简历</a></li>
+					<li style="width: 16.666666666666668%"><a href="https://joeybling.github.io/ibooks/">技术笔记</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/Java/">Java</a></li>
+					<li style="width: 16.666666666666668%"><a href="https://zhousiwei.gitee.io/cv/">个人简历</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/Linux/">Linux</a></li>
+					<li style="width: 16.666666666666668%"><a href="/anires/index.html">动态简历</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/ELK日志分析/">ELK日志分析</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/Java/">Java</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/tags/Linux/">Linux</a></li>
 		        
 				</ul>
 			</nav>
@@ -222,11 +233,11 @@
 <h4 id="2、安装MySQL"><a href="#2、安装MySQL" class="headerlink" title="2、安装MySQL"></a>2、安装MySQL</h4><h6 id="2-1-下载并安装-libaio"><a href="#2-1-下载并安装-libaio" class="headerlink" title="2.1 下载并安装 libaio"></a>2.1 下载并安装 libaio</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local</span><br><span class="line"><span class="meta">#</span> wget http://mirror.centos.org/centos/6/os/x86_64/Packages/libaio-0.3.107-10.el6.x86_64.rpm</span><br><span class="line"><span class="meta">#</span> rpm -ivh libaio-0.3.107-10.el6.x86_64.rpm</span><br></pre></td></tr></table></figure>
 <h6 id="2-2-下载并安装MySQL"><a href="#2-2-下载并安装MySQL" class="headerlink" title="2.2 下载并安装MySQL"></a>2.2 下载并安装MySQL</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /usr/local</span><br><span class="line"><span class="meta">#</span> wget https://dev.mysql.com/get/archives/mysql-5.6/MySQL-5.6.26-1.linux_glibc2.5.x86_64.rpm-bundle.tar</span><br><span class="line"><span class="meta">#</span> tar -xf MySQL-5.6.26-1.linux_glibc2.5.x86_64.rpm-bundle.tar</span><br><span class="line"><span class="meta">#</span> rpm -ivh MySQL-server-5.6.26-1.linux_glibc2.5.x86_64.rpm</span><br><span class="line"><span class="meta">#</span> rpm -ivh MySQL-client-5.6.26-1.linux_glibc2.5.x86_64.rpm</span><br></pre></td></tr></table></figure>
 <h6 id="2-3-查看并修改MySQL-root用户密码"><a href="#2-3-查看并修改MySQL-root用户密码" class="headerlink" title="2.3 查看并修改MySQL root用户密码"></a>2.3 查看并修改MySQL root用户密码</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> more /root/.mysql_secret</span><br><span class="line"><span class="meta">#</span> service mysql restart</span><br><span class="line"><span class="meta">#</span> mysqladmin -uroot -pFeyU2YjwMcAw9Nv0 password 'root'  --修改root密码为root</span><br><span class="line"><span class="meta">#</span> mysql -uroot -proot   --测试登陆</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/2743275-1d296e2cb8b73d3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="/images/2743275-1d296e2cb8b73d3c.png" alt=""></p>
 <h6 id="2-4-配置MySQL数据库编码"><a href="#2-4-配置MySQL数据库编码" class="headerlink" title="2.4 配置MySQL数据库编码"></a>2.4 配置MySQL数据库编码</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cp -rp /usr/share/mysql/my-default.cnf /etc/my.cnf</span><br><span class="line"><span class="meta">#</span> 在mysqld下面增加</span><br><span class="line">init-connect='SET NAMES utf8'</span><br><span class="line">character-set-server = utf8</span><br><span class="line"><span class="meta">#</span> service mysql restart</span><br><span class="line"><span class="meta">#</span> mysql -uroot -proot  --验证是否成功</span><br><span class="line"><span class="meta">#</span> show variables like 'character%';</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/2743275-6cdfd951579ad2d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="/images/2743275-6cdfd951579ad2d3.png" alt=""></p>
 <hr>
-<p><img src="https://upload-images.jianshu.io/upload_images/2743275-eb169140eb6b5b36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="/images/2743275-eb169140eb6b5b36.png" alt=""></p>
 <h6 id="2-5-配置MySQL远程访问"><a href="#2-5-配置MySQL远程访问" class="headerlink" title="2.5 配置MySQL远程访问"></a>2.5 配置MySQL远程访问</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> service iptables stop</span><br><span class="line"><span class="meta">#</span> chkconfig iptables off</span><br><span class="line"><span class="meta">#</span> mysql -uroot -proot</span><br><span class="line"><span class="meta">#</span> grant all privileges on *.* to root@'%' identified by 'root' WITH GRANT OPTION;</span><br><span class="line"><span class="meta">#</span> flush privileges;</span><br></pre></td></tr></table></figure>
       
 
@@ -608,6 +619,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
+              <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>技术笔记</a>
+            </li>
+          
+            <li class="search-li">
               <a href="https://github.com/JoeyBling" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>GitHub</a>
             </li>
           
@@ -619,6 +634,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简书</a>
             </li>
           
+            <li class="search-li">
+              <a href="https://blog.csdn.net/qq_30930805" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>CSDN</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.zhihu.com/people/joeybling" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>知乎</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://weibo.com/jayinfo" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>微博</a>
+            </li>
+          
         </ul>
   		
     	</section>
@@ -627,7 +654,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">联系QQ:2434387555&lt;br&gt;&lt;br&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">主要涉及技术：&lt;br&gt;Java后端开发、聚合支付、&lt;br&gt;公众号开发、开源爱好者、Linux&lt;br&gt;&lt;br&gt;联系QQ:2434387555&lt;br&gt;&lt;br&gt;很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
   	  	
     	</section>
     
